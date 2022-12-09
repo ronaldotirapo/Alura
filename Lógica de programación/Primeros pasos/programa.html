@@ -1,37 +1,62 @@
 <!DOCTYPE HTML>
-<meta charset="HTML">
-<script>
+<html>
+    <head>
+        <meta charset="HTML">
+    </head>
 
-    var anio = 2025;
+    <body>
+        <script>
 
-    document.write("Juan tiene " + (anio-2000) + " años");
-    document.write("<br><br>");
+            var anio = 2025;
+        
+            document.write("Juan tiene " + (anio-2000) + " años");
+            document.write("<br><br>");
+        
+            document.write("Pedro tiene " + (anio-1995) + " años");
+            document.write("<br><br>");
+        
+            anio = 2030;
+        
+            document.write("Carlos tiene " + (anio-2005) + " años");
+        
+            document.write("<br><br>");
+            document.write("<br><br>");
+        
+            anio = 2020;
+        
+            document.write("Jimena tiene " + (anio-2010) + " años");
+            document.write("<br><br>");
+        
+            document.write("Paola tiene " + (anio-1995) + " años");
+            document.write("<br><br>");
+        
+            document.write("Laura tiene " + (anio-2005) + " años");
+            document.write("<br><br>");
+        
+            var edadJimena = 25;
+            var edadPaola = 10;
+            var edadLaura = 15;
 
-    document.write("Pedro tiene " + (anio-1995) + " años");
-    document.write("<br><br>");
+            var nombre1 = "Jimena";
+            var nombre2 = "Paola";
+            var nombre3 = "Laura";
 
-    anio = 2030;
+            var promedio = (edadJimena+edadPaola+edadLaura)/3;
+        
+            document.write("El promedio de la edades de " 
+                + nombre1 + ", " 
+                + nombre2 + " y " 
+                + nombre3 + " es: " + Math.round(promedio))
+        
+        </script>
+        
+        <!--El siguiente código no ejecutará porque no puede concatenar algo que no es un número, es decir un Any y un int: 
+            document.write(Mi edad es + 12)-->
+        <!--los paréntesis agrupan las operaciones para priorizarlas individualmente-->
+        <!--Los resultados de JavaScript se convertirán en código HTML-->
+        <!--No es posible escribir código JavaScript fuera de las etiquetas script-->
+        <!--Los datos cambiantes siempre deben usarse como variables-->
+    </body>
 
-    document.write("Carlos tiene " + (anio-2005) + " años");
+</html>
 
-    document.write("<br><br>");
-    document.write("<br><br>");
-
-    anio = 2020;
-
-    document.write("Jimena tiene " + (anio-2010) + " años");
-    document.write("<br><br>");
-
-    document.write("Paola tiene " + (anio-1995) + " años");
-    document.write("<br><br>");
-
-    document.write("Laura tiene " + (anio-2005) + " años");
-    document.write("<br><br>");
-
-</script>
-
-    <!--El siguiente código no ejecutará porque no puede concatenar algo que no es un número, es decir un Any y un int: 
-        document.write(Mi edad es + 12)-->
-    <!--los paréntesis agrupan las operaciones para priorizarlas individualmente-->
-    <!--Los resultados de JavaScript se convertirán en código HTML-->
-    <!--No es posible escribir código JavaScript fuera de las etiquetas script-->
