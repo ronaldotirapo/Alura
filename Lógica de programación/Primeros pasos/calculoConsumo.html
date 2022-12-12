@@ -15,23 +15,32 @@
             var recorridoConGasolina = 480;
             var eficienciaConGasolina = recorridoConGasolina/tanque;
 
-            var saltoDeLinea1 = "<br>";
-            var saltoDeLinea2 = "<br><br>";
+            function saltarLinea (cantidadDeSaltos) {
+                for (var i = 0; i<cantidadDeSaltos; i++) {
+                    document.write("<br>");
+                }
+            } 
 
-            document.write("Un auto con:" + saltoDeLinea1 +  
-            "Tanque de " + tanque + " litros de gasolina" + saltoDeLinea1 +  
-            "Recorrido de " + recorridoConGasolina + " kilómetros" + saltoDeLinea2 + 
-            "Tiene una eficiencia de " + eficienciaConGasolina + " kilómetros/litro");
+            document.write("Un auto con:");  
+            saltarLinea(1);
+            document.write("Tanque de " + tanque + " litros de gasolina");
+            saltarLinea(1);
+            document.write("Recorrido de " + recorridoConGasolina + " kilómetros");
+            saltarLinea(2); 
+            document.write("Tiene una eficiencia de " + eficienciaConGasolina + " kilómetros/litro");
 
-            document.write(saltoDeLinea2);
+            saltarLinea(2);
 
             var recorridoConAlcohol = 300;
             var eficienciaConAlcohol = recorridoConAlcohol/tanque;
 
-            document.write("Un auto con:" + saltoDeLinea1 + 
-            "Tanque de " + tanque + " litros de alcohol" + saltoDeLinea1 + 
-            "Recorrido de " + recorridoConAlcohol + " kilómetros" + saltoDeLinea2 +  
-            "Tiene una eficiencia de " + eficienciaConAlcohol + " kilómetros/litro");
+            document.write("Un auto con:");
+            saltarLinea(1); 
+            document.write("Tanque de " + tanque + " litros de alcohol"); 
+            saltarLinea(1);
+            document.write("Recorrido de " + recorridoConAlcohol + " kilómetros");
+            saltarLinea(2);
+            document.write("Tiene una eficiencia de " + eficienciaConAlcohol + " kilómetros/litro");
         </script>
     </body>
 </html>

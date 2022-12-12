@@ -6,14 +6,19 @@
 
     <body>
         <script>
+
+            function saltarLinea (cantidadDeSaltos) {
+                for (var i = 0; i<cantidadDeSaltos; i++) {
+                    document.write("<br>");
+                }
+            } 
+
             var anio = 2025;
-            var saltoDeLinea2 = "<br><br>";
         
             document.write("Juan tiene " + (anio-2000) + " años");
-            document.write(saltoDeLinea2);
-        
+            saltarLinea(2);        
             document.write("Pedro tiene " + (anio-1995) + " años");
-            document.write(saltoDeLinea2);
+            saltarLinea(2);
         
             anio = 2030;
         
