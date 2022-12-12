@@ -13,16 +13,21 @@
                 }
             } 
 
+            function imprimir (frase){
+                document.write(frase);
+                saltarLinea(2);
+            }
+
+            //Este código imprime los años de Juan, Pedro y Carlos
+
             var anio = 2025;
-        
-            document.write("Juan tiene " + (anio-2000) + " años");
-            saltarLinea(2);        
-            document.write("Pedro tiene " + (anio-1995) + " años");
-            saltarLinea(2);
+
+            imprimir("Juan tiene " + (anio-2000) + " años");       
+            imprimir("Pedro tiene " + (anio-1995) + " años");
         
             anio = 2030;
         
-            document.write("Carlos tiene " + (anio-2005) + " años");
+            imprimir("Carlos tiene " + (anio-2005) + " años");
         </script>
         
         <!--El siguiente código no ejecutará porque no puede concatenar algo que no es un número, es decir un Any y un int: 
