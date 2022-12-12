@@ -8,6 +8,7 @@
         <script>
 
             function saltarLinea (cantidadDeSaltos) {
+                //for (expreción inicial; condición; expreción final){}
                 for (var i = 0; i<cantidadDeSaltos; i++) {
                     document.write("<br>");
                 }
@@ -28,6 +29,18 @@
             anio = 2030;
         
             imprimir("Carlos tiene " + (anio-2005) + " años");
+
+
+            //Este código imprime la diferencia de edad entre mi hermana y yo
+
+            var miEdad = 24;
+            var edadDeMiHermana = 17;
+
+            /*Si no se pone entre paréntesis no ejecuta ya que: 
+            Las operaciones matemáticasdeben ir en paréntesis para no confundir con la concatenación*/
+            imprimir("La diferencia de edad entre mi hermana y yo es: " + (miEdad - edadDeMiHermana));
+
+
         </script>
         
         <!--El siguiente código no ejecutará porque no puede concatenar algo que no es un número, es decir un Any y un int: 
