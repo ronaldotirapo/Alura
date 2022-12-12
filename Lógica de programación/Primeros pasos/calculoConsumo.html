@@ -15,19 +15,22 @@
             var recorridoConGasolina = 480;
             var eficienciaConGasolina = recorridoConGasolina/tanque;
 
-            document.write("Un auto con: </br>" + 
-            "Tanque de " + tanque + " litros de gasolina </br>" + 
-            "Recorrido de " + recorridoConGasolina + " kilómetros </br></br>" + 
+            var saltoDeLinea1 = "<br>";
+            var saltoDeLinea2 = "<br><br>";
+
+            document.write("Un auto con:" + saltoDeLinea1 +  
+            "Tanque de " + tanque + " litros de gasolina" + saltoDeLinea1 +  
+            "Recorrido de " + recorridoConGasolina + " kilómetros" + saltoDeLinea2 + 
             "Tiene una eficiencia de " + eficienciaConGasolina + " kilómetros/litro");
 
-            document.write("</br></br>");
+            document.write(saltoDeLinea2);
 
             var recorridoConAlcohol = 300;
             var eficienciaConAlcohol = recorridoConAlcohol/tanque;
 
-            document.write("Un auto con: </br>" + 
-            "Tanque de " + tanque + " litros de alcohol</br>" + 
-            "Recorrido de " + recorridoConAlcohol + " kilómetros </br></br>" + 
+            document.write("Un auto con:" + saltoDeLinea1 + 
+            "Tanque de " + tanque + " litros de alcohol" + saltoDeLinea1 + 
+            "Recorrido de " + recorridoConAlcohol + " kilómetros" + saltoDeLinea2 +  
             "Tiene una eficiencia de " + eficienciaConAlcohol + " kilómetros/litro");
         </script>
     </body>
