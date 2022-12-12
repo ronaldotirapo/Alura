@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            function saltarLinea (){
+                for (var i = 0; i<5; i++) {
+                    document.write("<br>");
+                    // == es para la expresión igual que
+                    if (i == 2) {
+                        document.write("<hr>");
+                    }
+                }
+            }
+
+            function imprimir (frase){
+                document.write("<big>" + frase + "</big>");
+                saltarLinea();
+            }
+
+            var anio = 2022;
+
+            imprimir("Hola mundo");
+            
+            //Este código calcula las edades de Juan, Pedro y Carlos
+
+            imprimir("Juan tiene: " + (anio-2000) + " años");
+            imprimir("Pedro tiene: " + (anio-1995) + " años");
+
+            var anio = 2030;
+
+            imprimir("Carlos tiene: " + (anio-2005) + " años");
+
+        </script>
+    </body>
+</html>    
