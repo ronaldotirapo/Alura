@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="HTML">
+    </head>
+    <body>
+
+        <h1>PROGRAMA QUE CALCULA EL I.M.C</h1>
+
+        <script>
+
+            function saltarLinea (cantidadDeSaltos) {
+                //for (expreción inicial; condición; expreción final){}
+                for (var i = 0; i<cantidadDeSaltos; i++) {
+                    document.write("<br>");
+                }
+            } 
+
+            function imprimir (frase){
+                document.write(frase);
+                saltarLinea(2);
+            }
+
+            function calcularIMC (peso, altura) {
+                return peso / (altura * altura);
+            }
+
+            function promedioIMC (imc1, imc2) {
+                return (imc1 + imc2) / 2;
+            }
+
+            function imprimirIMC(imc, nombre){
+                imprimir("El I.M.C de " + nombre + " es: " + Math.round(imc));
+            }
+
+            function imprimirPromedioIMC(promedio, nombre1, nombre2){
+                imprimir("El promedio de I.M.C de " + nombre1 + " y " + nombre2 + " es: " + Math.round(promedio));
+            }
+
+            var nombreInformado = prompt("Informe su nombre");
+            var pesoInformado = prompt("Informe su peso");
+            var alturaInformada = prompt("Informe su altura");
+
+            var imc1 = calcularIMC(pesoInformado,alturaInformada);
+
+            imprimirIMC(imc1, nombreInformado);
+        </script>
+    </body>
+</html>
