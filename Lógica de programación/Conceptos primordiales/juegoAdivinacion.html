@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1>JUEGO DE ADIVINACIÓN</h1>
+        <script>
+            function saltarLinea (cantidadDeSaltos) {
+                //for (expreción inicial; condición; expreción final){}
+                for (var i = 0; i<cantidadDeSaltos; i++) {
+                    document.write("<br>");
+                }
+            } 
+
+            function imprimir (frase) {
+                document.write(frase);
+                saltarLinea(2);
+            }
+
+            var numeroPensado = Math.round(Math.random()*10);
+            var numeroLanzado = parseInt(prompt("Ingrese un número entre 0 y 10"));
+
+            if (numeroLanzado == numeroPensado) {
+                imprimir("Usted acertó");
+            } else {
+                imprimir("Usted erró, el número pensado era: " + numeroPensado);
+            }
+        </script>
+    </body>
+</html>

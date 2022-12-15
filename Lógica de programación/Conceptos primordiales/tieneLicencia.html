@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1>¿Será que puedo conducir?</h1>
+        <script>
+            function saltarLinea (cantidadDeSaltos) {
+                //for (expreción inicial; condición; expreción final){}
+                for (var i = 0; i<cantidadDeSaltos; i++) {
+                    document.write("<br>");
+                }
+            } 
+
+            function imprimir (frase) {
+                document.write(frase);
+                saltarLinea(2);
+            }
+
+            var edad = parseInt(prompt("Ingresa tu edad"));
+            var tieneLicencia = prompt("¿Tienes licencia de conducir? Responde con S o N");
+
+            if (edad >= 18 && tieneLicencia == "S") {
+                imprimir("¡Felicidades, puedes conducir!");
+            } else {
+                imprimir("Lo lamentamos pero no puedes conducir");
+            }
+        </script>
+    </body>
+</html>

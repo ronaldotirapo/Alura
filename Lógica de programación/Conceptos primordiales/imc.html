@@ -4,11 +4,8 @@
         <meta charset="UTF-8">
     </head>
     <body>
-
         <h1>PROGRAMA QUE CALCULA EL I.M.C</h1>
-
         <script>
-
             function saltarLinea (cantidadDeSaltos) {
                 //for (expreción inicial; condición; expreción final){}
                 for (var i = 0; i<cantidadDeSaltos; i++) {
@@ -16,7 +13,7 @@
                 }
             } 
 
-            function imprimir (frase){
+            function imprimir (frase) {
                 document.write(frase);
                 saltarLinea(2);
             }
@@ -29,11 +26,11 @@
                 return (imc1 + imc2) / 2;
             }
 
-            function imprimirIMC(imc, nombre){
+            function imprimirIMC(imc, nombre) {
                 imprimir("El I.M.C de " + nombre + " es: " + Math.round(imc));
             }
 
-            function imprimirPromedioIMC(promedio, nombre1, nombre2){
+            function imprimirPromedioIMC(promedio, nombre1, nombre2) {
                 imprimir("El promedio de I.M.C de " + nombre1 + " y " + nombre2 + " es: " + Math.round(promedio));
             }
 
@@ -45,19 +42,19 @@
 
             imprimirIMC(imcCalculado, nombreInformado);
 
-            if (imcCalculado < 18.5){
+            if (imcCalculado < 18.5) {
                 imprimir("Su I.M.C está debajo de lo recomendado");
             }
 
-            if (imcCalculado >= 18.5 && imcCalculado < 25)    {
+            if (imcCalculado >= 18.5 && imcCalculado < 25) {
                 imprimir("Su I.M.C está normal");
             }
 
-            if (imcCalculado >= 25 && imcCalculado < 30){
+            if (imcCalculado >= 25 && imcCalculado < 30) {
                 imprimir("Su I.M.C está considerado sobrepeso");
             }
 
-            if (imcCalculado >= 30){
+            if (imcCalculado >= 30) {
                 imprimir("Su I.M.C está considerado obesidad");
             } 
         </script>
