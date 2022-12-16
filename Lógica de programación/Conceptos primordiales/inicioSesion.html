@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
     </head>
     <body>
-        <h1>JUEGO DE ADIVINACIÓN</h1>
+        <h1>Inicio de sesión</h1>
         <script>
             function saltarLinea (cantidadDeSaltos) {
                 //for (expreción inicial; condición; expreción final){}
@@ -18,15 +18,26 @@
                 saltarLinea(2);
             }
 
-            function loteria (n) {
-                return Math.round(Math.random()*n);
-            }
+            var user = "alura";
+            var pass = "alura123";
+            var intentos = 3;
+            var contador = 1;
 
-            for (var lineas = 1; lineas <= 3; lineas++) {
-                for (var cantidad = 1; cantidad <= 10; cantidad++) {
-                    document.write("*");
+            while (contador <= intentos) {
+                var userIngresado = prompt("Ingrese su nombre de usuario");
+                var passIngresado = prompt("Ingrese su contraseña");
+
+                if (userIngresado == user && passIngresado == pass) {
+                    imprimir("Bienvenido al sistema " + userIngresado);
+                    break;
+                } else {
+                    if (intentos == 3) {
+                        alert("Has agotado el número de intentos");
+                    } else {
+                        alert("Usuario incorrecto");
+                    }
                 }
-                saltarLinea(1);
+                contador++;
             }
         </script>
     </body>
