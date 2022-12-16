@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
     </head>
     <body>
-        <h1>Programa año mundial de la FIFA</h1>
+        <h1>Números pares del 1 al 100</h1>
         <script>
             function saltarLinea (cantidadDeSaltos) {
                 //for (expreción inicial; condición; expreción final){}
@@ -18,14 +18,13 @@
                 saltarLinea(2);
             }
 
-            var anioMundial = 1930;    
-            var limite = parseInt(prompt("Ingrese el año límite para calcular"));
+            var acumuladorNumero = 2;
 
-            //Es recomendable usar el while con condiciones mas no para una cantidad prefijada de repeticiones
-            while (anioMundial <= limite) {
-                imprimir("Hubo mundial en la FIFA en el año: " + anioMundial);
-                anioMundial = anioMundial + 4;
+            while (acumuladorNumero <= 100) {
+                imprimir(acumuladorNumero);
+                acumuladorNumero = acumuladorNumero + 2;
             }
+
             imprimir("Fin");
         </script>
     </body>

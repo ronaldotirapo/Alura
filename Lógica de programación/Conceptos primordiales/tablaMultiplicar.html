@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1>Tabla de multiplicar</h1>
+        <script>
+            function saltarLinea (cantidadDeSaltos) {
+                //for (expreción inicial; condición; expreción final){}
+                for (var i = 0; i<cantidadDeSaltos; i++) {
+                    document.write("<br>");
+                }
+            } 
+
+            function imprimir (frase) {
+                document.write(frase);
+                saltarLinea(2);
+            }
+            
+            var multiplicador = 1;
+            var multiplicando = 5;
+
+            imprimir("Tabla generada con el ciclo While");
+            while (multiplicador <= 10) {
+                imprimir(multiplicando + " * " + multiplicador + " = " + (multiplicando*multiplicador));
+                multiplicador = multiplicador + 1;
+            }
+
+            imprimir("Tabla generada con el ciclo For");
+            for (var i = 1; i <= 10; i++) {
+                imprimir(multiplicando + " * " + i + " = " + (multiplicando*i));
+            }
+        </script>
+    </body>
+</html>
