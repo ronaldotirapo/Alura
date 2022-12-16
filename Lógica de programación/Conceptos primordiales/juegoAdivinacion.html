@@ -22,18 +22,29 @@
                 return Math.round(Math.random()*n);
             }
 
-            var numeroLanzado = parseInt(prompt("Ingrese un número entre 0 y 10"));
-            var numeroPensado = loteria(numeroLanzado);
+            var numeroPensado = loteria(10);
+            var intentos = 3;
+            var contador = 1;
+
+            while (contador <= intentos) {
+                var numeroLanzado = parseInt(prompt("Ingrese un número entre 0 y 10"));
+                if (numeroLanzado == numeroPensado) {
+                    alert("Usted acertó en el intento " + contador + ", el número pensado era " + numeroPensado);
+                    break;
+                } else {
+                    alert("Usted erró");
+
+                }
+                contador++;
+            }
 
             if (numeroLanzado == numeroPensado) {
-                imprimir("Usted acertó");
+                imprimir("Usted acertó en el intento " + contador + ", el número pensado era " + numeroPensado);
             } else {
-                if (numeroLanzado > numeroLanzado) {
-                    imprimir("Usted erró, el número lanzado es mayor que el número pensado");
-                } else {
-                    imprimir("Usted erró, el número lanzado es menor que el número pensado");                    
-                }
+                imprimir("Usted erró, el número pensado era " + numeroPensado);
             }
+
+            imprimir("Fin");
         </script>
     </body>
 </html>
