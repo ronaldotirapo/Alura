@@ -13,28 +13,34 @@
         var pantalla = document.querySelector("canvas");
         var pincel = pantalla.getContext("2d");
 
+        var colores = ["blue", "red", "green"];
+        var indice = 0;
+
         pincel.fillStyle = "gray";
         pincel.fillRect(0, 0, 600, 400);
-
-        function exibirAlerta(evento) {
-            var x = evento.pageX - pantalla.offsetLeft;
-            var y = evento.pageY - pantalla.offsetTop;
-            console.log(evento);
-            alert(x + ", " + y);
-        }
 
         function dibujarCirculo(evento) {
             var x = evento.pageX - pantalla.offsetLeft;
             var y = evento.pageY - pantalla.offsetTop;
 
-            pincel.fillStyle = "blue";
+            pincel.fillStyle = (colores[indice]);
             pincel.beginPath();
             pincel.arc(x, y, 10, 0, 2 * 3.14);
             pincel.fill();
             console.log(x + ", " + y);
         }
 
+        function cambiarColor(evento) {
+            indice++
+            if (indice >= (colores.length)) {
+                indice = 0;
+            }
+            return false; //Hace que no se muestre el menú contextual
+        }
+
         pantalla.onclick = dibujarCirculo;
+
+        pantalla.oncontextmenu = cambiarColor;
     </script>
 </body>
 
