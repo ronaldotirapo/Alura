@@ -17,7 +17,9 @@
         pincel.fillRect(0, 0, 600, 400);
 
         function exibirAlerta(evento) {
-            var x = evento.pageX - pantalla.offsetLeft;
+            //La pantalla (el canvas) tiene un margen y no ocupa desde el inicio de la página
+            //Se resta el aumento debido al margen en X y Y
+            var x = evento.pageX - pantalla.offsetLeft; 
             var y = evento.pageY - pantalla.offsetTop;
             console.log(evento);
             alert(x + ", " + y);

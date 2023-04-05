@@ -10,19 +10,24 @@
 
     </canvas>
     <script>
+        //Se selecciona el canvas como una variable y luego se da un contexto 2d
         var pantalla = document.querySelector("canvas");
         var pincel = pantalla.getContext("2d");
 
+        //Se establece el array de colores y se inicia el índice
         var colores = ["blue", "red", "green"];
         var indice = 0;
 
+        //Se colorea el canvas para visualizarlo
         pincel.fillStyle = "gray";
         pincel.fillRect(0, 0, 600, 400);
 
         function dibujarCirculo(evento) {
+            //Se resta los márgenes de las coordenadas internas del canvas
             var x = evento.pageX - pantalla.offsetLeft;
             var y = evento.pageY - pantalla.offsetTop;
 
+            //Se establece un color según el array y se dibuja un círculo
             pincel.fillStyle = (colores[indice]);
             pincel.beginPath();
             pincel.arc(x, y, 10, 0, 2 * 3.14);
@@ -31,13 +36,15 @@
         }
 
         function cambiarColor(evento) {
+            //Se aumenta el índice o reinicia cuando es mayor a la cantidad del array
             indice++
             if (indice >= (colores.length)) {
                 indice = 0;
             }
-            return false; //Hace que no se muestre el menú contextual
+            return false; 
+            /*Hace que no se muestre el menú contextual ya que algunas funciones por defecto retornan true,
+            lo que iniciaría el menú contextual*/ 
         }
-
         pantalla.onclick = dibujarCirculo;
 
         pantalla.oncontextmenu = cambiarColor;
