@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>  
+        <meta charset="UTF-8">
+    </head>
+    <body>  
+        <canvas width="600" height="400"></canvas>
+        <script>
+            //Se crea variables para el canvas y se colorea su area
+            var pantalla = document.querySelector("canvas");
+            var pincel = pantalla.getContext("2d");
+            pincel.fillStyle = "lightgrey";
+            pincel.fillRect(0,0,600,400);
+
+            //Crea y pinta una circunferencia según las coordenadas
+            function diseniarCircunferencia(x, y, radio){
+                pincel.fillStyle = "blue";
+                pincel.beginPath();
+                pincel.arc(x, y, radio, 0, 2*Math.PI);
+                pincel.fill();
+            }
+
+            //Borra el canvas en un área cuadrada según un par de coordenadas de inicio y fin
+            //También borra el color que se le puso al área del canvas
+            function limpiarPantalla (){
+                pincel.clearRect(0,0,600,400);
+            }
+            
+            //Variable para incrementar la coordenada X de la circunferencia
+            var x = 0;
+
+            //Limpiar la pantalla y crea una nueva circunferencia
+            function actualizarPantalla(){
+                limpiarPantalla();
+                diseniarCircunferencia(x,10,10);
+                x++;
+            }   
+
+            //Actualiza la pantalla cada 50 milisegundos
+            setInterval(actualizarPantalla, 5);
+        </script>
+    </body>
+</html>
