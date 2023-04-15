@@ -29,27 +29,23 @@
             //Variable para incrementar la coordenada X de la circunferencia
             var x = 0;
 
-            //Variable para decrementar la coordenada X de la circunferencia
-            var xDecremento = 0;
+            /*Variable bandera para controlar el sentido, 1 para incremento y -1 para decremento
+            inicia en incremento */
+            var sentido = 1;
 
-            //Variable maxima para la coordenada X de la circunferencia
-            var xMaximo = 600;
-
-            //Limpiar la pantalla y crea una nueva circunferencia
+            /*Limpia la pantalla, solo cambia a decremento cuando x es mayor que el maximo
+            y cambia a incremento cuando x es menor que el minimo*/ 
             function actualizarPantalla(){
                 limpiarPantalla();
-                if (x >= xMaximo) {
-                    diseniarCircunferencia(xDecremento,10,10);
-                    xDecremento--;
-                    if (xDecremento == 0) {
-                        x = xDecremento;
-                    } 
-                } else if (x < xMaximo) {
-                    diseniarCircunferencia(x,10,10);
-                    x++;
-                    xDecremento++;
+                if (x > 600) {
+                    sentido = -1;
+                } else if (x < 0) {
+                    sentido = 1;
                 }
-            }   
+
+                diseniarCircunferencia(x,10,10);
+                x = x + sentido; 
+            }  
 
             //Actualiza la pantalla cada 50 milisegundos
             setInterval(actualizarPantalla, 5);
