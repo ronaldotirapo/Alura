@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <canvas width="600" height="400"> </canvas>
+        <script>
+            /*Guardo el elemento canvas en la variable pantalla y 
+            la variable pantalla con contexto 2d en la variable pincel*/
+            var pantalla = document.querySelector("canvas");
+            var pincel = pantalla.getContext("2d");
+
+            //Le doy a la variable pincel el color gris claro y lo relleno del color en el area
+            pincel.fillStyle = "lightgrey";
+            pincel.fillRect(0, 0, 600, 400); //Se borra el coloreado cuando se usa pincel.clearRect
+
+            //Variables para crear los circulos
+            var radio = 10;
+            var xAleatorio;
+            var yAleatorio;
+            
+            //Crea una circunferencia teniendo en cuenta los argumentos
+            function diseniarCircunferencia(x, y, radio, color){
+                pincel.fillStyle = color;
+                pincel.beginPath();
+                pincel.arc(x,y,radio,0,2*Math.PI);
+                pincel.fill();
+            }
+
+            //Limpia los elementos en un area establecida
+            function limpiarPantalla(){
+                pincel.clearRect(0, 0, 600, 400);
+            }
+
+            //Regresa un valor aleatorio redondeado hacia abajo segun un maximo
+            function sortearPosicion(maximo){
+                return Math.floor(Math.random()*maximo);
+            }
+
+            //Crea el objetivo para apuntar
+            function diseniarObjetivo(x, y){
+                diseniarCircunferencia(x, y, radio + 20, "red");
+                diseniarCircunferencia(x, y, radio + 10, "white");
+                diseniarCircunferencia(x, y, radio, "red");
+            }
+
+            //Limpia los elementos y crea un nuevo objetivo en una posicion aleatoria
+            function actualizarPantalla(){
+                limpiarPantalla();
+                xAleatorio = sortearPosicion(600);
+                yAleatorio = sortearPosicion(400);
+                diseniarObjetivo(xAleatorio, yAleatorio);
+            }
+            
+            /*Compara si la coordenada en el clic esta dentro del area del circulo
+            del objetivo con el radio mas chico y de ser asi invoca un alert*/
+            function disparar(evento){
+                var x = evento.pageX - pantalla.offsetLeft;
+                var y = evento.pageY - pantalla.offsetTop;
+                if(
+                    x < xAleatorio + radio &&
+                    x > xAleatorio - radio &&
+                    y < yAleatorio + radio &&
+                    y > yAleatorio - radio
+                ) {
+                    alert("Tiro certero!");
+                }
+            }
+
+            //Agrega el procedimiento disparar cuando ocurre el evento onclic
+            document.onclick = disparar;
+
+            //Invoca el procedimiento actualizarPantalla cada 1000 milisegundos (1 segundo)
+            setInterval(actualizarPantalla, 1000);
+        </script>
+    </body>
+</html>
