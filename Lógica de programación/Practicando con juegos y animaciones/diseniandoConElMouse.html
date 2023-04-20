@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <canvas width="600" height="400"> </canvas>
+    <script>
+        //Variables para el canvas y dibujar en 2d
+        var pantalla = document.querySelector("canvas");
+        var pincel = pantalla.getContext("2d");
+
+        //Selecciona un color y pinta en el area
+        pincel.fillStyle = "lightgrey";
+        pincel.fillRect(0, 0, 600, 400);
+
+        //Variable para manejar si se puede dibjar
+        var puedoDibujar = false;
+
+        //Dibuja un circulo azul
+        function dibujarCirculo(evento) {
+            if (puedoDibujar) {
+                var x = evento.pageX - pantalla.offsetLeft;
+                var y = evento.pageY - pantalla.offsetTop;
+                pincel.fillStyle = "blue";
+                pincel.beginPath();
+                pincel.arc(x, y, 10, 0, 2 * Math.PI);
+                pincel.fill();
+            }
+        }
+
+        //Habilita la opcion para dibujar
+        function habilitarDibujar() {
+            puedoDibujar = true;
+        }
+
+        //Deshabilita la opcion para dibujar
+        function deshabilitarDibujar() {
+            puedoDibujar = false;
+        }
+
+        //Variable para habilitar el dibujado cuando se mantiene el clic izquierdo
+        onmousedown = habilitarDibujar;
+
+        //Variable para deshabilitar el dibujado cuando se suelta el clic izquierdo
+        onmouseup = deshabilitarDibujar;
+
+        //Variable para dibujar cuando se mueve el mouse
+        onmousemove = dibujarCirculo;
+        
+      /*Implementar tres colores distintos para elegir y que en esa area no se pueda dibujar,
+      para ello limitar con un condicional el area como en el ejercicio anterior que fue un circulo
+      en este el area de cuadrangular por lo que se compara el ancho y el alto del area para elegir los colores
+      con la posicion actual del mouse y si esta dentro de ella deshabilitar la opcion de dibujar*/
+    </script>
+  </body>
+</html>
