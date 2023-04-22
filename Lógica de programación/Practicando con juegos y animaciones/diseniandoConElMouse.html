@@ -7,48 +7,113 @@
   <body>
     <canvas width="600" height="400"> </canvas>
     <script>
-        //Variables para el canvas y dibujar en 2d
-        var pantalla = document.querySelector("canvas");
-        var pincel = pantalla.getContext("2d");
+      //Variables para el canvas y dibujar en 2d
+      var pantalla = document.querySelector("canvas");
+      var pincel = pantalla.getContext("2d");
 
-        //Selecciona un color y pinta en el area
-        pincel.fillStyle = "lightgrey";
-        pincel.fillRect(0, 0, 600, 400);
+      //Selecciona un color y pinta en el area
+      pincel.fillStyle = "lightgrey";
+      pincel.fillRect(0, 0, 600, 400);
 
-        //Variable para manejar si se puede dibjar
-        var puedoDibujar = false;
+      //Variable para manejar si se puede dibjar
+      var puedoDibujar = false;
 
-        //Dibuja un circulo azul
-        function dibujarCirculo(evento) {
-            if (puedoDibujar) {
-                var x = evento.pageX - pantalla.offsetLeft;
-                var y = evento.pageY - pantalla.offsetTop;
-                pincel.fillStyle = "blue";
-                pincel.beginPath();
-                pincel.arc(x, y, 10, 0, 2 * Math.PI);
-                pincel.fill();
-            }
+      //Variable para controlar el color y tamano del pincel
+      var colorPincel = "blue";
+      var radioPincel = 5;
+
+      //Variables para manejar las coordenadas y el area de los cuadrados 
+      var xRojo = 0;
+      var xVerde = 50;
+      var xAzul = 100;
+      var yInicialCuadrados = 0;
+      var baseCuadrados = 50;
+
+      //Evalua el area donde esta el mouse y si es permitido dibuja un circulo azul
+      function dibujarCirculo(evento) {
+        var x = evento.pageX - pantalla.offsetLeft;
+        var y = evento.pageY - pantalla.offsetTop;
+        if (puedoDibujar && evaluarAreaParaDibujarCirculo(x, y)) {
+          pincel.fillStyle = colorPincel;
+          pincel.beginPath();
+          pincel.arc(x, y, radioPincel, 0, 2 * Math.PI);
+          pincel.fill();
         }
+      }
 
-        //Habilita la opcion para dibujar
-        function habilitarDibujar() {
-            puedoDibujar = true;
+      //Cambia el color cuando de da clic en el area de uno de los colores
+      function cambiarColor(evento) {
+        var x = evento.pageX - pantalla.offsetLeft;
+        var y = evento.pageY - pantalla.offsetTop;
+        evaluarAreaParaCambiarColor(x, y, xRojo, yInicialCuadrados, (xRojo + baseCuadrados), baseCuadrados, "red");
+        evaluarAreaParaCambiarColor(x, y, xVerde, yInicialCuadrados, (xVerde + baseCuadrados), baseCuadrados, "green");
+        evaluarAreaParaCambiarColor(x, y, xAzul, yInicialCuadrados, (xAzul + baseCuadrados), baseCuadrados, "blue");
+      }
+
+      //Evalua el area donde esta el mouse y cambia al color del argumento
+      function evaluarAreaParaCambiarColor(xEvaluar, yEvaluar, xInicial, yInicial, xFinal, yFinal, color) {
+        if (
+          xEvaluar > xInicial &&
+          yEvaluar > yInicial &&
+          xEvaluar < xFinal &&
+          yEvaluar < yFinal 
+        ) {
+          colorPincel = color; 
         }
+      }
 
-        //Deshabilita la opcion para dibujar
-        function deshabilitarDibujar() {
-            puedoDibujar = false;
+      //Evalua el area permitida para permitir dibujar
+      // No permite dibujar en el area de los colores para seleccionar
+      //Tiene un aumento de 10 en las coordenadas debido al radio del circulo
+      function evaluarAreaParaDibujarCirculo(x , y){
+        if (
+          x >= -10 &&
+          y >= -10 &&
+          x <= baseCuadrados*3 + radioPincel &&
+          y <= baseCuadrados + radioPincel
+        ) {
+          return false; 
+        } else {
+          return true;
         }
+      }
 
-        //Variable para habilitar el dibujado cuando se mantiene el clic izquierdo
-        onmousedown = habilitarDibujar;
+      //Dibuja un cuadrado con un color en una coordenada
+      function dibujarCuadrado(color, x, y, base, altura){
+        pincel.fillStyle = color;
+        pincel.fillRect(x, y, base, altura);
+      }
 
-        //Variable para deshabilitar el dibujado cuando se suelta el clic izquierdo
-        onmouseup = deshabilitarDibujar;
+      //Habilita la opcion para dibujar
+      function habilitarDibujar() {
+        puedoDibujar = true;
+      }
 
-        //Variable para dibujar cuando se mueve el mouse
-        onmousemove = dibujarCirculo;
-        
+      //Deshabilita la opcion para dibujar
+      function deshabilitarDibujar() {
+        puedoDibujar = false;
+      }
+
+      //Variable para habilitar el dibujado cuando se mantiene el clic izquierdo
+      onmousedown = habilitarDibujar;
+
+      //Variable para deshabilitar el dibujado cuando se suelta el clic izquierdo
+      onmouseup = deshabilitarDibujar;
+
+      //Variable para dibujar cuando se mueve el mouse
+      onmousemove = dibujarCirculo;
+
+      //Variable para cambiar el color del pincel cuando se da clic en el area del color
+      onclick = cambiarColor;
+
+      //Variable para deshabilitar el menu contextual
+      oncontextmenu = () => false;
+
+      //Crea cuadrados de color para que sean la paleta para seleccionar
+      dibujarCuadrado("red", xRojo, yInicialCuadrados, baseCuadrados, baseCuadrados);
+      dibujarCuadrado("green", xVerde, yInicialCuadrados, baseCuadrados, baseCuadrados);
+      dibujarCuadrado("blue", xAzul, yInicialCuadrados, baseCuadrados, baseCuadrados);
+
       /*Implementar tres colores distintos para elegir y que en esa area no se pueda dibujar,
       para ello limitar con un condicional el area como en el ejercicio anterior que fue un circulo
       en este el area de cuadrangular por lo que se compara el ancho y el alto del area para elegir los colores
