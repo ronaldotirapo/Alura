@@ -67,8 +67,8 @@
       //Tiene un aumento de 10 en las coordenadas debido al radio del circulo
       function evaluarAreaParaDibujarCirculo(x , y){
         if (
-          x >= -10 &&
-          y >= -10 &&
+          x >= -(radioPincel) &&
+          y >= -(radioPincel) &&
           x <= baseCuadrados*3 + radioPincel &&
           y <= baseCuadrados + radioPincel
         ) {
