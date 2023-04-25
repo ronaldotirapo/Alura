@@ -1,4 +1,9 @@
+/*Uno de los codigos de colores que se pueden usar son el hexadecimal, 
+representada  por un # seguido de 6 numeros del 0 al F,
+en el cual cada par representa R, G y B; como tambien se puede usar el codigo rgb,
+representado por rgb("numero del 0 al 255", "numero del 0 al 255", "numero del 0 al 255")*/
 body {
+    
     background: #CCCCCC;
 }
 
