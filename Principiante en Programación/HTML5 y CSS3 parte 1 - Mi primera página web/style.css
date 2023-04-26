@@ -2,9 +2,27 @@
 representada  por un # seguido de 6 numeros del 0 al F,
 en el cual cada par representa R, G y B; como tambien se puede usar el codigo rgb,
 representado por rgb("numero del 0 al 255", "numero del 0 al 255", "numero del 0 al 255")*/
+
+/*Es importante mantener la jerarquía anidada en los selectores de elementos*/
+
 body {
-    
     background: #CCCCCC;
+}
+
+#banner {
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    height: 150px;
+    /*Cada elemento esta dentro de un bloque en el cual consta de: 
+    margin, el espaciado o margen que separa un elemento de otro
+    border, el borde que separa el bloque contenedor del margen
+    padding, el espaciado interno del bloque contenedor del elemento */
+    margin: 40px;
+    border: 10px solid #000000;
+    padding: 20px;
 }
 
 p {
@@ -13,4 +31,8 @@ p {
 
 em strong {
     color: red;
+}
+
+#mision {
+    font-size: 20px;
 }
