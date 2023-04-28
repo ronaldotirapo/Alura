@@ -5,36 +5,34 @@ que indica al navegador la version actual de HTML, HTML5-->
 <!--Es util colocar el atributo lang en la etiqueta html por temas de accesibilidad,
 tambien se puede colocar en una seccion de otro idioma por ejemplo dentro de la eiqueta span-->
 <html lang="es-PE">
-  <head>
-    <!--Es importante colocar charset, la codificacion de caracteres, con el estandar UTF-8
-    para admitir casi todos los caracteres usados en distintos idiomas del mundo-->
-    <meta charset="UTF-8" />
 
-    <!--El CSS puede ubicerse inline, en la misma etiqueta con la propiedad style, en el head como metadato o
+<head>
+  <!--Es importante colocar charset, character set, la codificacion de caracteres, con el estandar UTF-8
+    para admitir casi todos los caracteres usados en distintos idiomas del mundo-->
+  <meta charset="UTF-8" />
+
+  <!--El CSS puede ubicerse inline, en la misma etiqueta con la propiedad style, en el head como metadato o
     con la practica mas estandar que es usar css en un archivo aparte
     Se utiliza el atributo rel, relationship, para indicar la relacion con el documento html
     Se utiliza el atributo href, hyper reference, para indicar el hypertexto o URL de donde se obtendra el CSS-->
-    <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css" />
 
-    <!--Otras etiquetas utiles en el head pueden ser las siguientes-->
-    <title>Mi pagina web</title>
-    <meta name="author" content="Ronaldo Tirapo" />
-    <meta
-      name="description"
-      content="pagina web segun los contenidos de alura del curso de HTML y CSS parte 1"
-    />
-  </head>
+  <!--Otras etiquetas utiles en el head pueden ser las siguientes-->
+  <title>Mi pagina web</title>
+  <meta name="author" content="Ronaldo Tirapo" />
+  <meta name="description" content="pagina web segun los contenidos de alura del curso de HTML y CSS parte 1" />
+</head>
 
-  <body>
+<body>
 
-    <header>
-      <h1 class="titulo-principal">Barbería Alura</h1>
-    </header>
+  <header>
+    <h1 class="titulo-principal">Barbería Alura</h1>
+  </header>
 
-    <img id="banner" src="banner.jpg" />
+  <img id="banner" src="banner.jpg" />
 
-    <div class="principal">
-      <h2 class="titulo-centralizado">Sobre la Barbería Alura</h1>
+  <div class="principal">
+    <h2 class="titulo-centralizado">Sobre la Barbería Alura</h1>
 
       <!--Es mejor utilizar la etiqueta strong para marcar la importancia de algo y por temas de accesibilidad,
       si es por temas de estilo no es recomendable usar la etiqueta b, es mejor dar estilo en css con font-weight: bold-->
@@ -63,10 +61,10 @@ tambien se puede colocar en una seccion de otro idioma por ejemplo dentro de la 
         posee un padrón de excelencia y agilidad, garantizando calidad y
         satisfacción de nuestros clientes.
       </p>
-    </div>
+  </div>
 
-    <div class="diferenciales">
-      <h3 class="titulo-centralizado">Diferenciales</h2>
+  <div class="diferenciales">
+    <h3 class="titulo-centralizado">Diferenciales</h2>
       <!--Para listas no ordenadas, unordered list, se utiliza la etiqueta ul para crear el elemento
     Para listas ordenadas, ordered list, se utiliza la etiqueta ol para crear el elemento
     Para cada item de una lista se debe utlizar la etiqueta li para crear el elemento-->
@@ -79,9 +77,10 @@ tambien se puede colocar en una seccion de otro idioma por ejemplo dentro de la 
         <li class="items">Profesionales calificados</li>
       </ul>
 
-      <img src="diferenciales.jpg" class="imagenDiferenciales"/>
-    </div>
-  </body>
+      <img src="diferenciales.jpg" class="imagenDiferenciales" />
+  </div>
+</body>
+
 </html>
 
 <!--Un equipo de FrontEnd usualmente es compuesto por
