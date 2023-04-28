@@ -3,13 +3,12 @@ representada  por un # seguido de 6 numeros del 0 al F,
 en el cual cada par representa R, G y B; como tambien se puede usar el codigo rgb,
 representado por rgb("numero del 0 al 255", "numero del 0 al 255", "numero del 0 al 255")*/
 
-/*Es importante mantener la jerarquía anidada en los selectores de elementos*/
+/*Es importante mantener la jerarquía anidada en los selectores de elementos
+Es buena practica utilizar selectores de clase en vez de referenciar a los elementos directamente*/
 
-/*
-body {
-    background: #CCCCCC;
+.titulo-principal {
+    padding-left: 30px;
 }
-*/
 
 #banner {
     width: 100%;
@@ -20,7 +19,7 @@ body {
     padding: 20px;
 }
 
-h1 {
+.titulo-centralizado {
     text-align: center;
     /*
     height sirve para aumentar la altura inferior dentro del bloque del elemento
@@ -51,10 +50,6 @@ em strong {
 .diferenciales {
     background: #FFFFFF;
     padding: 30px;
-}
-
-h2 {
-    text-align: center;
 }
 
 ul {
