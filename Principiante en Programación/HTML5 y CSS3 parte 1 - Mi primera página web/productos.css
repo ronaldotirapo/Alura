@@ -1,0 +1,23 @@
+header {
+    /*background-color solo sirve para establecer un color solido  de fondo
+    a comparacion de background que permite gradientes, efectos, imagenes, etc.*/
+    background-color: #BBBBBB;
+}
+
+/*Se realiza asi para que afecte a la forma de mostrar los elemnetos de la lista,
+que por defecto es en display block*/
+nav li{
+    display: inline;
+    /*Cada lado de los atributos de margin representan: arriba, derecha, abajo, izquierda
+    Practicamente en sentido horario*/
+    margin: 0 0 0 15px;
+}
+
+/*Modfica al texto que se encuentra en la seccion de navegacion*/
+nav a{
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
