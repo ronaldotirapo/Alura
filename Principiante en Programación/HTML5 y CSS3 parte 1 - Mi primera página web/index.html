@@ -1,6 +1,7 @@
 <!--El doctype es un document type definition 
 que indica al navegador la version actual de HTML, HTML5-->
 <!DOCTYPE html>
+
 <!--Es util colocar el atributo lang en la etiqueta html por temas de accesibilidad,
 tambien se puede colocar en una seccion de otro idioma por ejemplo dentro de la eiqueta span-->
 <html lang="es-PE">
@@ -8,9 +9,13 @@ tambien se puede colocar en una seccion de otro idioma por ejemplo dentro de la 
     <!--Es importante colocar charset, la codificacion de caracteres, con el estandar UTF-8
     para admitir casi todos los caracteres usados en distintos idiomas del mundo-->
     <meta charset="UTF-8" />
+
     <!--El CSS puede ubicerse inline, en la misma etiqueta con la propiedad style, en el head como metadato o
-    con la practica mas estandar que es usar css en un archivo aparte-->
+    con la practica mas estandar que es usar css en un archivo aparte
+    Se utiliza el atributo rel, relationship, para indicar la relacion con el documento html
+    Se utiliza el atributo href, hyper reference, para indicar el hypertexto o URL de donde se obtendra el CSS-->
     <link rel="stylesheet" href="style.css" />
+
     <!--Otras etiquetas utiles en el head pueden ser las siguientes-->
     <title>Mi pagina web</title>
     <meta name="author" content="Ronaldo Tirapo" />
@@ -23,34 +28,54 @@ tambien se puede colocar en una seccion de otro idioma por ejemplo dentro de la 
   <body>
     <img id="banner" src="banner.jpg" />
 
-    <h1>Sobre la Barbería Alura</h1>
-    <!--Es mejor utilizar la etiqueta strong para marcar la importancia de algo y por temas de accesibilidad,
-    si es por temas de estilo no es recomendable usar la etiqueta b, es mejor dar estilo en css con font-weight: bold-->
-    <p>
-      Ubicada en el corazón de la ciudad, la
-      <strong>Barbería Alura</strong> trae para el mercado lo que hay de mejor
-      para su cabello y barba. Fundada en 2020, la Barbería Alura ya es destaque
-      en la ciudad y conquista nuevos clientes diariamente.
-    </p>
+    <div class="principal">
+      <h1>Sobre la Barbería Alura</h1>
 
-    <!--Es mejor utilizar la etiqueta em para marcar distincion de algo y por temas de accesibilidad,
-    si es por temas de estilo no es recomendable utilizar la etiqueta i, es mejor dar estilo en css con font-style: italic-->
-    <p id="mision">
-      <em>
-        Nuestra misión es:
-        <strong>
-          "Proporcionar autoestima y calidad de vida a nuestros clientes".
-        </strong>
-      </em>
-    </p>
+      <!--Es mejor utilizar la etiqueta strong para marcar la importancia de algo y por temas de accesibilidad,
+      si es por temas de estilo no es recomendable usar la etiqueta b, es mejor dar estilo en css con font-weight: bold-->
+      <p>
+        Ubicada en el corazón de la ciudad, la
+        <strong>Barbería Alura</strong> trae para el mercado lo que hay de mejor
+        para su cabello y barba. Fundada en 2020, la Barbería Alura ya es
+        destaque en la ciudad y conquista nuevos clientes diariamente.
+      </p>
 
-    <p>
-      Ofrecemos profesionales experimentados que están constantemente observando
-      los cambios y movimiento en el mundo de la moda, para así ofrecer a
-      nuestros clientes las últimas tendencias. El atendimiento posee un padrón
-      de excelencia y agilidad, garantizando calidad y satisfacción de nuestros
-      clientes.
-    </p>
+      <!--Es mejor utilizar la etiqueta em para marcar distincion de algo y por temas de accesibilidad,
+      si es por temas de estilo no es recomendable utilizar la etiqueta i, es mejor dar estilo en css con font-style: italic-->
+      <p id="mision">
+        <em>
+          Nuestra misión es:
+          <strong>
+            "Proporcionar autoestima y calidad de vida a nuestros clientes".
+          </strong>
+        </em>
+      </p>
+
+      <p>
+        Ofrecemos profesionales experimentados que están constantemente
+        observando los cambios y movimiento en el mundo de la moda, para así
+        ofrecer a nuestros clientes las últimas tendencias. El atendimiento
+        posee un padrón de excelencia y agilidad, garantizando calidad y
+        satisfacción de nuestros clientes.
+      </p>
+    </div>
+
+    <div class="diferenciales">
+      <h2>Diferenciales</h2>
+      <!--Para listas no ordenadas, unordered list, se utiliza la etiqueta ul para crear el elemento
+    Para listas ordenadas, ordered list, se utiliza la etiqueta ol para crear el elemento
+    Para cada item de una lista se debe utlizar la etiqueta li para crear el elemento-->
+      <ul>
+        <!--El atributo class sirve para aplicar los mismos estilos a varios elementos 
+      a comparacion de el atributo id que sirve para un unico elemento-->
+        <li class="items">Atencion al cliente personalizada</li>
+        <li class="items">Espacio diferenciado</li>
+        <li class="items">Localizacion</li>
+        <li class="items">Profesionales calificados</li>
+      </ul>
+
+      <img src="diferenciales.jpg" class="imagenDiferenciales"/>
+    </div>
   </body>
 </html>
 

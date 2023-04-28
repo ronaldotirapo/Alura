@@ -5,34 +5,81 @@ representado por rgb("numero del 0 al 255", "numero del 0 al 255", "numero del 0
 
 /*Es importante mantener la jerarquía anidada en los selectores de elementos*/
 
+/*
 body {
     background: #CCCCCC;
 }
+*/
 
 #banner {
     width: 100%;
 }
 
+.principal {
+    background: #CCCCCC;
+    padding: 20px;
+}
+
 h1 {
     text-align: center;
+    /*
+    height sirve para aumentar la altura inferior dentro del bloque del elemento
     height: 150px;
+    */
     /*Cada elemento esta dentro de un bloque en el cual consta de: 
     margin, el espaciado o margen que separa un elemento de otro
     border, el borde que separa el bloque contenedor del margen
-    padding, el espaciado interno del bloque contenedor del elemento */
+    padding, el espaciado interno del bloque contenedor del elemento
     margin: 40px;
     border: 10px solid #000000;
     padding: 20px;
+    */
 }
 
 p {
     text-align: center;
 }
 
+#mision {
+    font-size: 20px;
+}
+
 em strong {
     color: red;
 }
 
-#mision {
-    font-size: 20px;
+.diferenciales {
+    background: #FFFFFF;
+    padding: 30px;
+}
+
+h2 {
+    text-align: center;
+}
+
+ul {
+    /*Para cambiar la presentacion de los elementos, el display, modificamos su atributo por defecto
+    el cual es inline para img, a, span, etc; y block para ul, ol, div, p, h1, header, footer, form, etc.
+    El atributo inline hace que un elemento no inicie en una linea nueva y solo ocupa todo el espacio necesario,
+    ademas su margin y padding horizontal de izquierda y derecha no se puede establecer, solo su vertical,
+    tampoco se puede establecer width y height, su uso es recomendado para elementos de texto
+    El atributo block hace que un elemento inicie en una linea nueva y ocupe todo el espacio disponible,
+    pueden tener width, height, margin y padding definidos, su uso es recomendado
+    para parrafos y encabezados que requieren un espacio vertical definido
+    El atributo inline-block hace que un elemento no inicia en una nueva linea, 
+    permite establecer el margin, padding, width y height, su uso es recomendao
+    para imagenes o botones que requieren un ancho y alto definido pero deben aparecer en linea*/
+    display: inline-block;
+    vertical-align: top;
+    width: 20%;
+    margin-right: 15%;
+
+}
+
+.items {
+    font-style: italic;
+}
+
+.imagenDiferenciales {
+    width: 50%;
 }
