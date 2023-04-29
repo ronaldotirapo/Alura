@@ -2,11 +2,41 @@ header {
     /*background-color solo sirve para establecer un color solido  de fondo
     a comparacion de background que permite gradientes, efectos, imagenes, etc.*/
     background-color: #BBBBBB;
+    padding: 20px 0;
+}
+
+.caja {
+    /*La propiedad position static sigue el flujo normal de los elementos 
+    y no permite valores de top, right, bottom y left
+    La propiedad position relative sigue el flujo normal de los elementos,
+    ocupan su espacio original en la págna
+    y permite valores de top, right, bottom y left
+    La propiedad position absolute se determina en funcion a su contenedor de posicionamiento mas cercano,
+    no ocupan su espacio original en la págna
+    y permite valores de top, right, bottom y left
+    La propiedad position fixed se determina en funcion al tamaño de la página,
+    no ocupan su espacio original en la págna
+    y permite valores de top, right, bottom y left*/
+    position: relative;
+    width: 940px;
+    margin: 0 auto;
+}
+
+nav {
+    /*La propiedad position modificar el flujo normal de la posicion de los elementos en la pagina web
+    Por defecto es static, pero puede ser relative, absolute o fixed
+    Se diferencia con display en que position altera el flujo de la posicion respecto a la pagina
+    y display la forma de mostrar los elementos en su bloque respecto a otros
+    Debe ser utilizado con cuidado al tratar de hacer un diseño responsivo ya que puede ocultar elementos
+    o hacer que no se muestren donde deberían*/
+    position: absolute;
+    top: 110px;
+    right: 0;
 }
 
 /*Se realiza asi para que afecte a la forma de mostrar los elemnetos de la lista,
 que por defecto es en display block*/
-nav li{
+nav li {
     display: inline;
     /*Cada lado de los atributos de margin representan: arriba, derecha, abajo, izquierda
     Practicamente en sentido horario*/
@@ -14,7 +44,7 @@ nav li{
 }
 
 /*Modfica al texto que se encuentra en la seccion de navegacion*/
-nav a{
+nav a {
     text-transform: uppercase;
     color: #000000;
     font-weight: bold;

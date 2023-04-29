@@ -53,7 +53,7 @@ em strong {
 }
 
 ul {
-    /*Para cambiar la presentacion de los elementos, el display, modificamos su atributo por defecto
+    /*Para cambiar la presentacion de los elementos respecto a otros, el display, modificamos su atributo por defecto
     el cual es inline para img, a, span, etc; y block para ul, ol, div, p, h1, header, footer, form, etc.
     El atributo inline hace que un elemento no inicie en una linea nueva y solo ocupa todo el espacio necesario,
     ademas su margin y padding horizontal de izquierda y derecha no se puede establecer, solo su vertical,
