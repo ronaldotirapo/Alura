@@ -1,49 +1,57 @@
 header {
-    /*background-color solo sirve para establecer un color solido  de fondo
-    a comparacion de background que permite gradientes, efectos, imagenes, etc.*/
+    /*background-color solo sirve para establecer un color sólido  de fondo
+    a comparación de background que permite gradientes, efectos, imágenes, etc.*/
     background-color: #BBBBBB;
     padding: 20px 0;
 }
 
 .caja {
+    /*La propiedad position modifica el flujo normal de la posición de los elementos en la página web
+    Por defecto es static, pero puede ser relative, absolute, fixed o sticky
+    Se diferencia con display en que position altera el flujo de la posición respecto a la página
+    y display la forma de mostrar los elementos en su bloque respecto a otros
+    Debe ser utilizado con cuidado al tratar de hacer un diseño responsivo ya que puede ocultar elementos
+    o hacer que no se muestren donde deberían*/
+
     /*La propiedad position static sigue el flujo normal de los elementos 
     y no permite valores de top, right, bottom y left
     La propiedad position relative sigue el flujo normal de los elementos,
-    ocupan su espacio original en la págna
+    ocupan su espacio original en la página, es decir dejarán un espacio cuando se muevan
+    y permite valores de top, right, bottom y left según su posición inicial en la página
+    La propiedad position absolute se determina en función a su contenedor padre más cercano (excepto si tiene position static),
+    no ocupan su espacio original en la página, es decir no dejan un espacio cuando se mueven
     y permite valores de top, right, bottom y left
-    La propiedad position absolute se determina en funcion a su contenedor de posicionamiento mas cercano,
-    no ocupan su espacio original en la págna
+    La propiedad position fixed pondrá al elemento en una posición fija al tamaño de la página y no se moverá incluso cuando se hace scroll,
+    no respeta un contenedor padre, no ocupan su espacio original en la página, es decir no dejan un espacio cuando se mueven
     y permite valores de top, right, bottom y left
-    La propiedad position fixed se determina en funcion al tamaño de la página,
-    no ocupan su espacio original en la págna
-    y permite valores de top, right, bottom y left*/
+    La propiedad position sticky se comporta como position relative
+    hasta que alcanza un umbral en top, right, bottom y left y pasa a comportarse como position fixed*/
+
     position: relative;
     width: 940px;
+    /*Para centrar un div u otros elementos se suele utilizar un 
+    margin: auto (centrar horizontal y verticalmente)
+    margin: 0 auto (centrar horizontal)*/
     margin: 0 auto;
 }
 
 nav {
-    /*La propiedad position modificar el flujo normal de la posicion de los elementos en la pagina web
-    Por defecto es static, pero puede ser relative, absolute o fixed
-    Se diferencia con display en que position altera el flujo de la posicion respecto a la pagina
-    y display la forma de mostrar los elementos en su bloque respecto a otros
-    Debe ser utilizado con cuidado al tratar de hacer un diseño responsivo ya que puede ocultar elementos
-    o hacer que no se muestren donde deberían*/
     position: absolute;
     top: 110px;
     right: 0;
 }
 
-/*Se realiza asi para que afecte a la forma de mostrar los elemnetos de la lista,
+/*Se realiza así para que afecte a la forma de mostrar los elemnetos de la lista,
 que por defecto es en display block*/
 nav li {
     display: inline;
     /*Cada lado de los atributos de margin representan: arriba, derecha, abajo, izquierda
-    Practicamente en sentido horario*/
+    Prácticamente en sentido horario
+    Si se omite left es igual a right, si se omite bottom es igual a top y si se omite right es igual a top*/
     margin: 0 0 0 15px;
 }
 
-/*Modfica al texto que se encuentra en la seccion de navegacion*/
+/*Modfica al texto, elemento a, que se encuentra en la sección nav*/
 nav a {
     text-transform: uppercase;
     color: #000000;
