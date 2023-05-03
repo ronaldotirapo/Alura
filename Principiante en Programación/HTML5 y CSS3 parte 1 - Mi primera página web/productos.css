@@ -24,11 +24,13 @@ header {
     La propiedad position fixed pondrá al elemento en una posición fija al tamaño de la página y no se moverá incluso cuando se hace scroll,
     no respeta un contenedor padre, no ocupan su espacio original en la página, es decir no dejan un espacio cuando se mueven
     y permite valores de top, right, bottom y left
-    La propiedad position sticky se comporta como position relative
-    hasta que alcanza un umbral en top, right, bottom y left y pasa a comportarse como position fixed*/
-
+    La propiedad position sticky se comporta como position relative hasta que alcanza un umbral de desplazamiento 
+    en top, right, bottom o left y pasa a comportarse como position fixed
+    Se utiliza para hacer esta característica sin JavaScript*/
     position: relative;
+
     width: 940px;
+
     /*Para centrar un div u otros elementos se suele utilizar un 
     margin: auto (centrar horizontal y verticalmente)
     margin: 0 auto (centrar horizontal)*/
@@ -45,6 +47,7 @@ nav {
 que por defecto es en display block*/
 nav li {
     display: inline;
+
     /*Cada lado de los atributos de margin representan: arriba, derecha, abajo, izquierda
     Prácticamente en sentido horario
     Si se omite left es igual a right, si se omite bottom es igual a top y si se omite right es igual a top*/
@@ -58,6 +61,18 @@ nav a {
     font-weight: bold;
     font-size: 22px;
     text-decoration: none;
+}
+
+/*Esta es una pseudoclase, son dos puntos seguido de una palabra clave como :hover, 
+que se añade junto a un selector para definir un estado especial de todo el elemento
+Se diferencia de los pseudoelementos en que estos solo aplican estilos a una parte del elemento
+Hay algunas pseudoclases que son funcionales para lo que se añade paréntensis, como :dir()
+
+:hover aplica las propiedades CSS definidas cuando se pasa el mouse sobre el elemento
+*/
+nav a:hover {
+    color: #C78C19;
+    text-decoration: underline;
 }
 
 .productos {
@@ -74,6 +89,7 @@ nav a {
     vertical-align: top;
     margin: 0 1.5%;
     padding: 30px 15px;
+
     /*Cada elemento está en un bloque o caja, "box", 
     por lo cual box-sizing modifica como se calcula el tamaño de alto y ancho total de la caja
     Su valor puede ser: 
@@ -87,15 +103,32 @@ nav a {
     sino al ancho y largo total que debe medir la caja por lo que se incluye padding y border al tamaño total de la caja 
     y el ancho y largo del contenido de la caja se calculan con el espacio sobrante */
     box-sizing: border-box;
+
+    /*Para colocar los valores de border-width, border-style y border-color en un solo atributo se colocar en ese orden*/
     border: 2px solid #000000;
+
     /*El borde de los elementos se aplica en sentido horario, 
     empezando por el borde superior izquierdo, borde superior derecho, borde inferior derecho y borde inferior izquierdo */
     border-radius: 10px;
 }
 
+.productos li:hover {
+    border-color: #C78C19;
+}
+
+/*:active aplica las propiedades CSS cuando se da clic en el elemento*/
+.productos li:active {
+    border-color: #088C19
+}
+
 .productos h2 {
     font-size: 30px;
     font-weight: bold;
+}
+
+/*Aplica los estilos al elemento h2 cuando la pseudoclase :hover se activa*/
+.productos li:hover h2 {
+    font-size: 33px;
 }
 
 .productos-descripcion {
