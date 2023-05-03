@@ -88,6 +88,9 @@ nav a {
     y el ancho y largo del contenido de la caja se calculan con el espacio sobrante */
     box-sizing: border-box;
     border: 2px solid #000000;
+    /*El borde de los elementos se aplica en sentido horario, 
+    empezando por el borde superior izquierdo, borde superior derecho, borde inferior derecho y borde inferior izquierdo */
+    border-radius: 10px;
 }
 
 .productos h2 {
