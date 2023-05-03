@@ -59,3 +59,48 @@ nav a {
     font-size: 22px;
     text-decoration: none;
 }
+
+.productos {
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+
+.productos li {
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 15px;
+    /*Cada elemento está en un bloque o caja, "box", 
+    por lo cual box-sizing modifica como se calcula el tamaño de alto y ancho total de la caja
+    Su valor puede ser: 
+    
+    content-box (por defecto),
+    Con el cual el width y height establecidos se aplican al contenido de la caja,
+    y para calcular el ancho y largo total de la caja se le suman padding y border horizontal y vertical
+    
+    border-box,
+    Con el cual el width y height establecidos no se aplican al contenido de la caja,
+    sino al ancho y largo total que debe medir la caja por lo que se incluye padding y border al tamaño total de la caja 
+    y el ancho y largo del contenido de la caja se calculan con el espacio sobrante */
+    box-sizing: border-box;
+    border: 2px solid #000000;
+}
+
+.productos h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.productos-descripcion {
+    font-size: 18px;
+}
+
+.productos-precio {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}

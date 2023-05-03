@@ -1,35 +1,66 @@
 <!DOCTYPE html>
 <html lang="es-PE">
-
-<head>
-  <title>Productos - Barbería Alura</title>
-  <meta charset="UTF-8" />
-  <!--Un archivo reset.css puede ser desarrollado por una comunidad de desarrolladores o personalizado
+  <head>
+    <title>Productos - Barbería Alura</title>
+    <meta charset="UTF-8" />
+    <!--Un archivo reset.css puede ser desarrollado por una comunidad de desarrolladores o personalizado
     para reducir las inconsistencias de diseño que se pueden presentar al desarrollar una página web
     ya que el navegador aplica estilos por defecto-->
-  <link rel="stylesheet" href="reset.css" />
-  <link rel="stylesheet" href="productos.css" />
-  <meta name="author" content="Ronaldo Tirapo" />
-  <meta name="description" content="Página segun los contenidos de Alura del curso de HTML y CSS parte 2" />
-</head>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="productos.css" />
+    <meta name="author" content="Ronaldo Tirapo" />
+    <meta
+      name="description"
+      content="Página segun los contenidos de Alura del curso de HTML y CSS parte 2"
+    />
+  </head>
 
-<body>
-  <!--Encabezado-->
-  <header>
-    <div class="caja">
-      <h1>
-        <img src="imagenes/logo.png" />
-      </h1>
-      <nav>
-        <ul>
-          <!--El elemento a, anchor, establece o "ancla" un enlace hacia otras páginas internas o externas-->
-          <li><a href="index.html">Home</a></li>
-          <li><a href="productos.html">Productos</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-</body>
+  <body>
+    <!--Encabezado-->
+    <header>
+      <div class="caja">
+        <h1>
+          <img src="imagenes/logo.png" />
+        </h1>
+        <nav>
+          <ul>
+            <!--El elemento a, anchor, establece o "ancla" un enlace hacia otras páginas internas o externas-->
+            <li><a href="index.html">Home</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
+    <!--Contenido principal-->
+    <main>
+      <ul class="productos">
+        <li>
+          <h2>Cabello</h2>
+          <img src="imagenes/cabello.jpg" />
+          <p class="productos-descripcion">
+            Con tijera o máquina, a gusto del cliente
+          </p>
+          <p class="productos-precio">$10.00</p>
+        </li>
+        <li>
+          <h2>Barba</h2>
+          <img src="imagenes/barba.jpg" />
+          <p class="productos-descripcion">
+            Corte y diseño profesional de barba
+          </p>
+          <p class="productos-precio">$8.00</p>
+        </li>
+        <li>
+          <h2>Cabello + Barba</h2>
+          <img src="imagenes/cabello+barba.jpg" />
+          <p class="productos-descripcion">
+            Paquete completo de cabello + barba
+          </p>
+          <p class="productos-precio">$15.00</p>
+        </li>
+      </ul>
+    </main>
+  </body>
 </html>
