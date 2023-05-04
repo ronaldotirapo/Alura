@@ -29,11 +29,10 @@ header {
     Se utiliza para hacer esta característica sin JavaScript*/
     position: relative;
 
-    width: 940px;
-
-    /*Para centrar un div u otros elementos se suele utilizar un 
-    margin: auto (centrar horizontal y verticalmente)
+    /*Para centrar un div u otros elementos con display: block se suele dar un width específico y luego un 
+    margin: auto (centrar horizontal y verticalmente) o
     margin: 0 auto (centrar horizontal)*/
+    width: 940px;
     margin: 0 auto;
 }
 
@@ -84,6 +83,8 @@ nav a:hover {
 
 .productos li {
     display: inline-block;
+
+    /*text-align: center alinea los elementos inline o inline-block al centro*/
     text-align: center;
     width: 30%;
     vertical-align: top;
