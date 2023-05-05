@@ -31,7 +31,21 @@
 
     <!--Elemento semántico de Contenido principal-->
     <main>
-        test
+        <!--Elemento semántico para un formulario-->
+        <form>
+            <!--La etiqueta label se relaciona con el id de una etiqueta input mediante la el atributo for-->
+            <label for="nombreyapellido">Nombre y apellido</label>
+            <input type="text" id="nombreyapellido">
+
+            <label for="correoelectronico">Correo electrónico</label>
+            <input type="text" id="correoelectronico">
+            
+            <label for="telefono">Teléfono</label>
+            <input type="text" id="telefono">
+            <!--La etiqueta input con type submit crea un botón con el texto equivalente a "enviar" en el idioma configurado de la página
+            El texto del botón puede editarse con el atributo value-->
+            <input type="submit" value="Enviar formulario">
+        </form>
     </main>
 
     <!--Elemento semántico de Pie de página-->

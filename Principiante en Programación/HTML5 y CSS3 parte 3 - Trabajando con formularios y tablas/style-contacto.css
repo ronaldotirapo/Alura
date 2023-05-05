@@ -1,37 +1,10 @@
 header {
-    /*background-color solo sirve para establecer un color sólido  de fondo
-    a comparación de background que permite gradientes, efectos, imágenes, etc.*/
     background-color: #BBBBBB;
     padding: 20px 0;
 }
 
 .caja {
-    /*La propiedad position modifica el flujo normal de la posición de los elementos en la página web
-    Por defecto es static, pero puede ser relative, absolute, fixed o sticky
-    Se diferencia con display en que position altera el flujo de la posición respecto a la página
-    y display la forma de mostrar los elementos en su bloque respecto a otros
-    Debe ser utilizado con cuidado al tratar de hacer un diseño responsivo ya que puede ocultar elementos
-    o hacer que no se muestren donde deberían*/
-
-    /*La propiedad position static sigue el flujo normal de los elementos 
-    y no permite valores de top, right, bottom y left
-    La propiedad position relative sigue el flujo normal de los elementos,
-    ocupan su espacio original en la página, es decir dejarán un espacio cuando se muevan
-    y permite valores de top, right, bottom y left según su posición inicial en la página
-    La propiedad position absolute se determina en función a su contenedor padre más cercano (excepto si tiene position static),
-    no ocupan su espacio original en la página, es decir no dejan un espacio cuando se mueven
-    y permite valores de top, right, bottom y left
-    La propiedad position fixed pondrá al elemento en una posición fija al tamaño de la página y no se moverá incluso cuando se hace scroll,
-    no respeta un contenedor padre, no ocupan su espacio original en la página, es decir no dejan un espacio cuando se mueven
-    y permite valores de top, right, bottom y left
-    La propiedad position sticky se comporta como position relative hasta que alcanza un umbral de desplazamiento 
-    en top, right, bottom o left y pasa a comportarse como position fixed
-    Se utiliza para hacer esta característica sin JavaScript*/
     position: relative;
-
-    /*Para centrar un div u otros elementos con display: block se suele dar un width específico y luego un 
-    margin: auto (centrar horizontal y verticalmente) o
-    margin: 0 auto (centrar horizontal)*/
     width: 940px;
     margin: 0 auto;
 }
@@ -42,18 +15,11 @@ nav {
     right: 0;
 }
 
-/*Se realiza así para que afecte a la forma de mostrar los elemnetos de la lista,
-que por defecto es en display block*/
 nav li {
     display: inline;
-
-    /*Cada lado de los atributos de margin representan: arriba, derecha, abajo, izquierda
-    Prácticamente en sentido horario
-    Si se omite left es igual a right, si se omite bottom es igual a top y si se omite right es igual a top*/
     margin: 0 0 0 15px;
 }
 
-/*Modfica al texto, elemento a, que se encuentra en la sección nav*/
 nav a {
     text-transform: uppercase;
     color: #000000;
@@ -62,84 +28,9 @@ nav a {
     text-decoration: none;
 }
 
-/*Esta es una pseudoclase, son dos puntos seguido de una palabra clave como :hover, 
-que se añade junto a un selector para definir un estado especial de todo el elemento
-Se diferencia de los pseudoelementos en que estos solo aplican estilos a una parte del elemento
-Hay algunas pseudoclases que son funcionales para lo que se añade paréntensis, como :dir()
-
-:hover aplica las propiedades CSS definidas cuando se pasa el mouse sobre el elemento
-*/
 nav a:hover {
     color: #C78C19;
     text-decoration: underline;
-}
-
-.productos {
-    width: 940px;
-    margin: 0 auto;
-    padding: 50px;
-}
-
-
-.productos li {
-    display: inline-block;
-
-    /*text-align: center alinea los elementos inline o inline-block al centro*/
-    text-align: center;
-    width: 30%;
-    vertical-align: top;
-    margin: 0 1.5%;
-    padding: 30px 15px;
-
-    /*Cada elemento está en un bloque o caja, "box", 
-    por lo cual box-sizing modifica como se calcula el tamaño de alto y ancho total de la caja
-    Su valor puede ser: 
-    
-    content-box (por defecto),
-    Con el cual el width y height establecidos se aplican al contenido de la caja,
-    y para calcular el ancho y largo total de la caja se le suman padding y border horizontal y vertical
-    
-    border-box,
-    Con el cual el width y height establecidos no se aplican al contenido de la caja,
-    sino al ancho y largo total que debe medir la caja por lo que se incluye padding y border al tamaño total de la caja 
-    y el ancho y largo del contenido de la caja se calculan con el espacio sobrante */
-    box-sizing: border-box;
-
-    /*Para colocar los valores de border-width, border-style y border-color en un solo atributo se colocar en ese orden*/
-    border: 2px solid #000000;
-
-    /*El borde de los elementos se aplica en sentido horario, 
-    empezando por el borde superior izquierdo, borde superior derecho, borde inferior derecho y borde inferior izquierdo */
-    border-radius: 10px;
-}
-
-.productos li:hover {
-    border-color: #C78C19;
-}
-
-/*:active aplica las propiedades CSS cuando se da clic en el elemento*/
-.productos li:active {
-    border-color: #088C19
-}
-
-.productos h2 {
-    font-size: 30px;
-    font-weight: bold;
-}
-
-/*Aplica los estilos al elemento h2 cuando la pseudoclase :hover se activa*/
-.productos li:hover h2 {
-    font-size: 33px;
-}
-
-.productos-descripcion {
-    font-size: 18px;
-}
-
-.productos-precio {
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 10px;
 }
 
 footer{
@@ -149,8 +40,29 @@ footer{
 }
 
 .copyright {
-    /*El tamaño por defecto de los textos es de 16px*/
     color: #FFFFFF;
     font-size: 13px;
     margin: 20px;
+}
+
+main {
+    width: 940px;
+    margin: 0 auto;
+}
+
+form {
+    margin: 40px 0;
+}
+
+form label {
+    display: block;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+form input {
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 25px;
+    width: 50%;
 }
