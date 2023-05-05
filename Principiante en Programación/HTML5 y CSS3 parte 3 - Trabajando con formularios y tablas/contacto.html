@@ -15,7 +15,9 @@
     <header>
         <div class="caja">
             <h1>
-                <img src="../HTML5 y CSS3 parte 2 - Posicionamiento, listas y navegación/imagenes/logo.png" />
+                <!--El atributo alt se utiliza para mejorar la accesibilidad describiendo la imagen con un texto alternativo-->
+                <img src="../HTML5 y CSS3 parte 2 - Posicionamiento, listas y navegación/imagenes/logo.png"
+                    alt="Logo de la Barbería Alura" />
             </h1>
             <nav>
                 <ul>
@@ -36,25 +38,32 @@
     <main>
         <!--Elemento semántico para un formulario-->
         <form>
-            <!--Todos los elementos input son elementos que contendrán un atributo value que se enviaría al servidor-->
+            <!--Todos los elementos input son elementos que contendrán un atributo value que se enviaría al servidor
+            Es importante colocar el type correcto para asegurar la semántica y la accesibilidad en dispositivos móviles
+            Algunos atributos que pueden ayudar a la accesibilidad son:
+            placeholder para mostrar un texto modelo en el campo para escribir, 
+            required para establecer que el campo debe ser llenado y estar en el formato correcto (importante poner el type correcto),
+            checked para marcar automáticamente elementos con atributo type radio o checkbox-->
 
             <!--El elemento label se relaciona con el id del elemento input mediante el atributo for-->
             <label for="nombreyapellido">Nombre y apellido</label>
-            <input class="input-padron" type="text" id="nombreyapellido" />
+            <input class="input-padron" type="text" id="nombreyapellido" required />
 
             <label for="correoelectronico">Correo electrónico</label>
-            <input class="input-padron" type="text" id="correoelectronico" />
+            <input class="input-padron" type="email" id="correoelectronico" required placeholder="email@dominio.com" />
 
             <label for="telefono">Teléfono</label>
-            <input class="input-padron" type="text" id="telefono" />
+            <input class="input-padron" type="tel" id="telefono" required placeholder="(xx) xxxx xxxx" />
 
             <!--El elemento textarea crea un area de texto 
-        y se puede modificar sus columnas y filas con los atrinutos cols y rows respectivamente-->
+            y se puede modificar sus columnas y filas con los atrinutos cols y rows respectivamente-->
             <label for="mensaje">Mensaje</label>
-            <textarea class="input-padron" cols="70" rows="10" id="mensaje"></textarea>
+            <textarea class="input-padron" cols="70" rows="10" id="mensaje" required></textarea>
 
-            <div>
-                <p>¿Cómo le gustaría que le contactemos?</p>
+            <!--El elemento semántico fieldset es utilizado para agrupar una sección de controles o inputs de un formulario y
+            el elemento legend escribir el título de la sección fieldset del formulario-->
+            <fieldset>
+                <legend>¿Cómo le gustaría que le contactemos?</legend>
 
                 <!--El atributo name se suele colocar para especificar el nombre del control
                 además que este será enviado al servidor junto con el value del elemento, formando un par name-value
@@ -77,25 +86,25 @@
                 </label>
 
                 <label for="radio-whatsapp">
-                    <input type="radio" name="contacto" value="whatsapp" id="radio-whatsapp" />
+                    <input type="radio" name="contacto" value="whatsapp" id="radio-whatsapp" checked />
                     Whatsapp
                 </label>
-            </div>
+            </fieldset>
 
-            <div>
-                <p>¿En qué horario prefiere ser atendido?</p>
+            <fieldset>
+                <legend>¿En qué horario prefiere ser atendido?</legend>
                 <!--Para colocar  items en el elemento select se necesita el elemento option-->
                 <select>
                     <option value="mañana">Mañana</option>
                     <option value="tarde">Tarde</option>
                     <option value="noche">Noche</option>
                 </select>
-            </div>
+            </fieldset>
 
             <!--Para no tener que anclar los label con los input mediante los atributos id y for
             se puede anidar los elementos que se desean de manera que se enlazan automáticamente-->
             <label class="checkbox-novedades">
-                <input type="checkbox" value="novedades" />
+                <input type="checkbox" value="novedades" checked />
                 ¿Le gustaría recibir novedades de la Barbería Alura?
             </label>
 
@@ -107,7 +116,8 @@
 
     <!--Elemento semántico de Pie de página-->
     <footer>
-        <img src="../HTML5 y CSS3 parte 2 - Posicionamiento, listas y navegación/imagenes/logo-blanco.png" />
+        <img src="../HTML5 y CSS3 parte 2 - Posicionamiento, listas y navegación/imagenes/logo-blanco.png"
+            alt="Logo de la Barbería Alura" />
         <p class="copyright">&copy Copyright Barbería Alura - 2023</p>
     </footer>
 </body>

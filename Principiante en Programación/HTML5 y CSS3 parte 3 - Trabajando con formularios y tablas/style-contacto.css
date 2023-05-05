@@ -55,7 +55,7 @@ form {
 }
 
 /*Para utilizar los mismos estilos en distintos selectores se utiliza la coma*/
-form label, form p {
+form label, form legend {
     display: block;
     font-size: 20px;
     margin: 0 0 10px;
