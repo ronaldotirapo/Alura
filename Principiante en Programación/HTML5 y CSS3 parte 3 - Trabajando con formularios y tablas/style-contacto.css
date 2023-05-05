@@ -104,10 +104,26 @@ Y si se combinan las etiquetas su "peso" se suma*/
     background: darkorange;
 
     /*La propiedad transform "transforma" el elemento, es decir cambia su tamaño o comportamiento
-    Tiene distintos valores posibles, 
+    Tiene distintos valores posibles:
     como scale() para aumentar el tamaño en una proporción o 
     rotate() para rotar el elemento en su eje según una cantidad en ángulos deg
     Se pueden aplicar varios valores si se separan por espacio*/
     transform: scale(1.2);
     transform-origin: left;
+}
+
+table {
+    margin: 40px;
+}
+
+thead {
+    background: #555555;
+    color: white;
+    font-weight: bold;
+}
+
+td,
+th {
+    border: 1px solid #000000;
+    padding: 8px 15px;
 }

@@ -36,7 +36,7 @@
 
     <!--Elemento semántico de Contenido principal-->
     <main>
-        <!--Elemento semántico para un formulario-->
+        <!--Elemento para agrupar elementos de un formulario-->
         <form>
             <!--Todos los elementos input son elementos que contendrán un atributo value que se enviaría al servidor
             Es importante colocar el type correcto para asegurar la semántica y la accesibilidad en dispositivos móviles
@@ -60,7 +60,7 @@
             <label for="mensaje">Mensaje</label>
             <textarea class="input-padron" cols="70" rows="10" id="mensaje" required></textarea>
 
-            <!--El elemento semántico fieldset es utilizado para agrupar una sección de controles o inputs de un formulario y
+            <!--El elemento fieldset es utilizado para agrupar una sección de controles o inputs de un formulario y
             el elemento legend escribir el título de la sección fieldset del formulario-->
             <fieldset>
                 <legend>¿Cómo le gustaría que le contactemos?</legend>
@@ -110,8 +110,55 @@
 
             <!--El elemento input con type submit crea un botón con el texto equivalente a "enviar" en el idioma configurado de la página
             El texto del botón puede editarse con el atributo value-->
-            <input type="submit" value="Enviar formulario" class="enviar"/>
+            <input type="submit" value="Enviar formulario" class="enviar" />
         </form>
+
+        <!--table es el elemento para definir una tabla
+        Para agrupar elementos complejos en una table se utiliza:
+        thead para el encabezado, solo puede haber uno
+        tbody para el cuerpo, puede haber varios y debe haber uno si hay thead o tfoot
+        tfoot para el pie, solo debe haber uno
+        Para definir una fila en la tabla se utiliza tr, table row
+        Para definir un contenido de encabezado de tabla se utiliza th, table header
+        Para definir un contenido en la fila de la tabla se utiliza td, table data-->
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        Día
+                    </th>
+                    <th>
+                        Hora
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        Lunes
+                    </td>
+                    <td>
+                        8am - 20pm
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Miércoles
+                    </td>
+                    <td>
+                        8am - 20pm
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Viernes
+                    </td>
+                    <td>
+                        8am - 20pm
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </main>
 
     <!--Elemento semántico de Pie de página-->

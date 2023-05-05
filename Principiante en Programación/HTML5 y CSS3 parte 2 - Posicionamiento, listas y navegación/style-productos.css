@@ -11,19 +11,23 @@ header {
     Se diferencia con display en que position altera el flujo de la posición respecto a la página
     y display la forma de mostrar los elementos en su bloque respecto a otros
     Debe ser utilizado con cuidado al tratar de hacer un diseño responsivo ya que puede ocultar elementos
-    o hacer que no se muestren donde deberían*/
+    o hacer que no se muestren donde deberían
 
-    /*La propiedad position static sigue el flujo normal de los elementos 
+    La propiedad position static sigue el flujo normal de los elementos 
     y no permite valores de top, right, bottom y left
+
     La propiedad position relative sigue el flujo normal de los elementos,
     ocupan su espacio original en la página, es decir dejarán un espacio cuando se muevan
     y permite valores de top, right, bottom y left según su posición inicial en la página
+
     La propiedad position absolute se determina en función a su contenedor padre más cercano (excepto si tiene position static),
     no ocupan su espacio original en la página, es decir no dejan un espacio cuando se mueven
     y permite valores de top, right, bottom y left
+    
     La propiedad position fixed pondrá al elemento en una posición fija al tamaño de la página y no se moverá incluso cuando se hace scroll,
     no respeta un contenedor padre, no ocupan su espacio original en la página, es decir no dejan un espacio cuando se mueven
     y permite valores de top, right, bottom y left
+    
     La propiedad position sticky se comporta como position relative hasta que alcanza un umbral de desplazamiento 
     en top, right, bottom o left y pasa a comportarse como position fixed
     Se utiliza para hacer esta característica sin JavaScript*/
@@ -64,6 +68,7 @@ nav a {
 
 /*Esta es una pseudoclase, son dos puntos seguido de una palabra clave como :hover, 
 que se añade junto a un selector para definir un estado especial de todo el elemento
+
 Se diferencia de los pseudoelementos en que estos solo aplican estilos a una parte del elemento
 Hay algunas pseudoclases que son funcionales para lo que se añade paréntensis, como :dir()
 
