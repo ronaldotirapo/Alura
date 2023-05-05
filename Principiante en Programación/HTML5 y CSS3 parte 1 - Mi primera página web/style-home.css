@@ -1,10 +1,10 @@
-/*Uno de los codigos de colores que se pueden usar son el hexadecimal, 
-representada  por un # seguido de 6 numeros del 0 al F,
-en el cual cada par representa R, G y B; como tambien se puede usar el codigo rgb,
+/*Uno de los códigos de colores que se pueden usar son el hexadecimal, 
+representada  por un # seguido de 6 numeros del 0 al F, en el cual cada par representa R, G y B;
+como también se puede usar el codigo rgb,
 representado por rgb("numero del 0 al 255", "numero del 0 al 255", "numero del 0 al 255")*/
 
 /*Es importante mantener la jerarquía anidada en los selectores de elementos
-Es buena practica utilizar selectores de clase en vez de referenciar a los elementos directamente*/
+Es buena práctica utilizar selectores de clase en vez de referenciar a los elementos directamente*/
 
 .titulo-principal {
     padding-left: 30px;
@@ -22,7 +22,7 @@ Es buena practica utilizar selectores de clase en vez de referenciar a los eleme
 .titulo-centralizado {
     text-align: center;
     /*
-    height sirve para aumentar la altura inferior dentro del bloque del elemento
+    height sirve para aumentar el alto del bloque del elemento
     height: 150px;
     */
     /*Cada elemento esta dentro de un bloque en el cual consta de: 
@@ -53,17 +53,17 @@ em strong {
 }
 
 ul {
-    /*Para cambiar la presentacion de los elementos respecto a otros, el display, modificamos su atributo por defecto
+    /*Para cambiar la presentación de los elementos respecto a otros, el display, modificamos su atributo por defecto
     el cual es inline para img, a, span, etc; y block para ul, ol, div, p, h1, header, footer, form, etc.
     El atributo inline hace que un elemento no inicie en una linea nueva y solo ocupa todo el espacio necesario,
-    ademas su margin y padding horizontal de izquierda y derecha no se puede establecer, solo su vertical,
+    además su margin y padding horizontal de izquierda y derecha no se puede establecer, solo su vertical,
     tampoco se puede establecer width y height, su uso es recomendado para elementos de texto
     El atributo block hace que un elemento inicie en una linea nueva y ocupe todo el espacio disponible,
     pueden tener width, height, margin y padding definidos, su uso es recomendado
     para parrafos y encabezados que requieren un espacio vertical definido
     El atributo inline-block hace que un elemento no inicia en una nueva linea, 
     permite establecer el margin, padding, width y height, su uso es recomendao
-    para imagenes o botones que requieren un ancho y alto definido pero deben aparecer en linea*/
+    para imágenes o botones que requieren un ancho y alto definido pero deben aparecer en linea*/
     display: inline-block;
     vertical-align: top;
     width: 20%;
