@@ -54,15 +54,25 @@ form {
     margin: 40px 0;
 }
 
-form label {
+/*Para utilizar los mismos estilos en distintos selectores se utiliza la coma*/
+form label, form p {
     display: block;
     font-size: 20px;
     margin: 0 0 10px;
 }
 
-form input {
+.input-padron {
     display: block;
     margin: 0 0 20px;
     padding: 10px 25px;
     width: 50%;
 }
+
+/*El margen que debería ser de 10px para los form label se reescribe, no se suma, para esta clase
+ya que el selector de clase tiene mayor "peso"*/
+.checkbox-novedades {
+    margin: 20px 0;
+}
+/*Esto sucede ya que hay una jerarquía en la forma de usar un selector, ya que cada forma tiene un "peso"
+selector inline en HTML > selector de ID > selector de clase > selector de elemento
+Y si se combinan las etiquetas su "peso" se suma*/

@@ -1,57 +1,115 @@
 <!DOCTYPE html>
 <html lang="es-PE">
-  <head>
+
+<head>
     <title>Contacto - Barbería Alura</title>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="../HTML5 y CSS3 parte 2 - Posicionamiento, listas y navegación/reset.css" />
     <link rel="stylesheet" href="style-contacto.css" />
     <meta name="author" content="Ronaldo Tirapo" />
-    <meta
-      name="description"
-      content="Página segun los contenidos de Alura del curso de HTML y CSS parte 3"
-    />
-  </head>
+    <meta name="description" content="Página segun los contenidos de Alura del curso de HTML y CSS parte 3" />
+</head>
 
-  <body>
+<body>
     <!--Elemento semántico de Encabezado-->
     <header>
-      <div class="caja">
-        <h1>
-          <img src="../HTML5 y CSS3 parte 2 - Posicionamiento, listas y navegación/imagenes/logo.png" />
-        </h1>
-        <nav>
-          <ul>
-            <li><a href="../HTML5 y CSS3 parte 1 - Mi primera página web/index.html">Home</a></li>
-            <li><a href="../HTML5 y CSS3 parte 2 - Posicionamiento, listas y navegación/productos.html">Productos</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-          </ul>
-        </nav>
-      </div>
+        <div class="caja">
+            <h1>
+                <img src="../HTML5 y CSS3 parte 2 - Posicionamiento, listas y navegación/imagenes/logo.png" />
+            </h1>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="../HTML5 y CSS3 parte 1 - Mi primera página web/index.html">Home</a>
+                    </li>
+                    <li>
+                        <a
+                            href="../HTML5 y CSS3 parte 2 - Posicionamiento, listas y navegación/productos.html">Productos</a>
+                    </li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <!--Elemento semántico de Contenido principal-->
     <main>
         <!--Elemento semántico para un formulario-->
         <form>
-            <!--La etiqueta label se relaciona con el id de una etiqueta input mediante la el atributo for-->
+            <!--Todos los elementos input son elementos que contendrán un atributo value que se enviaría al servidor-->
+
+            <!--El elemento label se relaciona con el id del elemento input mediante el atributo for-->
             <label for="nombreyapellido">Nombre y apellido</label>
-            <input type="text" id="nombreyapellido">
+            <input class="input-padron" type="text" id="nombreyapellido" />
 
             <label for="correoelectronico">Correo electrónico</label>
-            <input type="text" id="correoelectronico">
-            
+            <input class="input-padron" type="text" id="correoelectronico" />
+
             <label for="telefono">Teléfono</label>
-            <input type="text" id="telefono">
-            <!--La etiqueta input con type submit crea un botón con el texto equivalente a "enviar" en el idioma configurado de la página
+            <input class="input-padron" type="text" id="telefono" />
+
+            <!--El elemento textarea crea un area de texto 
+        y se puede modificar sus columnas y filas con los atrinutos cols y rows respectivamente-->
+            <label for="mensaje">Mensaje</label>
+            <textarea class="input-padron" cols="70" rows="10" id="mensaje"></textarea>
+
+            <div>
+                <p>¿Cómo le gustaría que le contactemos?</p>
+
+                <!--El atributo name se suele colocar para especificar el nombre del control
+                además que este será enviado al servidor junto con el value del elemento, formando un par name-value
+                Los input type="radio" que tengan el mismo name están en un mismo grupo 
+                por lo que solo se puede seleccionar y enviar uno de ellos
+                En cambio si varios input type="text" tienen el mismo atributo name se enviarán todos juntos -->
+
+                <!--El atributo value define el valor que tendrá el elemento para ser enviado al servidor
+                (En input type="text" el value definido será el que se muestre escrito al cargar el formulario),
+                no es necesario al menos que el atributo type sea radio o checkbox,
+                ya que sino no se sabría que valor tiene la selección que se hizo en el elemento-->
+                <label for="radio-email">
+                    <input type="radio" name="contacto" value="email" id="radio-email" />
+                    Email
+                </label>
+
+                <label for="radio-telefono">
+                    <input type="radio" name="contacto" value="telefono" id="radio-telefono" />
+                    Teléfono
+                </label>
+
+                <label for="radio-whatsapp">
+                    <input type="radio" name="contacto" value="whatsapp" id="radio-whatsapp" />
+                    Whatsapp
+                </label>
+            </div>
+
+            <div>
+                <p>¿En qué horario prefiere ser atendido?</p>
+                <!--Para colocar  items en el elemento select se necesita el elemento option-->
+                <select>
+                    <option value="mañana">Mañana</option>
+                    <option value="tarde">Tarde</option>
+                    <option value="noche">Noche</option>
+                </select>
+            </div>
+
+            <!--Para no tener que anclar los label con los input mediante los atributos id y for
+            se puede anidar los elementos que se desean de manera que se enlazan automáticamente-->
+            <label class="checkbox-novedades">
+                <input type="checkbox" value="novedades" />
+                ¿Le gustaría recibir novedades de la Barbería Alura?
+            </label>
+
+            <!--El elemento input con type submit crea un botón con el texto equivalente a "enviar" en el idioma configurado de la página
             El texto del botón puede editarse con el atributo value-->
-            <input type="submit" value="Enviar formulario">
+            <input type="submit" value="Enviar formulario" />
         </form>
     </main>
 
     <!--Elemento semántico de Pie de página-->
     <footer>
-      <img src="../HTML5 y CSS3 parte 2 - Posicionamiento, listas y navegación/imagenes/logo-blanco.png">
-      <p class="copyright">&copy Copyright Barbería Alura - 2023</p>
+        <img src="../HTML5 y CSS3 parte 2 - Posicionamiento, listas y navegación/imagenes/logo-blanco.png" />
+        <p class="copyright">&copy Copyright Barbería Alura - 2023</p>
     </footer>
-  </body>
+</body>
+
 </html>
