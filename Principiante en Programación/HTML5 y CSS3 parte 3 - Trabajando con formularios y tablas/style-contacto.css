@@ -33,7 +33,7 @@ nav a:hover {
     text-decoration: underline;
 }
 
-footer{
+footer {
     text-align: center;
     background: url(../HTML5%20y%20CSS3%20parte%202%20-%20Posicionamiento,%20listas%20y%20navegaci%C3%B3n/imagenes/bg.jpg);
     padding: 40px;
@@ -55,7 +55,8 @@ form {
 }
 
 /*Para utilizar los mismos estilos en distintos selectores se utiliza la coma*/
-form label, form legend {
+form label,
+form legend {
     display: block;
     font-size: 20px;
     margin: 0 0 10px;
@@ -73,6 +74,40 @@ ya que el selector de clase tiene mayor "peso"*/
 .checkbox-novedades {
     margin: 20px 0;
 }
+
 /*Esto sucede ya que hay una jerarquía en la forma de usar un selector, ya que cada forma tiene un "peso"
 selector inline en HTML > selector de ID > selector de clase > selector de elemento
 Y si se combinan las etiquetas su "peso" se suma*/
+
+.enviar {
+    width: 40%;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: orange;
+    border: none;
+    border-radius: 5px;
+
+    /*La propiedad transition aplica un efecto de transición de un estado a otro,
+    como cuando se aplica la pseudoclase :hover,
+    Es recomendado utilizar solo la propiedad transition, no sus variantes individuales, para evitar desincronización
+    Los valores que se pueden especificar son: propiedad a la que se aplicará, duración, función de tiempo, retardo
+    Se puede aplicar el formato a distintos elementos si se separa por coma*/
+    transition: all 1s;
+
+    /*La propiedad pointer cambia el tipo de cursos cuando se apunta al elemento*/
+    cursor: pointer;
+}
+
+.enviar:hover {
+    background: darkorange;
+
+    /*La propiedad transform "transforma" el elemento, es decir cambia su tamaño o comportamiento
+    Tiene distintos valores posibles, 
+    como scale() para aumentar el tamaño en una proporción o 
+    rotate() para rotar el elemento en su eje según una cantidad en ángulos deg
+    Se pueden aplicar varios valores si se separan por espacio*/
+    transform: scale(1.2);
+    transform-origin: left;
+}
