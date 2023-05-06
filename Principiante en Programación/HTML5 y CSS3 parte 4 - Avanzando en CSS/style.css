@@ -164,3 +164,21 @@ footer {
     font-size: 13px;
     margin: 20px;
 }
+
+/*Hay algunos combinadores para utilizar mejor los selectores
+Por ejemplo con ">": .main > p  
+que afecta a los elementos p que son hijos directos de la clase main
+
+Ejemplo con "+": img + p
+que afecta a todos los elementos p que tienen antes un elemento img,
+por lo que solo afectará a los p que tengan junto un elemento img
+
+Ejemplo con "~": img + p
+que afecta a todos los elementos p que están después de un elemento img, 
+aunque no esten juntos, por lo que puede afectar a varios p que estaban después de un img
+
+Ejemplo con pseudoclase ":not()": .principal p:not(#mision)
+que afecta a todos los elementos p de la clase principal menos al que tiene el id #mision*/
+
+/*La propiedades que utilizan medidas pueden utilizar la función calc() para calcular sus valores,
+por ejemplo: width: calc(40% - (26px * 4)*/
