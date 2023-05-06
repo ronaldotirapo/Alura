@@ -24,61 +24,75 @@
             <nav>
                 <ul>
                     <li>
-                        <a href="index.html">Home</a>
+                        <a href="index.html">
+                            Home
+                        </a>
                     </li>
                     <li>
-                        <a
-                            href="../HTML5 y CSS3 parte 2 - Posicionamiento, listas y navegación/productos.html">Productos</a>
+                        <a href="../HTML5 y CSS3 parte 2 - Posicionamiento, listas y navegación/productos.html">
+                            Productos
+                        </a>
                     </li>
-                    <li><a
-                            href="../HTML5 y CSS3 parte 3 - Trabajando con formularios y tablas/contacto.html">Contacto</a>
+                    <li>
+                        <a href="../HTML5 y CSS3 parte 3 - Trabajando con formularios y tablas/contacto.html">
+                            Contacto
+                        </a>
                     </li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <img id="banner" src="../HTML5 y CSS3 parte 1 - Mi primera página web/banner.jpg" />
+    <img class="banner" src="../HTML5 y CSS3 parte 1 - Mi primera página web/banner.jpg" />
 
-    <section class="principal">
-        <h2 class="titulo-centralizado">Sobre la Barbería Alura</h1>
+    <!--Elemento semántico de Contenido principal-->
+    <main>
+        <!--Elemento semántico de sección de página, un grupo de elementos que tienen relación a un tema-->
+        <section class="principal">
+            <!--El nombre de las clases no debe ser ni muy específico como para impedir que se reutilicen
+            ni muy genéricos para tener que combinar clases-->
+            <h2 class="titulo-principal">Sobre la Barbería Alura</h2>
 
-            <p>
-                Ubicada en el corazón de la ciudad, la
-                <strong>Barbería Alura</strong> trae para el mercado lo que hay de mejor
-                para su cabello y barba. Fundada en 2020, la Barbería Alura ya es
-                destaque en la ciudad y conquista nuevos clientes diariamente.
-            </p>
+                <img class="utensilios" src="utensilios.jpg" alt="Utensilios de un Barbero">
 
-            <p id="mision">
-                <em>
-                    Nuestra misión es:
-                    <strong>
-                        "Proporcionar autoestima y calidad de vida a nuestros clientes".
-                    </strong>
-                </em>
-            </p>
+                <p>
+                    Ubicada en el corazón de la ciudad, la
+                    <strong>Barbería Alura</strong> trae para el mercado lo que hay de mejor
+                    para su cabello y barba. Fundada en 2020, la Barbería Alura ya es
+                    destaque en la ciudad y conquista nuevos clientes diariamente.
+                </p>
 
-            <p>
-                Ofrecemos profesionales experimentados que están constantemente
-                observando los cambios y movimiento en el mundo de la moda, para así
-                ofrecer a nuestros clientes las últimas tendencias. El atendimiento
-                posee un padrón de excelencia y agilidad, garantizando calidad y
-                satisfacción de nuestros clientes.
-            </p>
-    </section>
+                <p id="mision">
+                    <em>
+                        Nuestra misión es:
+                        <strong>
+                            "Proporcionar autoestima y calidad de vida a nuestros clientes".
+                        </strong>
+                    </em>
+                </p>
 
-    <section class="diferenciales">
-        <h3 class="titulo-centralizado">Diferenciales</h2>
-            <ul>
-                <li class="items">Atencion al cliente personalizada</li>
-                <li class="items">Espacio diferenciado</li>
-                <li class="items">Localizacion</li>
-                <li class="items">Profesionales calificados</li>
-            </ul>
-
-            <img src="../HTML5 y CSS3 parte 1 - Mi primera página web/diferenciales.jpg" class="imagenDiferenciales" />
+                <p>
+                    Ofrecemos profesionales experimentados que están constantemente
+                    observando los cambios y movimiento en el mundo de la moda, para así
+                    ofrecer a nuestros clientes las últimas tendencias. El atendimiento
+                    posee un padrón de excelencia y agilidad, garantizando calidad y
+                    satisfacción de nuestros clientes.
+                </p>
         </section>
+
+        <section class="diferenciales">
+            <h3 class="titulo-principal">Diferenciales</h3>
+                <ul>
+                    <li class="items">Atencion al cliente personalizada</li>
+                    <li class="items">Espacio diferenciado</li>
+                    <li class="items">Localizacion</li>
+                    <li class="items">Profesionales calificados</li>
+                </ul>
+
+                <img src="../HTML5 y CSS3 parte 1 - Mi primera página web/diferenciales.jpg"
+                    class="imagen-diferenciales" />
+        </section>
+    </main>
 
     <!--Elemento semántico de Pie de página-->
     <footer>

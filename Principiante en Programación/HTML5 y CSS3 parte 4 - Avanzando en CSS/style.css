@@ -1,0 +1,102 @@
+/*Sección de encabezado*/
+
+header {
+    background-color: #BBBBBB;
+    padding: 20px 0;
+}
+
+.caja {
+    position: relative;
+    width: 940px;
+    margin: 0 auto;
+}
+
+nav {
+    position: absolute;
+    top: 110px;
+    right: 0;
+}
+
+nav li {
+    display: inline;
+    margin: 0 0 0 15px;
+}
+
+nav a {
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #C78C19;
+    text-decoration: underline;
+}
+
+/*Sección de contenido principal*/
+
+main {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.banner {
+    width: 100%;
+}
+
+.titulo-principal {
+    text-align: center;
+
+    /*em es una unidad proporcional según el tamaño de la  fuente del elemento padre,
+    el nombre proviene de la medida tipográfica de la letra M, pronunciada "em" en inglés, 
+    por ejemplo en el caso de 2em indica dos veces el tamaño de su padre el cual es 16px por lo que resulta 32px*/
+    font-size: 2em;
+
+    /*En este caso al ser el tamaño de la fuente del elemento padre 2em (32px), el margen resulta 32px*/
+    margin: 0 0 1em;
+
+    /*La propiedad clear no considera a los elementos flotantes, con propiedad float, en una dirección*/
+    clear: left;
+}
+
+.utensilios {
+    width: 120px;
+    
+    /*La propiedad float hacer que el elemento se posicione en una dirección y el texto se disperse a su alrededor,
+    Es como la  opción de Word para ajustar el texto pegado a la imagen*/
+    float: left;
+    margin: 0 20px 20px 0;
+}
+
+.principal p {
+    margin: 0 0 1em;
+}
+
+.principal strong {
+    font-weight: bold;
+}
+
+.principal em {
+    font-style: italic;
+}
+
+.imagen-diferenciales {
+    width: 60%;
+}
+
+/*Sección de pié de página*/
+
+footer {
+    text-align: center;
+    background: url(../HTML5%20y%20CSS3%20parte%202%20-%20Posicionamiento,%20listas%20y%20navegaci%C3%B3n/imagenes/bg.jpg);
+    padding: 40px;
+}
+
+.copyright {
+    /*El tamaño por defecto de los textos es de 16px*/
+    color: #FFFFFF;
+    font-size: 13px;
+    margin: 20px;
+}
