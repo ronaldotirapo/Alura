@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="../HTML5 y CSS3 parte 2 - Posicionamiento, listas y navegación/reset.css" />
     <link rel="stylesheet" href="style.css" />
 
+    <!--Utilizar fuentes externas ayuda a que la fuente de la página no dependa del navegador y a resaltar la misma-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
     <title>Mi pagina web</title>
     <meta name="author" content="Ronaldo Tirapo" />
     <meta name="description" content="Página web segun los contenidos de alura del curso de HTML y CSS parte 4" />
@@ -43,7 +48,8 @@
         </div>
     </header>
 
-    <img class="banner" src="../HTML5 y CSS3 parte 1 - Mi primera página web/banner.jpg" />
+    <img class="banner" src="../HTML5 y CSS3 parte 1 - Mi primera página web/banner.jpg"
+        alt="Salon de la barbería como banner" />
 
     <!--Elemento semántico de Contenido principal-->
     <main>
@@ -53,44 +59,66 @@
             ni muy genéricos para tener que combinar clases-->
             <h2 class="titulo-principal">Sobre la Barbería Alura</h2>
 
-                <img class="utensilios" src="utensilios.jpg" alt="Utensilios de un Barbero">
+            <img class="utensilios" src="utensilios.jpg" alt="Utensilios de un Barbero">
 
-                <p>
-                    Ubicada en el corazón de la ciudad, la
-                    <strong>Barbería Alura</strong> trae para el mercado lo que hay de mejor
-                    para su cabello y barba. Fundada en 2020, la Barbería Alura ya es
-                    destaque en la ciudad y conquista nuevos clientes diariamente.
-                </p>
+            <p>
+                Ubicada en el corazón de la ciudad, la <strong>Barbería Alura</strong>
+                trae para el mercado lo que hay de mejor para su cabello y barba.
+                Fundada en 2020, la Barbería Alura ya es destaque en la ciudad
+                y conquista nuevos clientes diariamente.
+            </p>
 
-                <p id="mision">
-                    <em>
-                        Nuestra misión es:
-                        <strong>
-                            "Proporcionar autoestima y calidad de vida a nuestros clientes".
-                        </strong>
-                    </em>
-                </p>
+            <p id="mision">
+                <em>
+                    Nuestra misión es:
+                    <strong>
+                        "Proporcionar autoestima y calidad de vida a nuestros clientes".
+                    </strong>
+                </em>
+            </p>
 
-                <p>
-                    Ofrecemos profesionales experimentados que están constantemente
-                    observando los cambios y movimiento en el mundo de la moda, para así
-                    ofrecer a nuestros clientes las últimas tendencias. El atendimiento
-                    posee un padrón de excelencia y agilidad, garantizando calidad y
-                    satisfacción de nuestros clientes.
-                </p>
+            <p>
+                Ofrecemos profesionales experimentados que están constantemente
+                observando los cambios y movimiento en el mundo de la moda, para así
+                ofrecer a nuestros clientes las últimas tendencias. El atendimiento
+                posee un padrón de excelencia y agilidad, garantizando calidad y
+                satisfacción de nuestros clientes.
+            </p>
+        </section>
+
+        <section class="mapa">
+            <h3 class="titulo-principal">
+                Nuestra ubicación
+            </h3>
+            <p>
+                Nuestro establecimiento está ubicado en el corazón de la ciudad
+            </p>
+            <!--El elemento iframe sirve para insertar elementos externos de otra página web como videos, mapas etc.-->
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.428977995041!2d-46.63605992466845!3d-23.588943462606153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5a2b2ed7f3a1%3A0xab35da2f5ca62674!2sCaelum%20-%20Education%20and%20Innovation!5e0!3m2!1ses!2spe!4v1683390076913!5m2!1ses!2spe"
+                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
 
         <section class="diferenciales">
             <h3 class="titulo-principal">Diferenciales</h3>
-                <ul>
-                    <li class="items">Atencion al cliente personalizada</li>
-                    <li class="items">Espacio diferenciado</li>
-                    <li class="items">Localizacion</li>
-                    <li class="items">Profesionales calificados</li>
-                </ul>
+            <ul>
+                <li class="items">Atencion al cliente personalizada</li>
+                <li class="items">Espacio diferenciado</li>
+                <li class="items">Localizacion</li>
+                <li class="items">Profesionales calificados</li>
+            </ul>
 
-                <img src="../HTML5 y CSS3 parte 1 - Mi primera página web/diferenciales.jpg"
-                    class="imagen-diferenciales" />
+            <img src="../HTML5 y CSS3 parte 1 - Mi primera página web/diferenciales.jpg" class="imagen-diferenciales"
+                alt="Imagen de barbero trabajando" />
+
+            <div class="video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/wcVVXUV0YUY"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+            </div>
         </section>
     </main>
 
