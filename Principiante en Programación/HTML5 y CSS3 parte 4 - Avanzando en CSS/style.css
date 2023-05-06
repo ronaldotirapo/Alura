@@ -41,11 +41,6 @@ nav a:hover {
 
 /*Sección de contenido principal*/
 
-main {
-    width: 940px;
-    margin: 0 auto;
-}
-
 .banner {
     width: 100%;
 }
@@ -74,6 +69,13 @@ main {
     margin: 0 20px 20px 0;
 }
 
+.principal {
+    width: 940px;
+    padding: 3em 0;
+    margin: 0 auto;
+    background: #FEFEFE;
+}
+
 .principal p {
     margin: 0 0 1em;
 }
@@ -88,11 +90,55 @@ main {
 
 .mapa {
     padding: 3em 0;
+    /*Se puede utilizar gradientes con la propiedad background mediante la función linear-gradient,
+    sus argumentos se separan por coma y la gradiente va por defecto de abajo hacia arriba desde el primer argumento al último,
+    se puede ajustar el alguno de dirección de la gradiente o utilizar otra función como radial-gradient*/
+    background: linear-gradient(#FEFEFE, #888888);
 }
 
 .mapa p {
     padding: 0 0 2em;
     text-align: center;
+    
+}
+
+.mapa-contenido {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.diferenciales {
+    padding: 3em 0;
+    background: #888888;
+}
+
+.contenido-diferenciales {
+    width: 640px;
+    margin: 0 auto;
+}
+
+.lista-diferenciales {
+    width: 40%;
+    /*inline e inline-block considera los saltos de lína en el código como saltos de línea tipográficos para separar los elementos*/
+    /*La mejor solución para evitar el salto de linea es usar flexbox*/
+    display: inline-block;
+    vertical-align: top;
+}
+
+/*Las pseudoclases permiten aplicar estilos a un elemento que está en un estado específico,
+en este caso aplica el estilo al primer elemento de varios elementos de la misma etiqueta*/
+.lista-diferenciales .items:first-child {
+    font-weight: bold;
+}
+
+.items {
+    /*La propiedad line-height establece el espacio de linea en el texto, como la sangría*/
+    line-height: 1.5em;
+}
+
+/*El pseudoelemento ::before coloca un contenido mediante la propiedad content; no acepta código HTMK*/
+.items::before {
+    content: "★";
 }
 
 .imagen-diferenciales {

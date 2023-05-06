@@ -48,6 +48,7 @@
         </div>
     </header>
 
+    <!--Es recomendable utilizar clases para los estilos en vez de identificadores ya que mejora la reusabilidad-->
     <img class="banner" src="../HTML5 y CSS3 parte 1 - Mi primera página web/banner.jpg"
         alt="Salon de la barbería como banner" />
 
@@ -94,23 +95,33 @@
                 Nuestro establecimiento está ubicado en el corazón de la ciudad
             </p>
             <!--El elemento iframe sirve para insertar elementos externos de otra página web como videos, mapas etc.-->
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.428977995041!2d-46.63605992466845!3d-23.588943462606153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5a2b2ed7f3a1%3A0xab35da2f5ca62674!2sCaelum%20-%20Education%20and%20Innovation!5e0!3m2!1ses!2spe!4v1683390076913!5m2!1ses!2spe"
-                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="mapa-contenido">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.428977995041!2d-46.63605992466845!3d-23.588943462606153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5a2b2ed7f3a1%3A0xab35da2f5ca62674!2sCaelum%20-%20Education%20and%20Innovation!5e0!3m2!1ses!2spe!4v1683390076913!5m2!1ses!2spe"
+                    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
         </section>
 
+        <!--Es preferente usar los elementos semánticos disponibles para establecer grupos de seeciones específicas de la página,
+        pero cuando dentro de ellos se necesita agrupar algunos elementos específicos se puede utilizar el elemento div-->
         <section class="diferenciales">
             <h3 class="titulo-principal">Diferenciales</h3>
-            <ul>
-                <li class="items">Atencion al cliente personalizada</li>
-                <li class="items">Espacio diferenciado</li>
-                <li class="items">Localizacion</li>
-                <li class="items">Profesionales calificados</li>
-            </ul>
-
-            <img src="../HTML5 y CSS3 parte 1 - Mi primera página web/diferenciales.jpg" class="imagen-diferenciales"
-                alt="Imagen de barbero trabajando" />
+            <div class="contenido-diferenciales">
+                <ul class="lista-diferenciales">
+                    <li class="items">Atencion al cliente personalizada</li>
+                    <li class="items">Espacio diferenciado</li>
+                    <li class="items">Localizacion</li>
+                    <li class="items">Profesionales calificados</li>
+                    <li class="items">Puntualidad</li>
+                    <li class="items">Limpieza</li>
+                </ul><img src="../HTML5 y CSS3 parte 1 - Mi primera página web/diferenciales.jpg"
+                    class="imagen-diferenciales" alt="Imagen de barbero trabajando" />
+                <!--El elemento ul y img deben ir pegado ya que tienen la propiedad display inline-block,
+                por lo que el espacio que está entre ellos en el código se verá reflejado en la página web-->
+                <!--La mejor solución para evitar el salto de linea debido a inline-block es usar flexbox-->
+            </div>
 
             <div class="video">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/wcVVXUV0YUY"

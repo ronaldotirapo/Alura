@@ -66,10 +66,12 @@ nav a {
     text-decoration: none;
 }
 
-/*Esta es una pseudoclase, son dos puntos seguido de una palabra clave como :hover, 
-que se añade junto a un selector para definir un estado especial de todo el elemento
+/*Esta es una pseudoclase, (dos puntos seguido de una palabra clave como :hover) 
+es un selector de clase que se añade junto a otro selector que esté en un estado especial para aplicar un estilo al elemento
 
-Se diferencia de los pseudoelementos en que estos solo aplican estilos a una parte del elemento
+Se diferencia de los pseudoelementos (dos veces dos puntos seguidos de una palahra clave como ::after) 
+en que estos solo aplican estilos a una parte del elemento
+
 Hay algunas pseudoclases que son funcionales para lo que se añade paréntensis, como :dir()
 
 :hover aplica las propiedades CSS definidas cuando se pasa el mouse sobre el elemento
