@@ -73,6 +73,7 @@ nav a:hover {
     width: 940px;
     padding: 3em 0;
     margin: 0 auto;
+    /*Para seleccionar un color también podemos utilizar el la función rgba() que añade un cuarto argumento el cual es la opacidad*/
     background: #FEFEFE;
 }
 
@@ -99,7 +100,7 @@ nav a:hover {
 .mapa p {
     padding: 0 0 2em;
     text-align: center;
-    
+
 }
 
 .mapa-contenido {
@@ -143,6 +144,17 @@ en este caso aplica el estilo al primer elemento de varios elementos de la misma
 
 .imagen-diferenciales {
     width: 60%;
+    transition: 400ms;
+    /*Para colocar sombras se pueden utilizar las propiedades 
+    box-shadow para sombras en bloque y text-shadow para sombras en texto
+    sus valores son: inset(opcional para sombra interna), eje X, eje Y (de arriba hacia abajo), difuminación, expansión y color
+    y se pueden aplicar múltiples sombras separadas por coma*/
+    box-shadow: 10px 10px 30px 15px #000000;
+}
+
+/*La propiedad opacity aplica opacidad al elemento, al 100% no el elemento es completamente visible y al 0% no se vería*/
+.imagen-diferenciales:hover {
+    opacity: 0.3;
 }
 
 .video {
@@ -167,14 +179,15 @@ footer {
 
 /*Hay algunos combinadores para utilizar mejor los selectores
 Por ejemplo con ">": .main > p  
-que afecta a los elementos p que son hijos directos de la clase main
+que afecta a los elementos p que son hijos directos de la clase main,
+a comparación de main p que afectaría a todos los descendientes como hijos de hijos y así
 
 Ejemplo con "+": img + p
-que afecta a todos los elementos p que tienen antes un elemento img,
-por lo que solo afectará a los p que tengan junto un elemento img
+que afecta a todos los elementos p que estaban adyacentes (como primer hermano) de un elemento img,
+por lo que solo afectará a los p que estén justo antes de un elemento img
 
 Ejemplo con "~": img + p
-que afecta a todos los elementos p que están después de un elemento img, 
+que afecta a todos los elementos p que están después (como hermanos) de un elemento img, 
 aunque no esten juntos, por lo que puede afectar a varios p que estaban después de un img
 
 Ejemplo con pseudoclase ":not()": .principal p:not(#mision)
@@ -182,3 +195,29 @@ que afecta a todos los elementos p de la clase principal menos al que tiene el i
 
 /*La propiedades que utilizan medidas pueden utilizar la función calc() para calcular sus valores,
 por ejemplo: width: calc(40% - (26px * 4)*/
+
+
+/*Una técnica para crear diseños responsivos es usar media queries, que se pueden complementar
+utilizando medidas proporcionales y un layout (disposición) adaptable o fluida*/
+@media screen and (max-width:480px) {
+    /*Se centralió el logo para que se vea estilizado en pantallas pequeñas*/
+    h1 {
+        text-align: center;
+    }
+
+    /*Se estableción un position static para que la barra de navegación ocupe una linea, 
+    ya que tenía position absolute*/
+    nav {
+        position: static;
+    }
+
+    /*Se estableció un width auto para todos los elementos con width fijo*/
+    .caja, .principal, .mapa-contenido, .contenido-diferenciales, .video{
+        width: auto;
+    }
+
+    /*Se estableció un width 100% a los elementos para que cada uno ocupe una linea*/
+    .lista-diferenciales, .imagen-diferenciales {
+        width: 100%;
+    }
+}
