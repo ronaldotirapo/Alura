@@ -134,7 +134,7 @@ en este caso aplica el estilo al primer elemento de varios elementos de la misma
 
 .items {
     /*La propiedad line-height establece el espacio de linea en el texto, como la sangría*/
-    line-height: 1.5em;
+    line-height: 1.5em;w
 }
 
 /*El pseudoelemento ::before coloca un contenido mediante la propiedad content; no acepta código HTMK*/
@@ -221,3 +221,51 @@ utilizando medidas proporcionales y un layout (disposición) adaptable o fluida*
         width: 100%;
     }
 }
+
+/*Algunos áreas de TI
+
+UX designer: encargado de la relación entre la empresa y el cliente mediante sus productos o servicios
+UI designer: diseña la presentación de las aplicaciones de la empresa con las que interactuará el usuario
+Desarrollador móvil: desarrolla aplicaciones para Android o IOS
+Desarrollador Full-Stack: se encarga del desarrollo backend y frontend al mismo tiempo
+CDO (Chief Digital Officer): encargado de alinear los objetivos de la empresa e incorporar las nuevas tecnologías digitales
+Científico de datos (Big Data): se encarga de analizar los datos de las empresas para obtener información útil
+Gerente de proyectos: encargado de idear, planificar, gestionar y realizar los proyectos de la empresa*/
+
+/*Medidas en CSS
+
+px (píxel) no es recomendado utilizarlo ya que es una medida absoluta, 
+así que será la misma en todos los dispositivos y por ello 
+no se "adaptará" según las distintas pantallas con distintas medidas de píxeles de todos los disposivos que existan
+En CSS no se utiliza un pixel real (hardware) sino un pixel de referencia
+
+pt (point o punto), cm, mm, in (inches o pulgadas) y pc (paica) también son medidas absolutas 
+por lo que no son recomendadas para diseñar una página responsiva,
+Son usualmente utilizados en tipografía o solo en CSS para impresiones
+1 in = 2,54 cm = 25,4 mm = 72 pt = 6 pc
+
+em, una medida relativa que se basa en el tamaño de fuente del contenedor padre, por defecto 16px,
+es útil para mantener proporciones jerárjicas entre pocas anidaciones ya que mientras más anidaciones más complejidad
+
+rem (root em), una medida relativa similar a em que se basa en el tamaño fuente del elemento raíz, el html,
+que inicialmente es 16px por lo que la proporción será la misma en cualquier anidación
+Para utilizarla facilmente se suele configurar el font-size de html a 62,5% para que 1rem = 10px y 
+utilizar rem para módulos y em para contenidos interiores
+
+%, una medida relativa similar a em, pero en función al tamaño del contenedor padre,
+e igualmente es compleja de mantener mientras más anidaciones
+Se suele configuar el ancho y alto independientemente para que sea porcentual según se necesite 
+
+Ex y Ch, son medidas relativas en función al tamaño de la letra x en la fuente definida 
+y al ancho del carácter 0, 1ch = 1 carácter si la fuente es monospace, respectivamente
+Ambos son usualmente utilizados en tipografía mas que para diseños responsivos
+
+vw (Viewport Width), vh (Viewport Height), wmin (Viewport Minimun) y vmax (Viewport Maximun),
+basadas en el tamaño de pantalla configurado en el viewport (el área donde se muestra la web en el navegador)
+todas basadas porcentualmente en el ancho, alto, mínimo o máximo de los valores del área del viewport
+por ejemplo en un viewport configurado a 1600*900:
+1vw = 16px
+1vh = 9px
+1vmin = 9px
+1 vmax = 16px
+*/
