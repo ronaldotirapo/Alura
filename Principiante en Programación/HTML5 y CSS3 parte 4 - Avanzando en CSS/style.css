@@ -50,7 +50,7 @@ nav a:hover {
 
     /*em es una unidad proporcional según el tamaño de la  fuente del elemento padre,
     el nombre proviene de la medida tipográfica de la letra M, pronunciada "em" en inglés, 
-    por ejemplo en el caso de 2em indica dos veces el tamaño de su padre el cual es 16px por lo que resulta 32px*/
+    por ejemplo en el caso de 2em indica dos veces el tamaño de su padre, el cual es 16px, por lo que resulta 32px*/
     font-size: 2em;
 
     /*En este caso al ser el tamaño de la fuente del elemento padre 2em (32px), el margen resulta 32px*/
@@ -244,13 +244,13 @@ por lo que no son recomendadas para diseñar una página responsiva,
 Son usualmente utilizados en tipografía o solo en CSS para impresiones
 1 in = 2,54 cm = 25,4 mm = 72 pt = 6 pc
 
-em, una medida relativa que se basa en el tamaño de fuente del contenedor padre, por defecto 16px,
+em, una medida relativa que se basa en el tamaño de fuente del contenedor padre, que por defecto en varios navegadores es 16px,
 es útil para mantener proporciones jerárjicas entre pocas anidaciones ya que mientras más anidaciones más complejidad
 
 rem (root em), una medida relativa similar a em que se basa en el tamaño fuente del elemento raíz, el html,
 que inicialmente es 16px por lo que la proporción será la misma en cualquier anidación
 Para utilizarla facilmente se suele configurar el font-size de html a 62,5% para que 1rem = 10px y 
-utilizar rem para módulos y em para contenidos interiores
+utilizar rem para módulos y em para contenidos interiores como también para width, margin, border y padding 
 
 %, una medida relativa similar a em, pero en función al tamaño del contenedor padre,
 e igualmente es compleja de mantener mientras más anidaciones
@@ -259,6 +259,8 @@ Se suele configuar el ancho y alto independientemente para que sea porcentual se
 Ex y Ch, son medidas relativas en función al tamaño de la letra x en la fuente definida 
 y al ancho del carácter 0, 1ch = 1 carácter si la fuente es monospace, respectivamente
 Ambos son usualmente utilizados en tipografía mas que para diseños responsivos
+Pero en el caso de ch se puede utilizar para cumplir la regla de diseño de cumplir 45 a 75 carácteres por linea,
+estableciendo un max-width de por ejemplo 60ch
 
 vw (Viewport Width), vh (Viewport Height), wmin (Viewport Minimun) y vmax (Viewport Maximun),
 basadas en el tamaño de pantalla configurado en el viewport (el área donde se muestra la web en el navegador)
@@ -268,4 +270,8 @@ por ejemplo en un viewport configurado a 1600*900:
 1vh = 9px
 1vmin = 9px
 1 vmax = 16px
+Si bien se ve una medida agradable de utilizar, se debe tener en cuenta su compatibilidad en navegadores
 */
+
+/*Para diseños responsivos se puede utilizar CSS Grid para crear layouts en toda la página y
+CSS Flexbox para los elementos que irán en los layouts*/

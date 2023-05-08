@@ -156,7 +156,10 @@ footer{
 }
 
 .copyright {
-    /*El tamaño por defecto de los textos es de 16px*/
+    /*El tamaño por defecto de los textos es de 16px en los navegadores, 
+    el cual puede ser cambiado por usuarios en la configuración por temas de accesibilidad,
+    pero cuando se define un font-size en un elemento ya no tomará el tamaño de la configuración,
+    lo que afectará la experiencia de usuario y accesibilidad*/
     color: #FFFFFF;
     font-size: 13px;
     margin: 20px;
