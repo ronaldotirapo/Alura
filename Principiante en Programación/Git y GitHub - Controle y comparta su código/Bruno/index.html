@@ -39,8 +39,10 @@ Para configurar el correo globalmente para todos los repositorios: git config --
 o git config --local user.email "email" solo para el repositorio actual
 Para configurar el nombre de usuario para todos los repositorios: git config --global user.name "nombre"
 o git config --local user.name "nombre" solo para el repositorio actual
+Para listar las configuraciones: git config --list 
+y para salir: :q (quit)
 head, es la cabecera o puntero donde se guarda el estado del repositorio, muestra en qué rama estamos
-working tree o working directory, es el directorio donde se está trabajando actualmente
+working tree o working directory, es el directorio donde se tiene los archivos y se está trabajando actualmente
 index, es el índice de cambios que se tiene en el repositorio, el staging area, y faltan hacer commit
 Para mostrar el registro de los cambios: git log, se pueden agregar varios modificadores 
 como git log -p para mostrar el path (ruta) donde se hizo los cambios
@@ -49,6 +51,15 @@ Para renombrar un archivo: git mv nombre-anterior nombre-nuevo
 Para eliminar un archivo del repositorio: git rm nombre-del-archivo
 Para ver los cambios hechos en los archivos: git diff
 Para ingnorar archivos se debe crear un archivo .gitignore y especificar los archivos allí, existen varios modificadores
+
+Para iniciar un "servidor" (un repositorio remoto o local sin working directory) donde se guardarán solo los cambios de los archivos: git init --bare
+Para añadir un "servidor": git remote add nombre-del-servidor ruta/del/servidor (usualmente se llama al servidor de origen como origin)
+Para listar los "servidores" remotos añadidos: git remote o git remote -v (verbose, verboso o con más detalles) para ver también las rutas
+Para clonar una carpeta de un "servidor": git clone ruta/del/servidor carpeta-donde-se-clonará (por defecto guarda el servidor de origen como origin) 
+Para enviar cambios a un "servidor": git push nombre-del-servidor rama-del-servidor
+Para traer cambios de un "servidor": git pull nombre-del-servidor rama-del-servidor
+Para renombrar el nombre de un "servidor" añadido: git remote rename nombre-del-servidor-antiguo nombre-del-servidor-nuevo
+Para cambiar el nombre de la rama actual: git branch -M nombre-de-la-rama (ahora se suele llamar main a la rama principal)
 
 
 -->
