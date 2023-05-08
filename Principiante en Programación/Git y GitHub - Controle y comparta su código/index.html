@@ -25,3 +25,30 @@
         </ul>
     </body>
 </html>
+
+<!--Comandos para git
+Para saber el estado general del monitoreo de los archivos: git status
+Para iniciar el monitoreo dentro de una carpeta: git init
+
+Los archivos en git pueden estar en los estados: untracked o tracked (unmodified - modified - staged)
+Para agregar archivos (untracked) o modificaciones (modified) para monitorear al staging area o área de preparación: git add nombre-del-archivo
+Para agregar todos los archivos o modificaciones para monitorear: git add .
+Para guardar confirmar los cambios de un archivo que estaban en el staged area(con un comentario requerido): git commit -m "comentario"
+Para agregar archivos o modificaciones y confirmar los cambios al mismo tiempo: git commit -a - m "comentario"
+Para configurar el correo globalmente para todos los repositorios: git config --global user.email "email" 
+o git config --local user.email "email" solo para el repositorio actual
+Para configurar el nombre de usuario para todos los repositorios: git config --global user.name "nombre"
+o git config --local user.name "nombre" solo para el repositorio actual
+head, es la cabecera o puntero donde se guarda el estado del repositorio, muestra en qué rama estamos
+working tree o working directory, es el directorio donde se está trabajando actualmente
+index, es el índice de cambios que se tiene en el repositorio, el staging area, y faltan hacer commit
+Para mostrar el registro de los cambios: git log, se pueden agregar varios modificadores 
+como git log -p para mostrar el path (ruta) donde se hizo los cambios
+o git log --oneline, para mostrar todos los cambios en una solo linea
+Para renombrar un archivo: git mv nombre-anterior nombre-nuevo
+Para eliminar un archivo del repositorio: git rm nombre-del-archivo
+Para ver los cambios hechos en los archivos: git diff
+Para ingnorar archivos se debe crear un archivo .gitignore y especificar los archivos allí, existen varios modificadores
+
+
+-->
