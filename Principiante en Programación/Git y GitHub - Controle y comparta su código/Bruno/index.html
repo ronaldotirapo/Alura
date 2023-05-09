@@ -64,11 +64,13 @@ Para cambiar el nombre de la rama actual: git branch -M nombre-de-la-rama (ahora
 Se suele utilizar las branch (ramas) para separar el trabajo por funcionalidades o partes del proyecto
 Para crear una nueva branch: git branch nombre-de-la-branch
 Para moverse a una branch: git checkout nombre-de-la-branch / Para crear y moverse: git branch -b nombre-de-la-branch
-Para hacer fusionar el branch actual con otra branch: git merge branch-para-fusionar, esto creará un branch commit,
-se suele hacer merge o rebase desde el branch principal, el main
+Para hacer fusionar el branch actual con otra branch: git merge branch-para-fusionar, esto creará un branch commit 
+para indicar el punto de unión y conservará los commits en ambos branches
 Para ver el registro en forma de gráfico en consola: git log --graph
 Para unir los commits de un branch con los del branch actual: git rebase branch-para-fusionar, 
-los commits del branch-para-fusionar serán los más actuales 
+los commits del branch-para-fusionar serán los más actuales, creando una sola linea de commits
+Se suele hacer merge o rebase desde el branch principal, el main
+Se suele recomendar usar rebase en trabajos individuales y merge en trabajos en grupo
 Tanto merge como rebase se utilizan para unir el trabajo de distintas branches, hay una discusión sobre cuál es mejor
 Cuando se modifica lineas iguales de código y se hace merge o rebase se tendrá que resolver el conflicto para seguir y hacer git add y git commit
 Se debe estár pendiente de los cambios con git status y luego hacer git pull antes de hacer git push a la ramas
