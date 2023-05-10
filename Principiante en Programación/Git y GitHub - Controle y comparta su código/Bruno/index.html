@@ -78,13 +78,18 @@ Se debe estár pendiente de los cambios con git status y luego hacer git pull an
 
 Para deshacer un cambio antes de hacer un git add: git restore nombre-del-archivo
 Para revertir un git add de un archivo (quitar del staging area): git restore --staged nombre-del-archivo (luego se tendría que hacer restore para borrar los cambios)
-Para descartar un commit: git revert hash-del-commit
+Para descartar un commit: git revert hash-del-commit (Esto genera un nuevo commit informado del descarte)
 Para guardar un estado del código en progreso (Work In Progress) sin hacer commit: git stash / Para listar los WIP: git stash list
 Para aplicar un WIP pero no borrarlo: git stash apply número-del-stash / Para borrarlo: git stash drop número-del-stash 
 Para aplicar el último WIP guardado y borrarlo de la lista: git stash pop
 Para moverse a un commit anterior sin afectar las branches y hacer commits experimentales: git checkout hash-del-commit (solo es necesario 7 dígitos)
 Si se desea guardar los commits experimentales, se puede crear una nueva branch para partir desde allí: git checkout -b nombre-de-la-branch
 git checkout se puede utilizar para navegar entre commits anteriores, el último commit de un branch o tags
+
+Para ver las diferencias de lo que ha estado modificando pero no se ha hecho git add (staging area): git diff
+Para ver las diferencias de los cambios de un commit (o branches) hasta otro: git diff hash-del-commit-inicial..hash-del-commit-final
+Para crear un punto histórico, versión, se puede usar: git tag -a nombre-del-tag -m "mensaje-del-tag" / para listar: git tag
+Para subir un tag: git push nombre-del-repositorio-remoto nombre-del-tag (Si se sube a GitHub se guardará en la sección tags como una release)
 
 
 -->
