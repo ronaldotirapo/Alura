@@ -62,8 +62,9 @@ Para renombrar el nombre de un "servidor" añadido: git remote rename nombre-del
 Para cambiar el nombre de la rama actual: git branch -M nombre-de-la-rama (ahora se suele llamar main a la rama principal)
 
 Se suele utilizar las branch (ramas) para separar el trabajo por funcionalidades o partes del proyecto
+Para listar las branches: git branch
 Para crear una nueva branch: git branch nombre-de-la-branch
-Para moverse a una branch: git checkout nombre-de-la-branch / Para crear y moverse: git branch -b nombre-de-la-branch
+Para moverse a una branch: git checkout nombre-de-la-branch / Para crear y moverse: git checkout -b nombre-de-la-branch
 Para hacer fusionar el branch actual con otra branch: git merge branch-para-fusionar, esto creará un branch commit 
 para indicar el punto de unión y conservará los commits en ambos branches
 Para ver el registro en forma de gráfico en consola: git log --graph
@@ -74,4 +75,16 @@ Se suele recomendar usar rebase en trabajos individuales y merge en trabajos en 
 Tanto merge como rebase se utilizan para unir el trabajo de distintas branches, hay una discusión sobre cuál es mejor
 Cuando se modifica lineas iguales de código y se hace merge o rebase se tendrá que resolver el conflicto para seguir y hacer git add y git commit
 Se debe estár pendiente de los cambios con git status y luego hacer git pull antes de hacer git push a la ramas
+
+Para deshacer un cambio antes de hacer un git add: git restore nombre-del-archivo
+Para revertir un git add de un archivo (quitar del staging area): git restore --staged nombre-del-archivo (luego se tendría que hacer restore para borrar los cambios)
+Para descartar un commit: git revert hash-del-commit
+Para guardar un estado del código en progreso (Work In Progress) sin hacer commit: git stash / Para listar los WIP: git stash list
+Para aplicar un WIP pero no borrarlo: git stash apply número-del-stash / Para borrarlo: git stash drop número-del-stash 
+Para aplicar el último WIP guardado y borrarlo de la lista: git stash pop
+Para moverse a un commit anterior sin afectar las branches y hacer commits experimentales: git checkout hash-del-commit (solo es necesario 7 dígitos)
+Si se desea guardar los commits experimentales, se puede crear una nueva branch para partir desde allí: git checkout -b nombre-de-la-branch
+git checkout se puede utilizar para navegar entre commits anteriores, el último commit de un branch o tags
+
+
 -->
