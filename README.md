@@ -1,1 +1,1 @@
-# Alura: Lógica de programación
+# Alura: Principiante en Programación
