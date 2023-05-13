@@ -19,6 +19,40 @@
     display: flex;
 }
 
+/*Sección main*/
+
+.contenidoPrincipal-cursos {
+    display: flex;
+
+    /*En este caso no sería necesario el valor row ya que viene por defecto*/
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.contenidoPrincipal-cursos-link {
+    /*En este caso no afectaría mucho que el display sea flex ya que solo hay un elemento, el a*/
+    display: flex;
+
+    /*Para calcular el tamaño que ocupará cada elemento también se debe tomar en cuenta 
+    lo que ocuparán los márgeness*/
+    width: 23%;
+    
+    /*Por alguna razón el media query:
+    @media (min-width: 769px) .contenidoPrincipal-cursos-link:nth-child(3n+1) {
+    margin-left: 0;
+    y
+    margin: 1%;
+    hace que algunos elementos li se queden pegados en algunos tamaños, si se quitan se ven mejor
+    Además si se añade:
+    margin-left: 1%;
+    margin-bottom: 1%;
+    se arregla el problema de los margenes en algunos tamaños
+    */
+
+    /*En este caso no conviene poner justify-content: space-around o space-between 
+    porque hace que los últimos elementos no queden con el espaciado correcto*/
+}
+
 /*Sección footer*/
 
 .rodapePrincipal-navMap-list {
