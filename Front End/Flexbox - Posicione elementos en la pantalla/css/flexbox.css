@@ -1,0 +1,61 @@
+/*Sección header*/
+
+.headerPrincipal .container {
+    /*display flex es una forma de distribuir (display) elementos hijo directo horizontal y verticalmente de forma flexible,
+    permitiendo modificar su tamaño estirándose o estrechándose para ajustarse al espacio*/
+    display: flex;
+    
+    /*EL valor center de la propiedad align-items de flexbox (por defecto es stretch el cual estira verticalmente al elemento más alto)
+    alinea los elementos al centro verticalmente haciendo que ocupen su respectivo espacio horizontal y verticalmente
+    Si el tamaño vertical exece al contenedor se exederá equitativamente arriba y abajo*/
+    align-items: center;
+    
+    /*La propiedad justify-content de flexbox define como distribuir el espacio entre elementos
+    El valor space-between crea un espacio automático equitativo entre dos (moviendolos al borde cada uno) o más items*/
+    justify-content: space-between;
+}
+
+.headerPrincipal-nav {
+    display: flex;
+}
+
+/*Sección footer*/
+
+.rodapePrincipal-navMap-list {
+    display: flex;
+    /*flex-direction define como distribuir los elementos (por defecto es row, en una fila)*/
+    flex-direction: column;
+    height: 260px;
+    /*flex-wrap wrap hace que los elementos se ajusten en varias lineas (por defecto es nowrap, en una sola linea) 
+    y distribuyan para que no se desborden cuando hay un alto específico*/
+    flex-wrap: wrap;
+}
+
+.rodapePrincipal-patrocinadores .container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.rodapePrincipal-patrocinadores-list {
+    display: flex;
+    align-items: center;
+
+    /*space-around dará un espaciado equitativo pero también agregará la mitad del especio al inicio y al final
+    Otros valores pueden ser:
+    flex-start, que alínea todos los elementos pegados al inicio, arriba en flex-direction column y a la izquierda en row
+    flex-end, que alínea todos los elementos pegados al final, abajo en flex-direction column y a la derecha en row
+    center, que alinea todos los elementos al centro y coloca un espacio equitativo alrededor*/
+    justify-content: space-around;
+    width: 70%;
+    margin-left: 5%;
+}
+
+/*En este caso no sería necesario display flex ya que necesitamos que el legend sea block*/
+.rodapePrincipal-contatoForm {
+    width: 25%;
+}
+
+/*Por defecto tiene el align-items stretch por lo que ajustará el button al alto del input*/
+.rodapePrincipal-contatoForm-fieldset {
+    display: flex;
+}
