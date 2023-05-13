@@ -4,12 +4,13 @@
     /*display flex es una forma de distribuir (display) elementos hijo directo horizontal y verticalmente de forma flexible,
     permitiendo modificar su tamaño estirándose o estrechándose para ajustarse al espacio*/
     display: flex;
-    
+
     /*EL valor center de la propiedad align-items de flexbox (por defecto es stretch el cual estira verticalmente al elemento más alto)
     alinea los elementos al centro verticalmente haciendo que ocupen su respectivo espacio horizontal y verticalmente
-    Si el tamaño vertical exece al contenedor se exederá equitativamente arriba y abajo*/
+    Si el tamaño vertical exece al contenedor se exederá equitativamente arriba y abajo
+    Se diferencia de align-content a que este último solo funciona cuando hay una sola línea y su valor por defecto es flex-start*/
     align-items: center;
-    
+
     /*La propiedad justify-content de flexbox define como distribuir el espacio entre elementos
     El valor space-between crea un espacio automático equitativo entre dos (moviendolos al borde cada uno) o más items*/
     justify-content: space-between;
@@ -36,7 +37,7 @@
     /*Para calcular el tamaño que ocupará cada elemento también se debe tomar en cuenta 
     lo que ocuparán los márgeness*/
     width: 23%;
-    
+
     /*Por alguna razón el media query:
     @media (min-width: 769px) .contenidoPrincipal-cursos-link:nth-child(3n+1) {
     margin-left: 0;
@@ -53,6 +54,34 @@
     porque hace que los últimos elementos no queden con el espaciado correcto*/
 }
 
+/*Sección Video*/
+
+.videoSobre .container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.videoSobre-sobre {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.videoSobre-video {
+    /*flex-grow indica un factor de crecimiento proporcional para los hijos de un container flex (por defecto es 0 y no acepta negativos)
+    según el espacio sobrante y la dirección de flex-direction en este caso row
+    Con un valor de 1 era suficiente, ya que tomaría proporcionalmente todo el espacio sobrante 
+    ya que videoSobre-sobre, el div de la derecha, tiene valor 0*/
+    flex-grow: 2;
+
+    /*flex-shrink hace encoger a los elementos hijo de un container flex cuando el tamaño de los elementos es mayor que su container*/
+    flex-shrink: 2;
+}
+
+.videoSobre-sobre-list {
+    flex-grow: 1;
+}
+
 /*Sección footer*/
 
 .rodapePrincipal-navMap-list {
@@ -65,7 +94,9 @@
     flex-wrap: wrap;
 }
 
-.rodapePrincipal-patrocinadores .container{
+/*Sección patrocinadores*/
+
+.rodapePrincipal-patrocinadores .container {
     display: flex;
     justify-content: space-between;
 }
@@ -92,4 +123,78 @@
 /*Por defecto tiene el align-items stretch por lo que ajustará el button al alto del input*/
 .rodapePrincipal-contatoForm-fieldset {
     display: flex;
+}
+
+/*Estilos para movile, 768px ya que es un tamaño generalizado para tablets*/
+
+@media (max-width:768px) {
+
+    /*Sección header*/
+
+    .headerPrincipal .container {
+        flex-direction: column;
+        /*initial alinea los elementos como strectch (estirándolos a los costados), ya que center hacía que ocupen solo el espacio necesario*/
+        align-items: initial;
+        text-align: center;
+    }
+
+    .headerPrincipal-nav {
+        flex-direction: column;
+    }
+
+    .headerPrincipal-nav-link-app {
+        /*Todos los elementos de un flex container tienen un número por lo que 
+        la propiedad order especifica un orden para el elemento*/
+        order: -1;
+    }
+
+    /*Sección main*/
+
+    .contenidoPrincipal-cursos {
+        flex-direction: column;
+    }
+
+    .contenidoPrincipal-cursos-link {
+        width: 100%;
+    }
+
+    /*Sección Video*/
+
+    .videoSobre .container {
+        flex-direction: column;    
+    }
+
+    /*Sección footer*/
+
+    .rodapePrincipal-navMap-list {
+        /*Utilizamos nowrap para que haga una sola columna y height en auto para que se adapte al contenido*/
+        flex-wrap: nowrap;
+        height: auto;
+    }
+
+    /*Sección pratrocinadores*/
+
+    .rodapePrincipal-patrocinadores .container {
+        flex-direction: column;
+    }
+
+    .rodapePrincipal-patrocinadores-list {
+        /*Aquí no sería necesario align-items: center ya que estaba establecido anteriormente*/
+        align-items: center;
+        width: 100%;
+        /*Quitamos los márgenes anteiormente definidos*/
+        margin: 0;
+    }
+
+    .rodapePrincipal-contatoForm {
+        width: 100%;
+        /*align-items: center no tendría efecto ya que el display es block*/
+        align-items: center;
+    }
+
+    .rodapePrincipal-contatoForm-fieldset {
+        /*justify-content: center tiene efecto ya que el display es flexbox*/
+        justify-content: center;
+    }
+
 }
