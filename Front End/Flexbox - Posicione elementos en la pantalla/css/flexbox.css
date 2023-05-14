@@ -5,10 +5,13 @@
     permitiendo modificar su tamaño estirándose o estrechándose para ajustarse al espacio*/
     display: flex;
 
-    /*EL valor center de la propiedad align-items de flexbox (por defecto es stretch el cual estira verticalmente al elemento más alto)
-    alinea los elementos al centro verticalmente haciendo que ocupen su respectivo espacio horizontal y verticalmente
-    Si el tamaño vertical exece al contenedor se exederá equitativamente arriba y abajo
-    Se diferencia de align-content a que este último solo funciona cuando hay una sola línea y su valor por defecto es flex-start*/
+    /*align-items alinea los elementos hijo (solo cuando hay una linea) según su valor y su flex-direction respetando los tamaños definidos
+    y su valor por defecto es stretch el cual estira en el eje transversal al tope del contenedor o el elemento más alto,     
+    (El eje transversal, cross axis, es el eje perpendicular al eje principal, es decir el flex-direction) 
+    Se diferencia de align-content a que este último solo funciona cuando hay más de una línea y su valor por defecto es flex-start
+    EL valor center de la propiedad align-items de flexbox 
+    alinea los elementos al centro horizontalmente (con flex-direction row) haciendo que ocupen su respectivo espacio 
+    horizontal y verticalmente y si el tamaño vertical exece al contenedor se exederá equitativamente arriba y abajo*/
     align-items: center;
 
     /*La propiedad justify-content de flexbox define como distribuir el espacio entre elementos
@@ -25,7 +28,9 @@
 .contenidoPrincipal-cursos {
     display: flex;
 
-    /*En este caso no sería necesario el valor row ya que viene por defecto*/
+    /*Las propiedades flex-direction, flex-wrap, tienen valores para invertir el orden como:
+    row-reverse, column-reverse y wrap-reverse
+    En este caso no sería necesario el valor row ya que viene por defecto*/
     flex-direction: row;
     flex-wrap: wrap;
 }
@@ -68,14 +73,24 @@
 }
 
 .videoSobre-video {
-    /*flex-grow indica un factor de crecimiento proporcional para los hijos de un container flex (por defecto es 0 y no acepta negativos)
-    según el espacio sobrante y la dirección de flex-direction en este caso row
-    Con un valor de 1 era suficiente, ya que tomaría proporcionalmente todo el espacio sobrante 
-    ya que videoSobre-sobre, el div de la derecha, tiene valor 0*/
+    /*flex-grow aumenta proporcionalmente el tamaño de los hijos de un container flex container (por defecto es 0 y no acepta negativos)
+    según el espacio sobrante (el cual se divide según la suma de los valores flex-grow de los elementos y se reparte 
+    según el valor de cada uno) y la dirección de flex-direction
+    Con un valor de 1 era suficiente, ya que tomaría proporcionalmente todo el espacio sobrante ya que el otro elemento tiene valor de 0*/
     flex-grow: 2;
 
-    /*flex-shrink hace encoger a los elementos hijo de un container flex cuando el tamaño de los elementos es mayor que su container*/
+    /*flex-shrink reduce proporcionalemente el tamaño de los elementos hijo de un flex container cuando el tamaño de los elementos es mayor
+    que su container (el espacio faltante se divide según la suma de los valores flex-shrink de los elementos y se reparte 
+    según el valor de cada uno) y en la dirección de flex-direction
+    Su valor por defecto es 1 (por eso los elementos se encogen por defecto) y no acepta negativos
+    Cuando se indica un valor de cero, anularía la capacidad de encogerse cuando hay poco tamaño, 
+    haciendo que el elemento no se encoga cuando hay poco espacio*/
     flex-shrink: 2;
+
+    /*Otra propiedad es flex-basis, el cual indica un tamaño width (row) o height (column) para el elemento según el flex-direction
+    Su valor por defecto es auto, por ello acepta la capacidad de encogerse, además si existe width o height se priorizará flex-basis
+    Tanto flex-grow, flex-shrink y flex-basis se pueden indicar en una sola linea (shorthand) utilizando:
+    flex: flex-grow flex-shrink flex-basis;*/
 }
 
 .videoSobre-sobre-list {
@@ -86,9 +101,11 @@
 
 .rodapePrincipal-navMap-list {
     display: flex;
+
     /*flex-direction define como distribuir los elementos (por defecto es row, en una fila)*/
     flex-direction: column;
     height: 260px;
+
     /*flex-wrap wrap hace que los elementos se ajusten en varias lineas (por defecto es nowrap, en una sola linea) 
     y distribuyan para que no se desborden cuando hay un alto específico*/
     flex-wrap: wrap;
@@ -133,6 +150,7 @@
 
     .headerPrincipal .container {
         flex-direction: column;
+
         /*initial alinea los elementos como strectch (estirándolos a los costados), ya que center hacía que ocupen solo el espacio necesario*/
         align-items: initial;
         text-align: center;
@@ -161,7 +179,7 @@
     /*Sección Video*/
 
     .videoSobre .container {
-        flex-direction: column;    
+        flex-direction: column;
     }
 
     /*Sección footer*/
@@ -182,12 +200,14 @@
         /*Aquí no sería necesario align-items: center ya que estaba establecido anteriormente*/
         align-items: center;
         width: 100%;
+
         /*Quitamos los márgenes anteiormente definidos*/
         margin: 0;
     }
 
     .rodapePrincipal-contatoForm {
         width: 100%;
+
         /*align-items: center no tendría efecto ya que el display es block*/
         align-items: center;
     }
