@@ -1,4 +1,4 @@
-/*Sección header*/
+ /*Sección header*/
 
 .headerPrincipal .container {
     /*display flex es una forma de distribuir (display) elementos hijo directo horizontal y verticalmente de forma flexible,
@@ -11,8 +11,12 @@
     Se diferencia de align-content a que este último solo funciona cuando hay más de una línea y su valor por defecto es flex-start
     EL valor center de la propiedad align-items de flexbox 
     alinea los elementos al centro horizontalmente (con flex-direction row) haciendo que ocupen su respectivo espacio 
-    horizontal y verticalmente y si el tamaño vertical exece al contenedor se exederá equitativamente arriba y abajo*/
+    horizontal y verticalmente y si el tamaño vertical exece al contenedor se exederá equitativamente arriba y abajo
+    Otros valores pueden ser: flex-start, flex-end y baseline*/
     align-items: center;
+
+    /*También existe la propiedad align-self, el cual el similar a align-items 
+    solo que align-self se aplica a los elementos hijo de un flex container individualmente*/
 
     /*La propiedad justify-content de flexbox define como distribuir el espacio entre elementos
     El valor space-between crea un espacio automático equitativo entre dos (moviendolos al borde cada uno) o más items*/
@@ -28,11 +32,19 @@
 .contenidoPrincipal-cursos {
     display: flex;
 
-    /*Las propiedades flex-direction, flex-wrap, tienen valores para invertir el orden como:
-    row-reverse, column-reverse y wrap-reverse
-    En este caso no sería necesario el valor row ya que viene por defecto*/
+    /*flex-direction define como distribuir los elementos (por defecto es row, en una fila)*/
+    /*En este caso no sería necesario el valor row ya que viene por defecto*/
     flex-direction: row;
+
+    /*flex-wrap wrap hace que los elementos se ajusten en varias lineas (por defecto es nowrap, en una sola linea) 
+    y distribuyan para que no se desborden cuando hay un alto específico*/
+
+    /*Las propiedades flex-direction, flex-wrap, tienen valores para invertir el orden como:
+    row-reverse y column-reverse para flex-direction y wrap-reverse para flex-wrap*/
     flex-wrap: wrap;
+
+    /*Para indicar la dirección y si se desea ajustar a varias lineas se puede utilizar el shorthand
+    flex-flow: flex-direction flex-wrap*/
 }
 
 .contenidoPrincipal-cursos-link {
@@ -102,12 +114,9 @@
 .rodapePrincipal-navMap-list {
     display: flex;
 
-    /*flex-direction define como distribuir los elementos (por defecto es row, en una fila)*/
     flex-direction: column;
     height: 260px;
 
-    /*flex-wrap wrap hace que los elementos se ajusten en varias lineas (por defecto es nowrap, en una sola linea) 
-    y distribuyan para que no se desborden cuando hay un alto específico*/
     flex-wrap: wrap;
 }
 
@@ -161,7 +170,7 @@
     }
 
     .headerPrincipal-nav-link-app {
-        /*Todos los elementos de un flex container tienen un número por lo que 
+        /*Todos los elementos de un flex container tienen un número (por defecto 0) por lo que 
         la propiedad order especifica un orden para el elemento*/
         order: -1;
     }
