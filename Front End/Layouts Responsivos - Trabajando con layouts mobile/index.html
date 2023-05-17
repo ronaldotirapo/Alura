@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home | Apeperia</title>
+    
+    <meta name="author" content="Ronaldo Tirapo">
+    <meta name="description" content="Página según los contenidos del curso de layouts responsivos de Alura">
+    
+    <!--Se debe procurar poner siempre al inicio de los estilos el reset.css-->
+    <link href="css/reset.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="css/head.css" rel="stylesheet">
+    <link href="css/llamada.css" rel="stylesheet">
+    <link href="css/base.css" rel="stylesheet">
+</head>
+
+<!--Gracias a EMMET, un complemento para editores de código, se permite escribir etiquetas HTML 
+y de otros lenguajes de una manerá ágil y resumida, por ejemplo para crear la sección header:
+header>img+nav>ul>li*6>a-->
+
+<body>
+    <!--Según la metodología BEM (Block, Element, Modifier) para nombrar clases,
+    el bloque debe tener un nombre claro, 
+    el elemento debe ser seguido del nombre del bloque y dos __
+    el modificador debe ser seguido del nombre del elemento y dos -- -->
+    <header class="head">
+        <!--Un formato recomendado para logos es el SVG (Scalable Vector Graphics) ya que guarda información vectorial por lo que tiene poco peso-->
+        <img class="head__logo" src="img/logo-apeperia.svg" alt="Logo de Apeperia">
+        <nav class="head__navegacion">
+            <ul>
+                <li class="head__enlace"><a href="#">Sobre</a></li>
+                <li class="head__enlace"><a href="#">Planes</a></li>
+                <li class="head__enlace"><a href="#">Blog</a></li>
+                <li class="head__enlace"><a href="#">Destacados</a></li>
+                <li class="head__enlace"><a href="#">Institucional</a></li>
+                <li class="head__enlace"><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="llamada">
+            <h1 class="llamada__titulo">Aplicaciones en la medida</h1>
+            <p class="llamada__texto">
+                Apeperia es una empresa emergente con una manera inovadora de comprar
+                y crear aplicaciones móviles y web.
+            </p>
+            <a class="llamada__boton" href="#">Conozca los planes</a>
+        </section>
+    </main>
+</body>
+
+</html>

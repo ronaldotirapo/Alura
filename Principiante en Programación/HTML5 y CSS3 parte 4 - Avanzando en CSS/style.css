@@ -49,7 +49,7 @@ nav a:hover {
     text-align: center;
 
     /*em es una unidad proporcional según el tamaño de la  fuente del elemento padre,
-    el nombre proviene de la medida tipográfica de la letra M, pronunciada "em" en inglés, 
+    el nombre proviene de la medida tipográfica de la letra M, ya que cada letra contaba con un "Ephemeral" box, 
     por ejemplo en el caso de 2em indica dos veces el tamaño de su padre, el cual es 16px, por lo que resulta 32px*/
     font-size: 2em;
 
