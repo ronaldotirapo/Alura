@@ -2,8 +2,12 @@
 <html lang="es-PE">
 
 <head>
-    <meta charset="UTF-8">
     <title>Home | Apeperia</title>
+    
+    <meta charset="UTF-8">
+
+    <!--Se debe tener en cuenta la etiqueta meta viewport con su atributo initial-scale-->
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
     
     <meta name="author" content="Ronaldo Tirapo">
     <meta name="description" content="Página según los contenidos del curso de layouts responsivos de Alura">
@@ -26,7 +30,7 @@ header>img+nav>ul>li*6>a-->
     el bloque debe tener un nombre claro, 
     el elemento debe ser seguido del nombre del bloque y dos __
     el modificador debe ser seguido del nombre del elemento y dos -- -->
-    <header class="head">
+    <header class="head container">
         <!--Un formato recomendado para logos es el SVG (Scalable Vector Graphics) ya que guarda información vectorial por lo que tiene poco peso-->
         <img class="head__logo" src="img/logo-apeperia.svg" alt="Logo de Apeperia">
         <nav class="head__navegacion">
@@ -42,15 +46,21 @@ header>img+nav>ul>li*6>a-->
     </header>
 
     <main>
-        <section class="llamada">
+        <section class="llamada container">
             <h1 class="llamada__titulo">Aplicaciones en la medida</h1>
             <p class="llamada__texto">
                 Apeperia es una empresa emergente con una manera inovadora de comprar
                 y crear aplicaciones móviles y web.
             </p>
-            <a class="llamada__boton" href="#">Conozca los planes</a>
+            <a class="llamada__boton boton" href="#">Conozca los planes</a>
         </section>
     </main>
 </body>
 
 </html>
+
+<!--Es importante considerar si el desarrollo será mobile first o desktop first según el propósito de la página web
+Un diseño mobile first puede considerarse cuando el público objetivo usa dispositivos móviles,
+para tener accesibilidad y tener un enfoque minimalista y en el contenido, de lo escencial en el diseño
+Un diseño desktop first se debe considerar cuando la página tiene muchas funcionalidades, 
+se debe tener más capacidad y espacio para tener más funciones y el producto es optimizado para desktop (como Google Docs)-->
