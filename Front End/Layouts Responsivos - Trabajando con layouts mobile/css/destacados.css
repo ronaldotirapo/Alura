@@ -36,6 +36,9 @@
 .destacados__panel-texto {
     font-weight: 700;
     font-size: 1.2rem;
+
+    /*La propiedad line-height establece la separación en altura entre textos, prácticamente la sangría
+    Su valor normal indica un valor por defecto, en la mayoría de navegadores 1.2 según el font-size*/
     line-height: normal;
 }
 
@@ -45,8 +48,3 @@
     border-color: var(--boton-rojo);
     margin: 0 auto;
 }
-
-/*Al diseñar los elementos teniendo en cuenta mobile first se debe tener en cuenta:
-el espaciado de los elementos desde borde de la pantalla del dispositivo,
-el tamaño de los objetos interactivos, su ubicación y separación,
-y también la velocidad de carga de la página, ya que todo ello impactará en la experiencia del usuario*/
