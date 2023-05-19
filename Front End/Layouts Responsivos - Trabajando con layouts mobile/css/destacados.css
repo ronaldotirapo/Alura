@@ -1,0 +1,52 @@
+.destacados {
+    background-color: var(--background-azul-claro);
+    padding-top: 2.5rem;
+    padding-bottom: 2rem;
+}
+
+.destacados__titulo {
+    color: var(--fuente-ceniza-oscuro);
+    font-weight: 700;
+    font-size: 1.5rem;
+    font-family: var(--montserrat);
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 2rem;
+
+}
+
+.destacados__panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.destacados__panel-img {
+    /*Se establece un width de 100vw en vez de 100% ya que el porcentaje establece como máximo el contenedor 
+    en cambio para vw el máximo es el wierport*/
+    width: 100vw;
+
+    /*La propiedad max-width ayuda a que la imagen ya no se extienda al maximo del viewport cuando supere 600px*/
+    max-width: 600px;
+    box-shadow: 0 2px 10px 5px #00000020;
+    margin-bottom: .5rem;
+}
+
+.destacados__panel-texto {
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: normal;
+}
+
+.destacados__boton {
+    color: var(--boton-rojo);
+    /*Aquí border-color es innecesario ya que está definido en la clase boton (el cual también está en este elemento) de base.css*/
+    border-color: var(--boton-rojo);
+    margin: 0 auto;
+}
+
+/*Al diseñar los elementos teniendo en cuenta mobile first se debe tener en cuenta:
+el espaciado de los elementos desde borde de la pantalla del dispositivo,
+el tamaño de los objetos interactivos, su ubicación y separación,
+y también la velocidad de carga de la página, ya que todo ello impactará en la experiencia del usuario*/

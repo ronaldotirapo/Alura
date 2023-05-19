@@ -73,7 +73,8 @@ nav a:hover {
     width: 940px;
     padding: 3em 0;
     margin: 0 auto;
-    /*Para seleccionar un color también podemos utilizar el la función rgba() que añade un cuarto argumento el cual es la opacidad*/
+    /*Para seleccionar un color también podemos utilizar el la función rgba() 
+    que añade un cuarto argumento, el alpha channel, el cual es la opacidad*/
     background: #FEFEFE;
 }
 
@@ -134,7 +135,7 @@ en este caso aplica el estilo al primer elemento de varios elementos de la misma
 
 .items {
     /*La propiedad line-height establece el espacio de linea en el texto, como la sangría*/
-    line-height: 1.5em;w
+    line-height: 1.5em;
 }
 
 /*El pseudoelemento ::before coloca un contenido mediante la propiedad content; no acepta código HTMK*/
