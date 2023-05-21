@@ -31,3 +31,29 @@
 .llamada__boton {
     width: 100%;
 }
+
+/*media query de tablets a más*/
+
+@media screen and (min-width: 768px) {
+    /*Hace que el texto no se expanda demasiado*/
+    .llamada__texto {
+        max-width: 600px;
+    }
+}
+
+/*media querys para desktop*/
+
+@media screen and (min-width: 1024px) {
+    /*Se establece una imagen de fondo y reduce el padding superior*/
+    .llamada {
+        background-image: url(..//img/bg-intro.jpg);
+        background-size: cover;
+        padding-top: 8.25rem;
+    }
+
+    /*Se aumenta el tamaño de fuente del título y aumenta el margen inferior*/
+    .llamada__titulo {
+        font-size: 3.25rem;
+        margin-bottom: 2rem;
+    }
+}

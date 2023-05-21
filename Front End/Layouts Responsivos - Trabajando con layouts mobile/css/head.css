@@ -27,10 +27,19 @@
 
 .head__enlace {
     font-size: 1.1rem;
-
     display: inline-block;
-
     margin-right: .7rem;
     margin-bottom: .7rem;
     margin-left: .7rem;
+}
+
+/*media querys para desktop*/
+
+@media screen and (min-width: 1024px) {
+    .head {
+        /*Establece una barra de navegación extendida a los costados y sin el borde inferior*/
+        flex-direction: row;
+        justify-content: space-between;
+        border: none;
+    }
 }

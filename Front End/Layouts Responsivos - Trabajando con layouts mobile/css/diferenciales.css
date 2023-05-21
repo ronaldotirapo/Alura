@@ -44,3 +44,13 @@
 .diferenciales__item-quimica {
     background-image: url(../img/icono-quimica.png);
 }
+
+/*media querys para desktop*/
+
+@media screen and (min-width: 1024px) {
+    .diferenciales {
+        background-color: var(--background-ceniza-claro);
+        justify-content: space-around;
+    }
+}
+

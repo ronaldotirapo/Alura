@@ -57,6 +57,8 @@ header>img+nav>ul>li*6>a-->
         </nav>
     </header>
 
+    <!--Sección Llamada-->
+
     <main>
         <section class="llamada container">
             <h1 class="llamada__titulo">Aplicaciones en la medida</h1>
@@ -134,6 +136,7 @@ header>img+nav>ul>li*6>a-->
             </ul>
             <p class="sobre_nosotros__texto">Desarrollamos aplicaciones para todas plataformas</p>
         </div>
+        <img src="img/sobre-apeperia.png" alt="Sobre nosotros" class="sobre_nosotros__imagen">
     </section>
 
     <!--Sección Planes-->
@@ -186,20 +189,24 @@ header>img+nav>ul>li*6>a-->
 
     <section class="institucional container">
         <h2 class="institucional__titulo">Institucional</h2>
-        <p class="institucional__descripcion">Un poco más sobre Apeperia</p>
-
-        <!--El elemento semántico address se utiliza para agrupar elementos relacionados a la dirección,
-        y con ello puedo ayudar al posicionamiento web-->
-        <address class="institucional__direccion">
-            Calle Vergueiro, 3185 <br> Villa Mariana, São Paulo
-            <article class="institucional__contacto">
-                <a href="tel:+55 11 55712751" class="institucional__contacto-telefono">+55 11 55712751</a> o
-                <a href="mailto:contato@apeperia.com" class="institucional__contacto-email">contato@apeperia.com</a>
-            </article>
-        </address>
-        
-        <!--Cuando se utiliza la etiqueta video se debe utilizar su atributo controls para que se muestren los controles-->
-        <video src="img/formacion-java.mp4" class="institucional__video" controls></video>
+        <div class="institucional__contenido">
+            <div class="institucional__informaciones">
+                <p class="institucional__descripcion">Un poco más sobre Apeperia</p>
+                
+                <!--El elemento semántico address se utiliza para agrupar elementos relacionados a la dirección, 
+                y con ello puedo ayudar al posicionamiento web-->
+                <address class="institucional__direccion">
+                    Calle Vergueiro, 3185 <br> Villa Mariana, São Paulo
+                    <article class="institucional__contacto">
+                        <a href="tel:+55 11 55712751" class="institucional__contacto-telefono">+55 11 55712751</a> o
+                        <a href="mailto:contato@apeperia.com"
+                            class="institucional__contacto-email">contato@apeperia.com</a>
+                    </article>
+                </address>
+            </div>
+            <!--Cuando se utiliza la etiqueta video se debe utilizar su atributo controls para que se muestren los controles-->
+            <video src="img/formacion-java.mp4" class="institucional__video" controls></video>
+        </div>
     </section>
 
     <!--Sección footer-->
@@ -222,7 +229,7 @@ header>img+nav>ul>li*6>a-->
             </ul>
         </nav>
     </footer>
-    
+
 </body>
 
 

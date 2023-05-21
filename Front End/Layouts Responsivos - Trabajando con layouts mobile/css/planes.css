@@ -104,3 +104,38 @@
 .tarjetas__boton--mega {
     border-color: var(--planes-card-mega);
 }
+
+/* @media screen and (min-width: 1024px) {
+    .planes__tarjetas {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    .tarjetas {
+        max-width: 300px;
+    }
+} */
+
+/*media query de tablets a más*/
+
+@media screen and (min-width: 768px) {
+    /*Establece un tamaño más alargado fijo para las tarjetas*/
+    .tarjetas {
+        max-width: 400px;
+    }
+}
+
+/*media querys para desktop*/
+
+@media screen and (min-width: 1024px) {
+    .planes__tarjetas {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    .tarjetas {
+        max-width: 300px;
+    }
+}

@@ -47,3 +47,38 @@
 .institucional__video {
     width: 100vw;
 }
+
+/*media query de tablets a más*/
+
+@media screen and (min-width: 768px) {
+
+    /*Hace que el elemento email quede en linea con el número de teléfono*/
+    .institucional__contacto-email {
+        display: inline-block;
+    }
+
+    /*Hace que el video ocupe el tamaño de su contenedor, por lo que tendrá un margen*/
+    .institucional__video {
+        width: 100%;
+    }
+}
+
+/*media querys para desktop*/
+
+@media screen and (min-width: 1024px) {
+    .institucional__contenido {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    .institucional__contacto-email {
+        display: block;
+    }
+
+    .institucional__video {
+        align-self: flex-end;
+        width: 375px;
+    }
+}

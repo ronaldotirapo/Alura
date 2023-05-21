@@ -56,3 +56,12 @@ body {
     border: 1px solid var(--boton-rojo);
     border-radius: 5px;
 }
+
+@media screen and (min-width:1024px) {
+    /*Hace que los contenedores de todas las secciones tengan un padding del total de la pantalla menos el contenedor (940px),
+    se coloca /2 ya que debe ser la mitad para cada lado del padding*/
+    .container {
+        padding-left: calc((100% - 940px)/2);
+        padding-right: calc((100% - 940px)/2);
+    }
+}
