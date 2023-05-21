@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruta & Fruto</title>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto:100,300,400,500,700,900" rel="stylesheet" />
+    <link href="./assets/css/normalize.css" rel="stylesheet" />
+    <link href="./assets/css/reset.css" rel="stylesheet" />
+    <link href="./assets/css/style.css" rel="stylesheet">
+
+    <meta name="author" content="Ronaldo Tirapo">
+    <meta name="description" content="Página según los contenidos del curso de arquitectura CSS de Alura">
+</head>
+
+<body>
+
+    <!--Para nombrar las clases utilizaremos la metodología BEM (Block, Element, Modifier), siendo un block un elemento independiente, 
+    un element un hijo directo dependiente de un block y un modifier un estado especial de un element
+    La metodología fue lanzada por Yandex con la intención de crear páginas web más rápido y hacerlas mantenibles y reutilizables-->
+
+    <header class="cabecera">
+        <img src="assets/img/logo.jpg" alt="Logo de Fruta & Fruto" class="cabecera__logo">
+        <nav class="cabecera__menu">
+            <ul class="menu__lista">
+                <li class="lista__item lista__item--activo"><a href="#" class="item__link">Inicio</a></li>
+                <li class="lista__item"><a href="#" class="item__link">Recetas</a></li>
+                <li class="lista__item"><a href="#" class="item__link">Quienes somos</a></li>
+                <li class="lista__item"><a href="#" class="item__link">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+
+</html>
+
+<!--
+Normalize CSS al igual que reset CSS restablece algunos valores por defecto que aplican los navegadores a los estilos
+Una arquitectura CSS estructurar el proyecto mediante carpetas, código y nombres de clase estandarizados
+Una metodología CSS debe ser: Predecible, Reutilizable, Mantenible y Escalable
+Una arquitectura se diferencia de una metología en que la metología son pasos a seguir abstractos y reutilizables
+y una arquitectura es una metología pero práctica aplicada a un tema específico, como CSS
+Así también existen varias metodologías como OOCSS, SMACSS, BEM, ITCSS Y ACSS (Atomic Design)
+-->

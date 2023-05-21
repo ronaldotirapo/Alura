@@ -9,9 +9,8 @@
     y su valor por defecto es stretch el cual estira en el eje transversal al tope del contenedor o el elemento más alto,     
     (El eje transversal, cross axis, es el eje perpendicular al eje principal, es decir el flex-direction) 
     Se diferencia de align-content a que este último solo funciona cuando hay más de una línea y su valor por defecto es flex-start
-    EL valor center de la propiedad align-items de flexbox 
-    alinea los elementos al centro horizontalmente (con flex-direction row) haciendo que ocupen su respectivo espacio 
-    horizontal y verticalmente y si el tamaño vertical exece al contenedor se exederá equitativamente arriba y abajo
+    EL valor center de la propiedad align-items de flexbox alinea los elementos al centro según la linea transversal de su flex-direction
+    Si el tamaño vertical exece al contenedor se exederá equitativamente arriba y abajo
     Otros valores pueden ser: flex-start, flex-end y baseline*/
     align-items: center;
 
@@ -32,12 +31,12 @@
 .contenidoPrincipal-cursos {
     display: flex;
 
-    /*flex-direction define como distribuir los elementos (por defecto es row, en una fila)*/
+    /*flex-direction define como distribuir los elementos hijo (por defecto es row, en una fila)*/
     /*En este caso no sería necesario el valor row ya que viene por defecto*/
     flex-direction: row;
 
-    /*flex-wrap wrap hace que los elementos se ajusten en varias lineas (por defecto es nowrap, en una sola linea) 
-    y distribuyan para que no se desborden cuando hay un alto específico*/
+    /*flex-wrap: wrap hace que los elementos se ajusten en varias lineas (por defecto es nowrap, en una sola linea) 
+    y se distribuyan según sea necesario para que no se desborden o estrechen cuando los elementos ocupan mucho espacio*/
 
     /*Las propiedades flex-direction, flex-wrap, tienen valores para invertir el orden como:
     row-reverse y column-reverse para flex-direction y wrap-reverse para flex-wrap*/
@@ -94,7 +93,7 @@
     /*flex-shrink reduce proporcionalemente el tamaño de los elementos hijo de un flex container cuando el tamaño de los elementos es mayor
     que su container (el espacio faltante se divide según la suma de los valores flex-shrink de los elementos y se reparte 
     según el valor de cada uno) y en la dirección de flex-direction
-    Su valor por defecto es 1 (por eso los elementos se encogen por defecto) y no acepta negativos
+    Su valor por defecto es 1 (por eso los elementos se encogen equitativamente por defecto) y no acepta negativos
     Cuando se indica un valor de cero, anularía la capacidad de encogerse cuando hay poco tamaño, 
     haciendo que el elemento no se encoga cuando hay poco espacio*/
     flex-shrink: 2;
@@ -135,7 +134,7 @@
     Otros valores pueden ser:
     flex-start, que alínea todos los elementos pegados al inicio, arriba en flex-direction column y a la izquierda en row
     flex-end, que alínea todos los elementos pegados al final, abajo en flex-direction column y a la derecha en row
-    center, que alinea todos los elementos al centro y coloca un espacio equitativo alrededor*/
+    center, que alinea todos los elementos al centro y coloca un espacio equitativo en los costados*/
     justify-content: space-around;
     width: 70%;
     margin-left: 5%;
