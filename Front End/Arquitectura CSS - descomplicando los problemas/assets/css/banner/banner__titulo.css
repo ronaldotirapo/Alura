@@ -1,0 +1,19 @@
+.banner__titulo {
+    /*El posicionamiento de este elemento se pudo haber logrado mejor con flexbox*/
+    color: #fdfdfd;
+    font-family: Pacifico, cursive;
+    font-size: 6.0625rem;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.75);
+    text-align: center;
+
+    width: 100%;
+    
+    /*Esto libera el texto del flujo normal de la página y con left y top hace que se coloque 
+    a la esquina inferior izquierda empezando por el centro del contenedor, y con transform: translate hace que
+    se coloque en el eje x en un 50% menos por lo que se colocaría al centro empezando el lado izquierdo contenedor
+    y en el eje y un 50% de abajo hacia arriba por lo que lograría colocarse finalmente al centro del contenedor*/
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}

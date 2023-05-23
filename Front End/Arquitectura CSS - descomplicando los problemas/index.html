@@ -9,7 +9,16 @@
     <link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto:100,300,400,500,700,900" rel="stylesheet" />
     <link href="./assets/css/normalize.css" rel="stylesheet" />
     <link href="./assets/css/reset.css" rel="stylesheet" />
-    <link href="./assets/css/style.css" rel="stylesheet">
+    <link href="./assets/css/cabecera.css" rel="stylesheet">
+    <link href="./assets/css/menu/menu__lista.css" rel="stylesheet">
+    <link href="./assets/css/menu/menu__item.css" rel="stylesheet">
+    <link href="./assets/css/menu/menu__link.css" rel="stylesheet">
+    <link href="./assets/css/banner/banner.css" rel="stylesheet">
+    <link href="./assets/css/banner/banner__imagen.css" rel="stylesheet">
+    <link href="./assets/css/banner/banner__titulo.css" rel="stylesheet">
+    <link href="./assets/css/sobre/sobre.css" rel="stylesheet">
+    <link href="./assets/css/sobre/sobre__titulo.css" rel="stylesheet">
+    <link href="./assets/css/sobre/sobre__descripcion.css" rel="stylesheet">
 
     <meta name="author" content="Ronaldo Tirapo">
     <meta name="description" content="Página según los contenidos del curso de arquitectura CSS de Alura">
@@ -21,17 +30,56 @@
     un element un hijo directo dependiente de un block y un modifier un estado especial de un element
     La metodología fue lanzada por Yandex con la intención de crear páginas web más rápido y hacerlas mantenibles y reutilizables-->
 
+    <!--Para estructurar el proyecto utilizaremos la metología Atomic Design de Brad Frost, el cual divide los elementos en:
+    atom, un elemento individual que no son muy útiles por si solos, como un button o fuentes, paleta de colores, etc.
+    molecules, un grupo de atoms que usualmente tienen una sola función y son reutilizables, como el componente de búsqueda de un header
+    organisms, grupos de molecules, una sección con un grupo de funciones, como un header
+    templates, grupos de organisms, que forman una página template ("modelo")
+    pages, una plantilla con un diseño específico, ya que el diseño es intercambiable
+    Esta metología permite crear sistemas de diseño tanto en frameworks e incluso programas de maquetación como Adobe XD 
+    -->
+
+    <!--Para aplicar la metodología Atomic Design a la arquitectura de nuestro proyecto organizamos los archivos CSS:
+    Los organism van en la carpeta raiz de CSS
+    Los molecule van un una nueva carpeta dentro de la carpeta raiz de CSS
+    Los atoms van en la carpeta de su molecule correspondiente-->
+
+    <!--Los organism pueden estar compuestos de molecules y/o atoms y/o otros organism-->
+
+    <!--Sección header-->
+
+    <!--En esta sección la clase cabecera sería un organism-->
     <header class="cabecera">
-        <img src="assets/img/logo.jpg" alt="Logo de Fruta & Fruto" class="cabecera__logo">
-        <nav class="cabecera__menu">
+        <!--El elemento img sería un atom-->
+        <img src="assets/img/logo.jpg" alt="Logo de Fruta & Fruto" class="logo">
+
+        <!--La clase menu sería un molecule, ya que podrá ser reutilizado dentro de otros organism-->
+        <nav class="menu">
+            
+            <!--Las clases derivadas de menu deben ser atoms así tengan hijos, ya que un molecule solo tiene atoms-->
             <ul class="menu__lista">
-                <li class="lista__item lista__item--activo"><a href="#" class="item__link">Inicio</a></li>
-                <li class="lista__item"><a href="#" class="item__link">Recetas</a></li>
-                <li class="lista__item"><a href="#" class="item__link">Quienes somos</a></li>
-                <li class="lista__item"><a href="#" class="item__link">Contacto</a></li>
+                <li class="menu__item menu__item--activo"><a href="#" class="menu__link">Inicio</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">Recetas</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">Quienes somos</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">Contacto</a></li>
             </ul>
         </nav>
     </header>
+    
+    <!--Sección banner-->
+
+    <!--En este caso banner sería un molecule y sus hijos atoms-->
+    <section class="banner">
+        <img src="./assets/img/banner.png" alt="banner" class="banner__imagen">
+        <h2 class="banner__titulo">Reaproveche mejor los alimentos</h2>
+    </section>
+
+    <!--Sección sobre-->
+
+    <section class="sobre">
+        <h2 class="sobre__titulo">Recetas para economizar y ganar salud</h2>
+        <p class="sobre__descripcion">Nuestras recetas te ayudan a aprovechar mejor los alimentos, economizar, ganar tiempo y practicidad</p>
+    </section>
 </body>
 
 </html>

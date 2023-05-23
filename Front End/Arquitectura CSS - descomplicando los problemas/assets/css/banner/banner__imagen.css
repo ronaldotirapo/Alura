@@ -1,0 +1,6 @@
+.banner__imagen {
+    /*Esta imagen no se esta usando de forma responsiva, podría haber quedado mejor como un
+    background-image con background-size cover en vez de un elemento*/
+    width: 100%;
+    height: calc(100vh - 72px);
+}
