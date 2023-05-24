@@ -1,0 +1,10 @@
+.receta {
+    background-color: #FDFDFD;
+    display: flex;
+    flex-direction: column;
+
+    margin-right: 5rem;
+    margin-bottom: 5rem;
+
+    width: calc(25% - 5rem);
+}

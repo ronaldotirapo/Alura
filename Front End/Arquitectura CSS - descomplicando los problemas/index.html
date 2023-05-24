@@ -19,6 +19,13 @@
     <link href="./assets/css/sobre/sobre.css" rel="stylesheet">
     <link href="./assets/css/sobre/sobre__titulo.css" rel="stylesheet">
     <link href="./assets/css/sobre/sobre__descripcion.css" rel="stylesheet">
+    <link href="./assets/css/recetas.css" rel="stylesheet">
+    <link href="./assets/css/receta/receta.css" rel="stylesheet">
+    <link href="./assets/css/receta/receta__imagen.css" rel="stylesheet">
+    <link href="./assets/css/receta/receta__contenido.css" rel="stylesheet">
+    <link href="./assets/css/receta/receta__titulo.css" rel="stylesheet">
+    <link href="./assets/css/receta/receta__descripcion.css" rel="stylesheet">
+    <link href="./assets/css/receta/receta__boton.css" rel="stylesheet">
 
     <meta name="author" content="Ronaldo Tirapo">
     <meta name="description" content="Página según los contenidos del curso de arquitectura CSS de Alura">
@@ -53,7 +60,8 @@
         <!--El elemento img sería un atom-->
         <img src="assets/img/logo.jpg" alt="Logo de Fruta & Fruto" class="logo">
 
-        <!--La clase menu sería un molecule, ya que podrá ser reutilizado dentro de otros organism-->
+        <!--La clase menu sería un molecule, ya que podrá ser reutilizado dentro de otros organism,
+        por ello debe tener una carpeta y un nombre no dependiente de su organism-->
         <nav class="menu">
             
             <!--Las clases derivadas de menu deben ser atoms así tengan hijos, ya que un molecule solo tiene atoms-->
@@ -79,6 +87,59 @@
     <section class="sobre">
         <h2 class="sobre__titulo">Recetas para economizar y ganar salud</h2>
         <p class="sobre__descripcion">Nuestras recetas te ayudan a aprovechar mejor los alimentos, economizar, ganar tiempo y practicidad</p>
+    </section>
+
+    <!--Sección Recetas-->
+
+    <section class="recetas">
+        <div class="receta">
+            <img src="./assets/img/recetas/ensalada-de-frutas.jpg" alt="Bowl de aguacate" class="receta__imagen">
+            <div class="receta__contenido">
+                <h4 class="receta__titulo">Bowl de aguacate</h4>
+                <p class="receta__descripcion">Receta refrescante llena de vitaminas para tu desayuno.</p>
+                <button class="receta__boton">Ver receta</button>
+            </div>
+        </div>
+        <div class="receta">
+            <img src="./assets/img/recetas/ensalada-de-kiwi.jpg" alt="Ensalada de kiwi" class="receta__imagen">
+            <div class="receta__contenido">
+                <h4 class="receta__titulo">Ensalada de kiwi</h4>
+                <p class="receta__descripcion">Receta refrescante llena de vitaminas para tu desayuno.</p>
+                <button class="receta__boton">Ver receta</button>
+            </div>
+        </div>
+        <div class="receta">
+            <img src="./assets/img/recetas/mix-de-vegetales.jpg" alt="Mix de vegetales" class="receta__imagen">
+            <div class="receta__contenido">
+                <h4 class="receta__titulo">Mix de vegetales</h4>
+                <p class="receta__descripcion">Receta refrescante llena de vitaminas para tu desayuno.</p>
+                <button class="receta__boton">Ver receta</button>
+            </div>
+        </div>
+        <div class="receta">
+            <img src="./assets/img/recetas/pimentones-juliana.jpg" alt="Pimentones en Juliana" class="receta__imagen">
+            <div class="receta__contenido">
+                <h4 class="receta__titulo">Pimentones en Juliana</h4>
+                <p class="receta__descripcion">Receta refrescante llena de vitaminas para tu desayuno.</p>
+                <button class="receta__boton">Ver receta</button>
+            </div>
+        </div>
+        <div class="receta">
+            <img src="./assets/img/recetas/plato-oriental.jpg" alt="Plato oriental" class="receta__imagen">
+            <div class="receta__contenido">
+                <h4 class="receta__titulo">Plato oriental</h4>
+                <p class="receta__descripcion">Receta refrescante llena de vitaminas para tu desayuno.</p>
+                <button class="receta__boton">Ver receta</button>
+            </div>
+        </div>
+        <div class="receta">
+            <img src="./assets/img/recetas/beterrabas-asadas.jpg" alt="Remolachas asadas" class="receta__imagen">
+            <div class="receta__contenido">
+                <h4 class="receta__titulo">Remolachas asadas</h4>
+                <p class="receta__descripcion">Receta refrescante llena de vitaminas para tu desayuno.</p>
+                <button class="receta__boton">Ver receta</button>
+            </div>
+        </div>
     </section>
 </body>
 
