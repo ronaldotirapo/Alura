@@ -1,24 +1,22 @@
-.cabecera {
+.rodapie {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-
+    padding-top: 5rem;
     padding-left: 2rem;
     padding-right: 2rem;
-
-    background-color: #F9F9F9;
 }
 
 @media screen and (min-width: 0) {
-    .cabecera {
-        padding: 0 1rem;
+    .rodapie {
+        flex-direction: column;
         justify-content: center;
+        align-items: center;
     }
 }
 
 @media screen and (min-width: 768px) {
-    .cabecera {
-        padding: 0 5rem;
+    .rodapie {
+        flex-direction: row;
         justify-content: space-between;
+        align-items: center;
     }
 }

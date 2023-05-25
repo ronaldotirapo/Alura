@@ -2,7 +2,6 @@
     /*El posicionamiento de este elemento se pudo haber logrado mejor con flexbox*/
     color: #fdfdfd;
     font-family: Pacifico, cursive;
-    font-size: 6.0625rem;
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.75);
     text-align: center;
 
@@ -16,4 +15,16 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: 0) {
+    .banner__titulo {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .banner__titulo {
+        font-size: 5.0625rem;
+    }
 }

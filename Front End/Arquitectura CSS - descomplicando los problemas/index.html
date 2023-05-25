@@ -34,6 +34,13 @@
     <link href="./assets/css/persona/persona__imagen.css" rel="stylesheet">
     <link href="./assets/css/persona/persona__nombre.css" rel="stylesheet">
     <link href="./assets/css/persona/persona__funcion.css" rel="stylesheet">
+    <link href="./assets/css/rodapie.css" rel="stylesheet">
+    <link href="./assets/css/rodapie/rodapie__titulo.css" rel="stylesheet">
+    <link href="./assets/css/rodapie/rodapie__descripcion.css" rel="stylesheet">
+    <link href="./assets/css/rodapie/rodapie__lista.css" rel="stylesheet">
+    <link href="./assets/css/rodapie/rodapie__item.css" rel="stylesheet">
+    <link href="./assets/css/rodapie/rodapie__icon.css" rel="stylesheet">
+    <link href="./assets/css/logo.css" rel="stylesheet">
 
     <meta name="author" content="Ronaldo Tirapo">
     <meta name="description" content="Página según los contenidos del curso de arquitectura CSS de Alura">
@@ -75,7 +82,7 @@
         <!--La clase menu sería un molecule, ya que podrá ser reutilizado dentro de otros organism,
         por ello debe tener una carpeta y un nombre no dependiente de su organism-->
         <nav class="menu">
-            
+
             <!--Las clases derivadas de menu deben ser atoms así tengan hijos, ya que un molecule solo tiene atoms-->
             <ul class="menu__lista">
                 <li class="menu__item menu__item--activo"><a href="#" class="menu__link">Inicio</a></li>
@@ -85,7 +92,7 @@
             </ul>
         </nav>
     </header>
-    
+
     <!--Sección banner-->
 
     <!--En este caso banner sería un molecule y sus hijos atoms-->
@@ -102,7 +109,8 @@
 
     <section class="sobre">
         <h2 class="sobre__titulo">Recetas para economizar y ganar salud</h2>
-        <p class="sobre__descripcion">Nuestras recetas te ayudan a aprovechar mejor los alimentos, economizar, ganar tiempo y practicidad</p>
+        <p class="sobre__descripcion">Nuestras recetas te ayudan a aprovechar mejor los alimentos, economizar, ganar
+            tiempo y practicidad</p>
     </section>
 
     <!--Sección Recetas-->
@@ -166,7 +174,7 @@
     <section class="quienes">
         <h3 class="quienes__titulo">Quienes somos</h3>
         <p class="quienes__descripcion">Conosca a la comunidad detrás de la iniciativa</p>
-        
+
         <div class="personas">
             <div class="persona">
                 <div class="persona__imagen persona__imagen--roberta"></div>
@@ -185,6 +193,28 @@
             </div>
         </div>
     </section>
+
+    <footer class="rodapie">
+        <h3 class="rodapie__titulo">fruta & fruto 2023</h3>
+        <p class="rodapie__descripcion">Contacto</p>
+        <ul class="rodapie__lista">
+            <li class="rodapie__item">
+                <a href="#" class="rodapie__icon">
+                    <img src="assets/img/WhatsApp.png" alt="Whatsapp">
+                </a>
+            </li>
+            <li class="rodapie__item">
+                <a href="#" class="rodapie__icon">
+                    <img src="assets/img/email.png" alt="email">
+                </a>
+            </li>
+            <li class="rodapie__item">
+                <a href="#" class="rodapie__icon">
+                    <img src="assets/img/Instagram.png" alt="Instagram">
+                </a>
+            </li>
+        </ul>
+    </footer>
 </body>
 
 </html>
