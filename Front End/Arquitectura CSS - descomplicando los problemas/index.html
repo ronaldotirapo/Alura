@@ -26,6 +26,14 @@
     <link href="./assets/css/receta/receta__titulo.css" rel="stylesheet">
     <link href="./assets/css/receta/receta__descripcion.css" rel="stylesheet">
     <link href="./assets/css/receta/receta__boton.css" rel="stylesheet">
+    <link href="./assets/css/quienes/quienes.css" rel="stylesheet">
+    <link href="./assets/css/quienes/quienes__titulo.css" rel="stylesheet">
+    <link href="./assets/css/quienes/quienes__descripcion.css" rel="stylesheet">
+    <link href="./assets/css/personas.css" rel="stylesheet">
+    <link href="./assets/css/persona/persona.css" rel="stylesheet">
+    <link href="./assets/css/persona/persona__imagen.css" rel="stylesheet">
+    <link href="./assets/css/persona/persona__nombre.css" rel="stylesheet">
+    <link href="./assets/css/persona/persona__funcion.css" rel="stylesheet">
 
     <meta name="author" content="Ronaldo Tirapo">
     <meta name="description" content="Página según los contenidos del curso de arquitectura CSS de Alura">
@@ -33,8 +41,8 @@
 
 <body>
 
-    <!--Para nombrar las clases utilizaremos la metodología BEM (Block, Element, Modifier), siendo un block un elemento independiente, 
-    un element un hijo directo dependiente de un block y un modifier un estado especial de un element
+    <!--Para nombrar las clases utilizaremos la metodología BEM (Block, Element, Modifier), siendo un block un elemento independiente
+    que puede contener otros block, un element un hijo directo dependiente de un block y un modifier un estado especial de un element
     La metodología fue lanzada por Yandex con la intención de crear páginas web más rápido y hacerlas mantenibles y reutilizables-->
 
     <!--Para estructurar el proyecto utilizaremos la metología Atomic Design de Brad Frost, el cual divide los elementos en:
@@ -50,6 +58,10 @@
     Los organism van en la carpeta raiz de CSS
     Los molecule van un una nueva carpeta dentro de la carpeta raiz de CSS
     Los atoms van en la carpeta de su molecule correspondiente-->
+
+    <!--Para relacionar Atomic design con BEM considero que:
+    Los bloques de BEM serían equivalentes a un organism o un molecule
+    Los element de BEM serían equivalentes a un atom-->
 
     <!--Los organism pueden estar compuestos de molecules y/o atoms y/o otros organism-->
 
@@ -78,7 +90,11 @@
 
     <!--En este caso banner sería un molecule y sus hijos atoms-->
     <section class="banner">
-        <img src="./assets/img/banner.png" alt="banner" class="banner__imagen">
+
+        <!--Se debe tener en cuenta cuando una imgen realmente es necesaria para la página y aporta información,
+        ya que si una imagen en HTML no carga el atributo alt ayuda a tener accesibilidad ya que la imagen era necesaria,
+        pero si la imgen es meramente estética o parte del diseño y no aporta información se puede insertar mejor en el CSS-->
+        <div class="banner__imagen"></div>
         <h2 class="banner__titulo">Reaproveche mejor los alimentos</h2>
     </section>
 
@@ -138,6 +154,34 @@
                 <h4 class="receta__titulo">Remolachas asadas</h4>
                 <p class="receta__descripcion">Receta refrescante llena de vitaminas para tu desayuno.</p>
                 <button class="receta__boton">Ver receta</button>
+            </div>
+        </div>
+    </section>
+
+    <!--Sección Quienes somos-->
+
+    <!--Me parece que la clase utilizada en la sección sobre se pudieron reutilizar para el título y descripción de esta página
+    y así quedar quienes como un organism con una sección con el título y la descripción como un molecule reutilizable y
+    la clase personas como otro molecule reutilizable-->
+    <section class="quienes">
+        <h3 class="quienes__titulo">Quienes somos</h3>
+        <p class="quienes__descripcion">Conosca a la comunidad detrás de la iniciativa</p>
+        
+        <div class="personas">
+            <div class="persona">
+                <div class="persona__imagen persona__imagen--roberta"></div>
+                <span class="persona__nombre">Roberta</span>
+                <span class="persona__funcion">Contenido</span>
+            </div>
+            <div class="persona">
+                <div class="persona__imagen persona__imagen--marcela"></div>
+                <span class="persona__nombre">Marcela</span>
+                <span class="persona__funcion">Chef de cocina</span>
+            </div>
+            <div class="persona">
+                <div class="persona__imagen persona__imagen--andreia"></div>
+                <span class="persona__nombre">Andréia</span>
+                <span class="persona__funcion">Pequeña productora</span>
             </div>
         </div>
     </section>
