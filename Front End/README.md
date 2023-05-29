@@ -1,6 +1,6 @@
 # Formación Front End
 
-### Sección Front-End UI
+## Sección Front-End UI
 
 * Artículo - [Comenzando con Front-end](https://www.aluracursos.com/blog/comenzando-con-front-end)
 
@@ -23,3 +23,15 @@
 * Artículo - [¿Cómo lidiar con los límites de resolución en sitios responsivos?](https://www.aluracursos.com/blog/como-lidiar-con-los-limites-de-resolucion-en-sitios-responsivos)
 
 * Curso - Arquitectura CSS: descomplicando los problemas
+
+* Artículo - [Cómo organizar el CSS en tu proyecto](https://www.aluracursos.com/blog/como-organizar-el-css-en-tu-proyecto)
+
+* Artículo - [Creación de componentes CSS con el estándar BEM](https://www.aluracursos.com/blog/creacion-de-componentes-css-con-el-estandar-bem)
+
+* Video - [Equipo Front End #AluraMás](https://www.youtube.com/watch?v=rpvrLaBQwgg)
+
+## Sección JavaScript el lenguaje de la web
+
+* Artículo - [Empezar a programar es con JavaScript](https://www.aluracursos.com/blog/empezar-a-programar-es-con-javascript)
+
+* Curso - JavaScript: primeros pasos con el lenguaje
