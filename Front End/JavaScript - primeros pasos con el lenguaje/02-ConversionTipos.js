@@ -10,7 +10,7 @@ Y dos tipos de datos especiales:
 Object
 Null
 
-Gracias al editor de Visual Studio Code ayuda a ver el tipo de dato cuando se pulsa CRTL + ENTER en la variable*/
+Gracias al editor de Visual Studio Code ayuda a ver el tipo de dato cuando se pasa sobre el nombre de la variable*/
 
 let unNumero = 15;
 let unTexto = "Hola Mundo";
