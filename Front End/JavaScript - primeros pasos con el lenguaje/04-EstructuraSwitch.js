@@ -1,6 +1,6 @@
 /*Para evaluar múltiples condiciones en vez de utilizar múltiples condiciones
 (y para evitar tener que evaluar cada condición) se puede utilizar la estructura switch,
-aunque otra forma de realizarlo es usando hash map*/
+aunque otra forma de realizarlo es usando map*/
 const ciudadDestino = "Lima";
 const miArrayDeCiudades = new Array("Lima", "Quito", "Santiago", "Caracas", "Bogotá");
 let valorPasaje = 0;
