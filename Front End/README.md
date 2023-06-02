@@ -35,3 +35,5 @@
 * Artículo - [Empezar a programar es con JavaScript](https://www.aluracursos.com/blog/empezar-a-programar-es-con-javascript)
 
 * Curso - JavaScript: primeros pasos con el lenguaje
+
+* Artículo - [Comprenda la diferencia entre var, let y const en JavaScript | Alura Cursos](https://www.aluracursos.com/blog/comprenda-diferencia-entre-var-let-y-const-en-javascript)
