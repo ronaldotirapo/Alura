@@ -32,7 +32,10 @@
         <!--Formulario de input de texto con un botón-->
         <form action="">
           <input type="text" name="task" placeholder="Nombre de la tarea" class="inputForm" autocomplete="off" />
-          <button type="submit" class="btnCreate">
+          
+          <!--Para seleccionar un elemento en JavaScript sin depender de id, tag o class (ya que estos podrían cambiar)
+          se utilizan los data attribute los cuales se escriben: data-nombre-de-atributo-->
+          <button type="submit" class="btnCreate" data-form-btn> 
             Agregar <i class="fas fa-plus-circle"></i>
           </button>
         </form>
@@ -50,6 +53,8 @@
       </ul>
     </div>
   </main>
+  <!--Es necesario agregar el script y enlazarlo con nuestro HTML mediante la etiqueta src-->
+  <script src="script.js"></script>
 </body>
 
 </html>
