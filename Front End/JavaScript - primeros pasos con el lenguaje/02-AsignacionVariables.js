@@ -26,7 +26,9 @@ ya que su alcance es local dentro del bloque de código o modulo del programa*/
 //console.log(apellido); esto arrojaría una excepción
 
 /*La palabra reservada var no es muy recomendada de usar
-ya que su alcance puede ser global en cualquier bloque del código o de función*/
+ya que tiene un alcance global dentro y fuera de cualquier bloque del código excepto en funciones,
+además las variables declaradas con var tiene hoisting (elevación) por lo que pueden ser utilizadas
+antes de ser si quiera declaradas lo cual puede llevar a confusiones*/
 
 {
     //Este es un bloque
