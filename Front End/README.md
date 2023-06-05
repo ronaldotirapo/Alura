@@ -43,4 +43,3 @@
 * Artículo - [¿Qué es DOM?](https://www.aluracursos.com/blog/que-es-dom)
 
 * Curso - JS en la Web: Validación de Formularios y HTML5
-
