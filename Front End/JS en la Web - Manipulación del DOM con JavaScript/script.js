@@ -1,3 +1,7 @@
+//Para importar nuestros módulos utilizamos import nombreDelModulo from "rutaDelModulo"
+import checkComplete from "./components/checkComplete.js"
+import deleteIcon from "./components/deleteIcon.js"
+
 /*Para proteger nuestro código del alcance global que tiene algunas variables y funciones utilizamos
 IIFE (Immediately Invoked Function Expression) o funciones invocadas inmediatamente, una función anónima dentro de un bloque*/
 (() => {
@@ -35,34 +39,16 @@ const createTask = (evento) => { //El objeto evento se registra automáticamente
 
     //La función appendChild agrega un nuevo elemento hijo
     //Agregamos los hijos correspondientes según la jerarquía
-    taskContent.appendChild(checkComplete()); //Añadimos el botón de check dentro de div mediante la función para que sea dinámico
+    taskContent.appendChild(checkComplete()); //Añadimos el botón de check dentro de div mediante una función para que sea dinámico
     taskContent.appendChild(taskTitle);
     task.appendChild(taskContent);
+    task.appendChild(deleteIcon()); //Añadimos el botón de eliminar tarea dentro del li mediante una función para que sea dinámico
     list.appendChild(task);
-
-    // const content = `
-    //     <i class="fas fa-trash-alt trashIcon icon"></i>
-    // `;
 
     /*Al ser el DOM un arbol cada uno de sus nodos puede ser modificado, entre otros métodos para modificar tenemos:
     insertBefore(padre,hijo)
     replaceChild(hijoAnterior, hijoNuevo)
     removeChild(hijoParaRemover)*/    
-}
-
-//Función para manipular el comportamiento del boton de check de la tarea dinámicamente y evitar el acoplamiento
-const checkComplete = () => {
-    const i = document.createElement("i");
-    i.classList.add("far", "fa-check-square", "icon"); //Para añadir más de una clase las separamos por coma
-    i.addEventListener("click", completeTask); //Agregamos un listener para modificar el color del check
-    return i;
-}
-
-const completeTask = (event) => {
-    const elemento = event.target; //Con la propiedad target del evento accedemos a la referencia del elemento que se hizo click
-    elemento.classList.toggle("fas"); //La función toggle (palanca) añade la clase cuando no existe o la quita cuando existe
-    elemento.classList.toggle("far");
-    elemento.classList.toggle("completeIcon");
 }
 
 //Añadimos el event listener a nuestro objeto btn
