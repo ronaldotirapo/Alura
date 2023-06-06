@@ -37,3 +37,10 @@
 * Curso - JavaScript: primeros pasos con el lenguaje
 
 * Artículo - [Comprenda la diferencia entre var, let y const en JavaScript | Alura Cursos](https://www.aluracursos.com/blog/comprenda-diferencia-entre-var-let-y-const-en-javascript)
+
+* Curso - JS en la Web: Manipulación del DOM con JavaScript
+
+* Artículo - [¿Qué es DOM?](https://www.aluracursos.com/blog/que-es-dom)
+
+* Curso - JS en la Web: Validación de Formularios y HTML5
+
