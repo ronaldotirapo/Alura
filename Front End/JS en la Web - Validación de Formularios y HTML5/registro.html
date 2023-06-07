@@ -24,6 +24,7 @@
             <h2 class="card__title">Completa tu registro</h2>
             <form action="./registro_concluido.html" class="formulario flex flex--column">
                 <fieldset>
+
                     <!--Para establecer campos requeridos utilizamos el atributo required
                     Cada input debería tener su respectivo atributo type según corresponda
                     Para establecer una límite de carácteres utilizamos los atributos minlength y maxlength-->
@@ -39,12 +40,12 @@
                         <span class="input-message-error">Este campo no es valido</span>
                     </div>
                     <div class="input-container">
+
                         <!--Para tener una validación personalizada en HTML utilizamos el atributo pattern
                         en el input del formulario utilizando expresiones regulares (regex)
                         Para mostrar un texto cuando no se cumple la validación utilizamos el atributo title-->
                         <input name="password" id="password" class="input" type="password" placeholder="Contraseña"
-                            required minlength="6" maxlength="12"
-                            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+-])$"
+                            required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+-]).{6,12}$" 
                             title="Al menos 6 carácters, máximo 12, debe contener una letra minúscula, una letra mayúscula, 
                             un número y no puede contener carácteres especiales">
                         <label class="input-label" for="password">Contraseña</label>
@@ -54,7 +55,11 @@
                 <fieldset>
                     <legend class="form__label">Información personal</legend>
                     <div class="input-container">
-                        <input name="birth" id="birth" class="input" type="text" placeholder="Fecha de nacimento">
+
+                        <!--Establecemos un data attribute llamado tipo (el cual utilizaremos para nuestros inputs) 
+                        con el contenido "nacimiento"-->
+                        <input name="birth" id="birth" class="input" type="date" placeholder="Fecha de nacimento"
+                            required data-tipo="nacimiento">
                         <label class="input-label" for="birth">Fecha de nacimiento</label>
                         <span class="input-message-error">Este campo no es valido</span>
                     </div>
@@ -87,6 +92,8 @@
             </form>
         </section>
     </main>
+    <!--Establecemos la relación de un archivo JavaScript, de preferencia en una carpeta con el nombre de js-->
+    <script src="./js/validaciones.js" type="module"></script>
 </body>
 
 </html>
