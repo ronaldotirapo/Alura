@@ -8,7 +8,7 @@
 
 * Artículo - [Desde cero hasta programador front-end](https://www.aluracursos.com/blog/desde-cero-hasta-programador-front-end)
 
-* Video - [Accesibilidad Web | #Aluramás](https://www.youtube.com/watch?v=ngMOsuZL-XE&list=PLNKOkLkhi1KceHPDvWE7ZkPW7betyiAG0&index=39&t=2s)
+* Video - [Accesibilidad Web](https://www.youtube.com/watch?v=ngMOsuZL-XE&list=PLNKOkLkhi1KceHPDvWE7ZkPW7betyiAG0&index=39&t=2s)
 
 * Artículo - [Empezando a organizar tu CSS](https://www.aluracursos.com/blog/empezando-a-organizar-tu-css)
 
@@ -36,7 +36,7 @@
 
 * Curso - [JavaScript: primeros pasos con el lenguaje](./JavaScript - primeros pasos con el lenguaje)
 
-* Artículo - [Comprenda la diferencia entre var, let y const en JavaScript | Alura Cursos](https://www.aluracursos.com/blog/comprenda-diferencia-entre-var-let-y-const-en-javascript)
+* Artículo - [Comprenda la diferencia entre var, let y const en JavaScript](https://www.aluracursos.com/blog/comprenda-diferencia-entre-var-let-y-const-en-javascript)
 
 * Curso - [JS en la Web: Manipulación del DOM con JavaScript](./JS en la Web - Manipulación del DOM con JavaScript/index.html)
 
