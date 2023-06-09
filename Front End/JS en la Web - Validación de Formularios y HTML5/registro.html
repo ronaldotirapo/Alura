@@ -45,7 +45,7 @@
                         en el input del formulario utilizando expresiones regulares (regex)
                         Para mostrar un texto cuando no se cumple la validación utilizamos el atributo title-->
                         <input name="password" id="password" class="input" type="password" placeholder="Contraseña"
-                            required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+-]).{6,12}$" 
+                            required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[!@#$%^&*_=+-]).{6,12}$"
                             title="Al menos 6 carácters, máximo 12, debe contener una letra minúscula, una letra mayúscula, 
                             un número y no puede contener carácteres especiales"
                             data-tipo="password">
@@ -65,26 +65,33 @@
                         <span class="input-message-error">Este campo no es valido</span>
                     </div>
                     <div class="input-container">
-                        <input name="phoneNumber" id="phoneNumber" class="input" type="text"
-                            placeholder="Número telefónico">
+                        <!--Establecemos que el campo es requerido, un patrón para definir que se espera una secuencia de 10 números, 
+                        el mínimo y máximo de caractares y el data attribute tipo-->
+                        <input name="phoneNumber" id="phoneNumber" class="input" type="text" placeholder="Número telefónico" 
+                        required pattern="\d{10}" minlength="10" maxlength="10" data-tipo="numero">
                         <label class="input-label" for="phoneNumber">Número telefónico</label>
                         <span class="input-message-error">Este campo no es valido</span>
                     </div>
                 </fieldset>
                 <fieldset>
                     <legend class="form__label">Dirección</legend>
+                    <!--Establecemos que el campo es requerido, un patrón para definir que se espera una secuencia de 10 números, 
+                        el mínimo y máximo de caractares y el data attribute tipo-->
                     <div class="input-container">
-                        <input name="cep" id="cep" class="input" type="text" placeholder="CEP">
+                        <input name="cep" id="cep" class="input" type="text" placeholder="CEP" 
+                        required pattern="[\s\S]{10,40}" minlength="10" maxlength="40" data-tipo="direccion">
                         <label class="input-label" for="cep">Dirección completa</label>
                         <span class="input-message-error">Este campo no es valido</span>
                     </div>
                     <div class="input-container">
-                        <input name="city" id="city" class="input" type="text" placeholder="Ciudad">
+                        <input name="city" id="city" class="input" type="text" placeholder="Ciudad" 
+                        required pattern="[\s\S]{4,30}" minlength="4" maxlength="30" data-tipo="ciudad">
                         <label class="input-label" for="city">Ciudad</label>
                         <span class="input-message-error">Este campo no es valido</span>
                     </div>
                     <div class="input-container">
-                        <input name="state" id="state" class="input" type="text" placeholder="Estado">
+                        <input name="state" id="state" class="input" type="text" placeholder="Estado" 
+                        required pattern="[\s\S]{4,30}" minlength="4" maxlength="30" data-tipo="estado">
                         <label class="input-label" for="state">Estado</label>
                         <span class="input-message-error">Este campo no es valido</span>
                     </div>

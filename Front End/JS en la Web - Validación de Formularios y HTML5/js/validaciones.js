@@ -33,8 +33,8 @@ const tiposDeError = [
     "valueMissing",
     "typeMismatch",
     "patternMismatch",
-    "customError"
-]
+    "customError",
+];
 
 //Creamos un objeto anidado para guardar los distintos mensajes de error según los valores del objeto validity de nuestro input
 const mensajesDeError = {
@@ -53,7 +53,23 @@ const mensajesDeError = {
         valueMissing: "El campo nacimiento no debe estar vacío",
         //El valor customError se define cuando utilizamos setCustomValidity para validar un el input de un formulario
         customError: "Debe ser mayor de 18 años"
-    }
+    },
+    numero: {
+        valueMissing: "El campo numero no debe estar vacío",
+        patternMismatch: "El formato requerido es una secuencia de 10 números",
+    },
+    direccion: {
+        valueMissing: "El campo direccion no debe estar vacío",
+        patternMismatch: "Al menos 10 carácteres y máximo 40",
+    },
+    ciudad: {
+        valueMissing: "El campo ciudad no debe estar vacío",
+        patternMismatch: "Al menos 4 carácteres y máximo 30",
+    },
+    estado: {
+        valueMissing: "El campo estado no debe estar vacío",
+        patternMismatch: "Al menos 4 carácteres y máximo 30",
+    },
 }
 
 /*Utilizamos una función que retorna un mensaje según el contenido de data attribute tipo del input
