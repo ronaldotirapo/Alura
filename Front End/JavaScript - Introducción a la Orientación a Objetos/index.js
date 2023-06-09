@@ -30,16 +30,19 @@ class Cuenta {
 
     //En JavaScript al definir una función en una clase no se debe utilizar la palabra reservada function
     //Para hacer referencia a la instancia propia que ejecutará la función se utiliza la palabra reservada this
-    //Para acceder a nuestras propiedades por convención es mejor hacerlas desde funciones conocidas como getters y setters
+    /*Para acceder a nuestras propiedades por convención es mejor hacerlas desde funciones conocidas como
+    getters y setters que utilizan return para devolver la propiedad*/
     depositoEnCuenta(value) {
         if (value > 0) {
             this.#saldo += value;
+            return this.#saldo;
         }
     }
 
     retiroEnCuenta(value) {
         if (this.#saldo >= value && value > 0) {
-            this.#saldo -= value;   
+            this.#saldo -= value;
+            return this.#saldo;
         }
     }
 
