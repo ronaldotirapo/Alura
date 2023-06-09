@@ -1,5 +1,7 @@
-/*JavaScript cuenta con un objeto Map, también conocido como mapa o diccionario,
-para almacenar grupos de clave-valor, los cuales también se podrían utilizar como reemplazo a la estructura switch*/
+/*JavaScript cuenta con múltiples objetos para almacenar listas, entre ellos Map 
+(que puede almacenar distintos tipos de variables en su clave, ya sean booleanos, objetos, fechas, funciones, etc),
+u Object (para almacenar grupos de clave-valor, en el cual la clave se trata como string), 
+los cuales también se podrían utilizar como reemplazo a la estructura switch*/
 
 const miArrayDeCiudades = new Array("Lima", "Quito", "Santiago", "Caracas", "Bogotá");
 const valorPasajes = [400, 300, 350, 200, 150];
@@ -7,7 +9,7 @@ const valorPasajes = [400, 300, 350, 200, 150];
 let miPresupuesto = 150;
 let i = 0;
 
-//Objeto Map
+//Objetos dentro de un Array
 const mapaDeCiudadesYprecios = [
     {
         ciudad: "Lima", //En caso las claves tengan carácteres especiales es mejor escribirlas entre comillas
