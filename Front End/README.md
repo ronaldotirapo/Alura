@@ -34,7 +34,7 @@
 
 * Artículo - [Empezar a programar es con JavaScript](https://www.aluracursos.com/blog/empezar-a-programar-es-con-javascript)
 
-* Curso - [JavaScript: primeros pasos con el lenguaje](./JavaScript - primeros pasos con el lenguaje)
+* Curso - JavaScript: primeros pasos con el lenguaje
 
 * Artículo - [Comprenda la diferencia entre var, let y const en JavaScript](https://www.aluracursos.com/blog/comprenda-diferencia-entre-var-let-y-const-en-javascript)
 
@@ -45,3 +45,9 @@
 * Curso - [JS en la Web: Validación de Formularios y HTML5](./JS en la Web - Validación de Formularios y HTML5/registro.html)
 
 * Artículo - [Formulario con form validation de HTML5](https://www.aluracursos.com/blog/formulario-con-form-validation-de-html5)
+
+* Curso - JavaScript: Introducción a la Orientación a Objetos
+
+* Artículo - [¡Organiza tu código Javascript de una manera fácil!](https://www.aluracursos.com/blog/organiza-tu-codigo-javascript-de-una-manera-facil)
+
+* Curso - JavaScript: Herencia e Interfaces en Orientación a Objetos
