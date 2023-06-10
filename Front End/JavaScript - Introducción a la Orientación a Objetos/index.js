@@ -1,64 +1,39 @@
-/*Las clases sirven para crear instancias de objetos, un conjunto de datos que siguen un molde,
-y así poder organizar mejor datos con información repetitiva 
-y en última instancia poder organizar una estructura de datos traidos de una base de datos*/
+/*Es buena práctica modularizar nuestras clases por lo que debemos separarlas en archivos independientes e
+indicarles que sean exportables y luego importarlas en el archivo principal o necesario*/
+import {Cuenta} from "./Cuenta.js";
+import {Cliente} from "./Cliente.js";
 
-/*Las variables definidas dentro de una clase pasan a llamarse atributos o propiedades,
-las cuales se heredarán en cada instancia de clase*/
-
-/*Al crear clases se debe tener en cuenta la abstracción de propiedades y funciones en el mundo real 
-y su relación en cada clase de modo que cada propiedad y función tenga sentido para cada clase e instancia*/
-class Cliente {
-    #nombre;
-    #dni;
-    #ruc;
-}
-
-class Cuenta {
-    /*Desde versiones mayores a 12 de NodeJS podemos utilizar el # para hacer nuestras propiedades privadas (encapsulamiento)
-    y no acceder directamente a ellas sin una función, como pueden ser getter y setter*/
-    #numero;
-    #saldo;
-    #agencia;
-
-    //El constructor de clase por convención debe ser la primera función de una clase y se declara con la palabra reservada constructor
-    //Además de preferencia debe inicializar las propiedades con sus respectivos tipo de datos para evitar errores
-    constructor() {
-        this.#numero = "";
-        this.#saldo = 0;
-        this.#agencia = "";
-    }
-
-    //En JavaScript al definir una función en una clase no se debe utilizar la palabra reservada function
-    //Para hacer referencia a la instancia propia que ejecutará la función se utiliza la palabra reservada this
-    /*Para acceder a nuestras propiedades por convención es mejor hacerlas desde funciones conocidas como
-    getters y setters que utilizan return para devolver la propiedad*/
-    depositoEnCuenta(value) {
-        if (value > 0) {
-            this.#saldo += value;
-            return this.#saldo;
-        }
-    }
-
-    retiroEnCuenta(value) {
-        if (this.#saldo >= value && value > 0) {
-            this.#saldo -= value;
-            return this.#saldo;
-        }
-    }
-
-    verSaldo() {
-        return this.#saldo;
-    }
-}
+/*Para que los módulos funciones debemos inicializar un proyecto en NodeJS con npm init
+y al finalizar la configurarción agregar la clave-valor "type": "module" en el archivo package.json*/ 
 
 //Para crear una instancia de clase, un objeto de una clase, utilizamos la palabra reservada new y ejecutamos su constructor de clase
-const cuenta1 = new Cuenta();
+const cuentaRonaldo = new Cuenta();
+const clienteRonaldo = new Cliente();
+clienteRonaldo.setNombre("Ronaldo");
+cuentaRonaldo.setCliente(clienteRonaldo); //Con la función setCliente relacionamos una instancia de clase Cuenta con la clase Cliente
+
+const cuentaMaria = new Cuenta();
+const clienteMaria = new Cliente();
+clienteMaria.setNombre("María");
+cuentaMaria.setCliente(clienteMaria);
+
+function mensajeSaldo(cuenta) {
+    console.log(
+        `El saldo de la cuenta de ${cuenta.getCliente().getNombre()} es: ${cuenta.getSaldo()}`
+    );
+}
 
 //Ahora podemos hacer referencia a sus propiedades (por convención desde funciones getter y setter) y funciones mendiante .
 /*Si hacemos referencia a una propiedad como cuenta1.saldoCuenta, no es la misma que #saldoCuenta, esta no estará definida,
 por lo que si la establecemos un valor estaríamos creando una nueva propiedad con ese nombre*/
-console.log(cuenta1.verSaldo());
-cuenta1.depositoEnCuenta(100);
-console.log(cuenta1.verSaldo());
-cuenta1.retiroEnCuenta(50);
-console.log(cuenta1.verSaldo());
+mensajeSaldo(cuentaRonaldo);
+cuentaRonaldo.depositoEnCuenta(100);
+mensajeSaldo(cuentaRonaldo);
+cuentaRonaldo.retiroEnCuenta(50);
+mensajeSaldo(cuentaRonaldo);
+
+cuentaRonaldo.transferirParaCuenta(25, cuentaMaria);
+mensajeSaldo(cuentaRonaldo);
+mensajeSaldo(cuentaMaria);
+
+

@@ -1,7 +1,7 @@
 /*En JavaScript no es necesario utilizar una palabra reservada para declarar variables
 pero es mala práctica*/
 
-/*Las variables primitivas en JavaScript se pasan por valor,
+/*Los tipos de datos primitivos en JavaScript se pasan por valor,
 mientras que los objetos se pasan por referencia*/
 
 /*La palabra reservada const para declarar variables se utiliza
