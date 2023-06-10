@@ -14,19 +14,23 @@ export class Cuenta {
     /*Desde versiones mayores a 12 de NodeJS podemos utilizar el # para hacer nuestras propiedades privadas (encapsulamiento)
     y no acceder directamente a ellas sin una función, como pueden ser getter y setter*/
     #numero;
-    #saldo;
     #agencia;
     #cliente;
+    #saldo;
+    //Los atributos estáticos (declarados con static) son atributos comunes en todas las instancias pues pertenecen a la clase
+    static numeroCuentas = 0; //En este caso se puede dejar el atributo como público, pero se debe tener cuidado de no modificarlo
 
     //El constructor de clase debe ser la primera función de una clase y se declara con la palabra reservada constructor
-    //Es buena práctica inicializar las propiedades con sus respectivos tipos de datos para evitar errores al manipular los atributos
-    constructor() {
-        /*Es buena práctica inicializar los objetos con el tipo de dato null, un tipo especial de objeto,
+    /*Es buena práctica inicializar las propiedades con sus respectivos tipos de datos, para ello se suele agregar parámetros según
+    el tipo de dato para inicializar las instancias en su creación, para así evitar errores al manipular los atributos*/
+    constructor(numero, agencia, cliente) {
+        /*Es buena práctica inicializar los objetos con el tipo de dato null cuando se requiera, un tipo especial de objeto,
         ya que sino será tratado como undefined, un tipo de dato primitivo*/
-        this.#numero = "";
-        this.#saldo = 0;
-        this.#agencia = "";
-        this.#cliente = null; //Inicializamos un nuevo objeto con el cual relacionamos la clase Cuenta con la clase Cliente
+        this.#numero = numero;
+        this.#agencia = agencia;
+        this.#cliente = cliente; //Inicializamos un nuevo objeto con el cual relacionamos la clase Cuenta con la clase Cliente
+        this.#saldo = 0; //Si no se requiere se puede inicializar con un valor por defecto
+        Cuenta.numeroCuentas++; //Para referenciar a un atributo estático utilizamos el nombre de la clase
     }
 
     //En JavaScript al definir una función en una clase no se debe utilizar la palabra reservada function
