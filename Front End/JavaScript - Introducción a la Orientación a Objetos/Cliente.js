@@ -9,27 +9,27 @@ export class Cliente {
         this.#ruc = "";
     }
 
-    getNombre() {
+    get nombre() {
         return this.#nombre;
     }
 
-    setNombre(nombre) {
+    set nombre(nombre) {
         this.#nombre = nombre;
     }
 
-    getDNI() {
+    get dni() {
         return this.#dni;
     }
 
-    setDNI(dni) {
+    set dni(dni) {
         this.#dni = dni;
     }
 
-    getRUC() {
+    get ruc() {
         return this.#ruc;
     }
 
-    setRUC(ruc) {
+    set ruc(ruc) {
         this.#ruc = ruc;
     }
 }

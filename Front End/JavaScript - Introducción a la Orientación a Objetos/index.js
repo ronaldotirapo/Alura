@@ -9,17 +9,17 @@ y al finalizar la configurarción agregar la clave-valor "type": "module" en el 
 //Para crear una instancia de clase, un objeto de una clase, utilizamos la palabra reservada new y ejecutamos su constructor de clase
 const cuentaRonaldo = new Cuenta();
 const clienteRonaldo = new Cliente();
-clienteRonaldo.setNombre("Ronaldo");
-cuentaRonaldo.setCliente(clienteRonaldo); //Con la función setCliente relacionamos una instancia de clase Cuenta con la clase Cliente
+clienteRonaldo.nombre = "Ronaldo";
+cuentaRonaldo.cliente = clienteRonaldo; //Con la función setCliente relacionamos una instancia de clase Cuenta con la clase Cliente
 
 const cuentaMaria = new Cuenta();
 const clienteMaria = new Cliente();
-clienteMaria.setNombre("María");
-cuentaMaria.setCliente(clienteMaria);
+clienteMaria.nombre = "María";
+cuentaMaria.cliente = clienteMaria;
 
 function mensajeSaldo(cuenta) {
     console.log(
-        `El saldo de la cuenta de ${cuenta.getCliente().getNombre()} es: ${cuenta.getSaldo()}`
+        `El saldo de la cuenta de ${cuenta.cliente.nombre} es: ${cuenta.saldo}`
     );
 }
 

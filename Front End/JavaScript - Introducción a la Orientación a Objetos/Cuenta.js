@@ -2,6 +2,8 @@
 y así poder organizar mejor datos con información repetitiva 
 y en última instancia poder organizar una estructura de datos traidos de una base de datos*/
 
+import { Cliente } from "./Cliente.js";
+
 /*Las variables definidas dentro de una clase pasan a llamarse atributos o propiedades,
 las cuales se heredarán en cada instancia de clase*/
 
@@ -16,9 +18,11 @@ export class Cuenta {
     #agencia;
     #cliente;
 
-    //El constructor de clase por convención debe ser la primera función de una clase y se declara con la palabra reservada constructor
-    //Además de preferencia debe inicializar las propiedades con sus respectivos tipo de datos para evitar errores
+    //El constructor de clase debe ser la primera función de una clase y se declara con la palabra reservada constructor
+    //Es buena práctica inicializar las propiedades con sus respectivos tipos de datos para evitar errores al manipular los atributos
     constructor() {
+        /*Es buena práctica inicializar los objetos con el tipo de dato null, un tipo especial de objeto,
+        ya que sino será tratado como undefined, un tipo de dato primitivo*/
         this.#numero = "";
         this.#saldo = 0;
         this.#agencia = "";
@@ -27,8 +31,6 @@ export class Cuenta {
 
     //En JavaScript al definir una función en una clase no se debe utilizar la palabra reservada function
     //Para hacer referencia a la instancia propia que ejecutará la función se utiliza la palabra reservada this
-    /*Para acceder a nuestras propiedades por convención es mejor hacerlas desde funciones conocidas como
-    getters y setters que utilizan return para devolver la propiedad*/
     depositoEnCuenta(value) {
         if (value > 0) {
             this.#saldo += value;
@@ -55,33 +57,46 @@ export class Cuenta {
         //valor = 1000; //Esto no modificaría a la variable del parámetro solo a la variable dentro de la función
         //cuenta.depositoEnCuenta(1000); //Esto modificaría el contenido de la instancia del objeto que se ingresó como parámetro
     }
-  
-    getSaldo() {
+
+    /*Para acceder a nuestras propiedades por convención es mejor hacerlas desde funciones conocidas como
+    getters y setters, estos se crean con las palabras reservadas get y set + en nombre de la propiedad,
+    esto crea un pseudo-propiedad la cual puede recibir valores y puede retornarlos utilizando return*/
+    
+    /*Gracias a mantener nuestras propiedades como privadas y utilizar getters y setter podemos establecer reglas en ellas
+    para asegurar el tratamiento de las propiedades y que estas no sean modificadas directamente (encapsulación)
+    
+    Y así mantenemos el principio SOLID de responsabilidad única, 
+    siendo las propiedades encargadas de almacenar y los getters y setter de manipular*/
+    
+    get saldo() {
         return this.#saldo;
     }
 
-    //Getters y setters de las demás propiedades
-    getNumero() {
+    get numero() {
         return this.#numero;
     }
 
-    setNumero(numero) {
+    set numero(numero) {
         this.#numero = numero;
     }
 
-    getAgencia() {
+    get agencia() {
         return this.#agencia;
     }
 
-    setAgencia(agencia) {
+    set agencia(agencia) {
         this.#agencia = agencia;
     }
 
-    getCliente() {
+    get cliente() {
         return this.#cliente;
     }
 
-    setCliente(cliente) {
-        this.#cliente = cliente;
+    set cliente(cliente) {
+        /*Para asegurar que no vamos a utilizar el setter para insertar un tipo de dato incorrecto
+        podemos utilizar un condicional comparando el parámetro con el tipo de instancia con la palabra reservada instanceOf*/
+        if (cliente instanceof Cliente) {
+            this.#cliente = cliente;
+        }
     }
 }
