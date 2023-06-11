@@ -4,9 +4,9 @@ pero es mala práctica*/
 /*Los tipos de datos primitivos en JavaScript se pasan por valor,
 mientras que los objetos se pasan por referencia*/
 
-/*La palabra reservada const para declarar variables se utiliza
-cuando se declare un valor que no cambiará en el tiempo,
-tampoco se puede cambiar su tipo declaración a let o var*/
+/*La palabra reservada const se usa para declarar valores que no cambiarán en el tiempo,
+ya que no se puede cambiar su tipo declaración a let o var, no se puede reasignar,
+porque crea una variable de solo lectura pero no inmutable, ya que en objetos se puede seguir modificando sus propiedades*/
 
 /*Su alcance es local dentro del bloque de código o modulo del programa*/
 
@@ -16,7 +16,8 @@ console.log(nombre);
 //var nombre = "Juan"; esto también arrojará una excepción
 
 /*La palabra reservada let es la mas utilizada actualmente para declarar variables,
-ya que su alcance es local dentro del bloque de código o modulo del programa*/
+ya que su alcance es local dentro del bloque de código o modulo del programa,
+además no tiene hoisting (elevación)*/
 
 {
     //Este es un bloque
