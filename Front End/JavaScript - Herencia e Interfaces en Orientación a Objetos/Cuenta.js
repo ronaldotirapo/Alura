@@ -1,6 +1,8 @@
 import { Cliente } from "./Cliente.js";
 
 export class Cuenta {
+    /*Como se puede suponer es posible hacer una instancia de clase de Cuenta, aunque esta cuenta solo sea destinada a ser una base,
+    por ello a las clases padre que solo deben ser un modelo para ser heredadas (extendidas), se les debe definir como abstractas*/
     #numero;
     #agencia;
     #cliente;
@@ -8,7 +10,21 @@ export class Cuenta {
 
     /*Para proveer especialización de clase podríamos proveer al constructor de alguna propiedad para identificar un tipo,
     pero depender de variables para definir distintas especialidades rompe con la práctica de responsabilidad única*/
+
+    /*JavaScript no soporta clases ni métodos abstractos, pero podemos evitar la instanciación de una clase mediante throw new error*/
     constructor(numero, agencia, cliente, saldo) {
+        //Mediante la igualdad de constructor
+        if (this.constructor === Cuenta) {
+            //Esto detiene la ejecución del programa si se está usando el constructor
+            throw new Error("La clase Cuenta es una clase abstracta"); 
+        }
+
+        //Mediante new target
+        if (new.target === Cuenta) {
+            //Esto detiene la ejecución del programa si se crea una nueva instancia de Cuenta
+            throw new Error("La clase Cuenta es una clase abstracta"); 
+        }
+        
         this.#numero = numero;
         this.#agencia = agencia;
         this.#cliente = cliente; 
@@ -34,7 +50,12 @@ export class Cuenta {
     }
 
     //Ahora tenemos dos funciones, una pública y otra protegida para poder modificar dentro de la misma clase padre o clases hijas
+    
+    /*Para crear una función abstracta debemos utilizar throw new error ya que JavaScript no soporta funciones abstractas,
+    esto indicaría que la función debe ser implementada o sobreescrita cuando sea heredada,
+    es decir que cada clase hija debe tener su especialización*/
     retiroEnCuenta(value) {
+        throw new Error("La función retiroEnCuenta es abstracta");
         this._retiroEnCuenta(value, 0);
     }
 
