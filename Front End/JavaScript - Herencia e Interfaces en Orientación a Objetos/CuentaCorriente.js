@@ -1,66 +1,23 @@
-import { Cliente } from "./Cliente.js";
-
-export class CuentaCorriente {
-    #numero;
-    #agencia;
-    #cliente;
-    #saldo;
+import { Cuenta } from "./Cuenta.js";
+export class CuentaCorriente extends Cuenta{
+    /*Para heredar las propiedades y funciones de una clase utilizamos la palabra reservada extends,
+    esto no generaría acceso a las propiedades y funciones privadas de la clase padre*/
     static numeroCuentas = 0; 
 
+    /*Para inicializar las variables utilizando el constructor de la clase padre (ya que el constructor es público),
+    utilizamos la función super()*/
     constructor(numero, agencia, cliente) {
-        this.#numero = numero;
-        this.#agencia = agencia;
-        this.#cliente = cliente; 
-        this.#saldo = 0;
+        super(numero, agencia, cliente, 0);
         CuentaCorriente.numeroCuentas++;
     }
 
-    depositoEnCuenta(value) {
-        if (value > 0) {
-            this.#saldo += value;
-            return this.#saldo;
-        }
-    }
+    /*Con la palabra reservada super también puedo acceder a las propiedades y funciones de la clase padre,
+    y si definimos una variable o función de la clase padre nuevamente la estaríamos sobreescribiendo*/
 
+    /*Al definir nuevamente una función con el mismo nombre que tenía la clase padre la estamos sobreescribiendo,
+    aunque no tenga funcionalidad*/
     retiroEnCuenta(value) {
-        if (this.#saldo >= value && value > 0) {
-            this.#saldo -= value;
-            return this.#saldo;
-        }
+        this._retiroEnCuenta(value, 5);
     }
 
-    transferirParaCuenta(valor, cuenta) {
-        this.retiroEnCuenta(valor);
-        cuenta.depositoEnCuenta(valor);
-    }
-    
-    get saldo() {
-        return this.#saldo;
-    }
-
-    get numero() {
-        return this.#numero;
-    }
-
-    set numero(numero) {
-        this.#numero = numero;
-    }
-
-    get agencia() {
-        return this.#agencia;
-    }
-
-    set agencia(agencia) {
-        this.#agencia = agencia;
-    }
-
-    get cliente() {
-        return this.#cliente;
-    }
-
-    set cliente(cliente) {
-        if (cliente instanceof Cliente) {
-            this.#cliente = cliente;
-        }
-    }
 }

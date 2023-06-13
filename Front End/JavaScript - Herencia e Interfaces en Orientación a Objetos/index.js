@@ -10,30 +10,12 @@ Solo es recomendable utilizar let cuando se tiene variables en funciones o varia
 /*Es importante mantener las propiedades y funciones privadas cuando sea necesario para sí asegurar el encapsulamiento,
 y cuando se desarrolle en equipo asegurar que solo se pueda acceder a los atributos y funciones necesarias*/
 
-//Implementado con CuentaCorriente
-/*
+//Implementado con las respectivas clases para cada tipo de cuenta
 const clienteRonaldo = new Cliente("Ronaldo", "123456", "654321");
-const cuentaRonaldo = new CuentaCorriente("000001", "001", clienteRonaldo);
+const cuentaRonaldo = new CuentaAhorros("000001", "001", clienteRonaldo, 200);
 
 const clienteMaria = new Cliente("Maria", "456789", "987654");
 const cuentaMaria = new CuentaCorriente("000002", "002", clienteMaria);
-*/
-
-//Implementado con CuentaAhorros
-/*
-const clienteRonaldo = new Cliente("Ronaldo", "123456", "654321");
-const cuentaRonaldo = new CuentaCorriente("000001", "001", clienteRonaldo);
-
-const clienteMaria = new Cliente("Maria", "456789", "987654");
-const cuentaMaria = new CuentaCorriente("000002", "002", clienteMaria);
-*/
-
-//Implementado con Cuenta
-const clienteRonaldo = new Cliente("Ronaldo", "123456", "654321");
-const cuentaRonaldo = new Cuenta("000001", "001", clienteRonaldo);
-
-const clienteMaria = new Cliente("Maria", "456789", "987654");
-const cuentaMaria = new Cuenta("000002", "002", clienteMaria);
 
 function mensajeSaldo(cuenta) {
     console.log(
@@ -51,6 +33,4 @@ cuentaRonaldo.transferirParaCuenta(25, cuentaMaria);
 mensajeSaldo(cuentaRonaldo);
 mensajeSaldo(cuentaMaria);
 
-console.log(Cuenta.numeroCuentas);
-
-
+console.log(CuentaCorriente.numeroCuentas);
