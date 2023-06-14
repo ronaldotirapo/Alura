@@ -1,4 +1,4 @@
-import { Cliente } from "./Cliente.js";
+import { Cliente } from "../Cliente.js";
 
 export class Cuenta {
     /*Como se puede suponer es posible hacer una instancia de clase de Cuenta, aunque esta cuenta solo sea destinada a ser una base,
@@ -41,8 +41,8 @@ export class Cuenta {
     }
 
     /*Por convención, ya que JavaScript no soporta funciones y propiedades protegidas, se utiliza el _ para alcance protegido
-    De esta manera tenemos una función _retiroEnCuenta protegida, es decir que indicamos a los desarrolladores
-    que solo se pueda acceder desde la clase padre y dentro de las clases hijas que la hereden*/
+    De esta manera tenemos una función _retiroEnCuenta protegida, la cual es como una función privada pero también
+    se pueda acceder desde la clase padre y dentro de las clases hijas que la hereden mediante la palabra reservada super*/
     _retiroEnCuenta(value, comision) { 
         value = value * (1+comision/100);
         if (this.#saldo >= value && value > 0) {
@@ -51,7 +51,7 @@ export class Cuenta {
         }
     }
 
-    //Ahora tenemos dos funciones, una pública y otra protegida para poder modificar dentro de la misma clase padre o clases hijas
+    //Ahora tenemos dos funciones, protegida y una pública abstracta para poder modificar dentro de la misma clase padre o clases hijas
     
     /*Para crear una función abstracta debemos utilizar throw new error ya que JavaScript no soporta funciones abstractas,
     esto indicaría que la función debe ser implementada o sobreescrita cuando sea heredada,

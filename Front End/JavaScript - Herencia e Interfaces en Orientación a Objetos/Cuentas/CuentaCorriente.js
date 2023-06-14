@@ -17,7 +17,8 @@ export class CuentaCorriente extends Cuenta{
     /*Al definir nuevamente una función con el mismo nombre que tenía la clase padre la estamos sobreescribiendo,
     aunque no tenga funcionalidad*/
     retiroEnCuenta(value) {
-        this._retiroEnCuenta(value, 5);
+        //Para implementar la clase abstracta utilizamos la función protegida mediante la palabra reservada super
+        super._retiroEnCuenta(value, 5);
     }
 
 }

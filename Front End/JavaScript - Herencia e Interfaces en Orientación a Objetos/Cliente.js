@@ -2,11 +2,13 @@ export class Cliente {
     #nombre;
     #dni;
     #ruc;
+    #clave;
 
     constructor(nombre, dni, ruc) {
         this.#nombre = nombre;
         this.#dni = dni;
         this.#ruc = ruc;
+        this.#clave = "";
     }
 
     get nombre() {
@@ -31,5 +33,13 @@ export class Cliente {
 
     set ruc(ruc) {
         this.#ruc = ruc;
+    }
+
+    establecerClave(clave) {
+        this.#clave = clave;
+    }
+
+    autenticar(clave){
+        return this.#clave == clave;
     }
 }
