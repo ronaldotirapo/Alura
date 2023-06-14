@@ -10,6 +10,14 @@ export class SistemaAutenticacion{
     funciones y propiedades base que se deben implementar en distintas clases no relacionadas,
     utilizamos funciones con el mismo nombre que implementaremos de manera distinta según la clase en la que se encuentre*/
     static login(usuario, clave){
-        return usuario.autenticar(clave);
+        /*Para implementar correctamente este polimorfismo debemos validar que la interfaz se encuentre siempre dentro de las clases,
+        ya sea una función o una propiedad*/
+
+        //Ya que JavaScript es un lenguaje de tipado debil utilizamos el concepto de duck typing para validar las interfaces
+        if ("autenticar" in usuario || usuario.autenticar instanceof Function) {
+            return usuario.autenticar(clave);   
+        } else {
+            return false;
+        }
     }
 }
