@@ -11,8 +11,8 @@ las cuales se heredarán en cada instancia de clase*/
 y su relación en cada clase de modo que cada propiedad y función tenga sentido para cada clase e instancia*/
 
 export class Cuenta {
-    /*Desde versiones mayores a 12 de NodeJS podemos utilizar el # para hacer nuestras propiedades privadas (encapsulamiento)
-    y no acceder directamente a ellas sin una función, como pueden ser getter y setter*/
+    /*Desde versiones mayores a 12 de NodeJS podemos utilizar el # para hacer nuestras propiedades y funciones privadas
+    y no acceder directamente a ellas sin una función, como pueden ser getter y setter (encapsulamiento)*/
     #numero;
     #agencia;
     #cliente;
@@ -20,9 +20,11 @@ export class Cuenta {
     //Los atributos estáticos (declarados con static) son atributos comunes en todas las instancias pues pertenecen a la clase
     static numeroCuentas = 0; //En este caso se puede dejar el atributo como público, pero se debe tener cuidado de no modificarlo
 
-    //El constructor de clase debe ser la primera función de una clase y se declara con la palabra reservada constructor
-    /*Es buena práctica inicializar las propiedades con sus respectivos tipos de datos, para ello se suele agregar parámetros según
-    el tipo de dato para inicializar las instancias en su creación, para así evitar errores al manipular los atributos*/
+    /*El constructor de clase debe ser la primera función de una clase y se declara con la palabra reservada constructor,
+    esta función especial tiene internamente el mismo nombre de la clase*/
+    
+    /*Es buena práctica inicializar las propiedades con sus respectivos tipos de datos en el constructor, para ello se suele agregar
+    parámetros para inicializar las propiedades su instanciación, y así evitar errores al manipular los atributos*/
     constructor(numero, agencia, cliente) {
         /*Es buena práctica inicializar los objetos con el tipo de dato null cuando se requiera, un tipo especial de objeto,
         ya que sino será tratado como undefined, un tipo de dato primitivo*/

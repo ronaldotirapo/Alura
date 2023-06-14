@@ -2,7 +2,8 @@ import { Cliente } from "./Cliente.js";
 
 export class Cuenta {
     /*Como se puede suponer es posible hacer una instancia de clase de Cuenta, aunque esta cuenta solo sea destinada a ser una base,
-    por ello a las clases padre que solo deben ser un modelo para ser heredadas (extendidas), se les debe definir como abstractas*/
+    por ello a las clases padre que solo deben ser un modelo para ser heredadas (pero no instanciadas),
+    se les debe definir como clases abstractas*/
     #numero;
     #agencia;
     #cliente;
@@ -11,7 +12,8 @@ export class Cuenta {
     /*Para proveer especialización de clase podríamos proveer al constructor de alguna propiedad para identificar un tipo,
     pero depender de variables para definir distintas especialidades rompe con la práctica de responsabilidad única*/
 
-    /*JavaScript no soporta clases ni métodos abstractos, pero podemos evitar la instanciación de una clase mediante throw new error*/
+    /*JavaScript no soporta clases ni métodos abstractos, pero podemos evitar la instanciación de una clase mediante throw new error,
+    una clase abstracta debe tener al menos una función abstracta, pero sus demás funciones si pueden ser implementados y heredados*/
     constructor(numero, agencia, cliente, saldo) {
         //Mediante la igualdad de constructor
         if (this.constructor === Cuenta) {
@@ -56,7 +58,6 @@ export class Cuenta {
     es decir que cada clase hija debe tener su especialización*/
     retiroEnCuenta(value) {
         throw new Error("La función retiroEnCuenta es abstracta");
-        this._retiroEnCuenta(value, 0);
     }
 
     transferirParaCuenta(valor, cuenta) {
