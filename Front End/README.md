@@ -51,3 +51,13 @@
 * Artículo - [¡Organiza tu código Javascript de una manera fácil!](https://www.aluracursos.com/blog/organiza-tu-codigo-javascript-de-una-manera-facil)
 
 * Curso - JavaScript: Herencia e Interfaces en Orientación a Objetos
+
+* Artículo - [Herencia en JavaScript](https://www.aluracursos.com/blog/herencia-en-javascript)
+
+* Artículo - [Capturando valor del input: introducción a los selectores](https://www.aluracursos.com/blog/capturando-valor-del-input-introduccion-a-los-selectores)
+
+* Video - [¿Cuál es la diferencia entre Front End y Back End?](https://www.youtube.com/watch?v=R9uaBxgCkyA&t=151s)
+
+* Artículo - [Conociendo Arrow Functions](https://www.aluracursos.com/blog/conociendo-arrow-functions)
+
+* Artículo - [Simulando una API REST con json-server](https://www.aluracursos.com/blog/simulando-una-api-rest-con-json-server)
