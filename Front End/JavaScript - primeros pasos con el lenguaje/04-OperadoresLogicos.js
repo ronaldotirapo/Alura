@@ -1,5 +1,7 @@
 /*JavaScript tiene entre operadores relacionales: >, >=, <, <=, ==, !=
-y también comparadores que incluyen el tipo de datos como: === y !==*/
+y también operadores realcionales estríctos que también comparan el tipo de datos como: === y !==
+Si se intenta compara un String se comparará según el número UNICODE
+Si se intenta comparar Boleeans true siempre será mayor*/
 
 const ciudadDestino = "Lima";
 const miArrayDeCiudades = new Array("Lima", "Quito", "Santiago", "Caracas", "Bogotá");

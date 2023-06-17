@@ -10,7 +10,7 @@ let edad = 25;
 let plantillaLiteral = `La edad de ${nombre} es ${edad}`;
 console.log(plantillaLiteral);
 
-/*JavaScript puede cambiar de tipo automáticamente cuando se vuelve a asignar un valor nuevo a una variables
+/*JavaScript puede cambiar de tipo automáticamente (ya que es de tipado dinámico) cuando se vuelve a asignar un valor nuevo a una variables
 por lo que se debe tener cuidado cuando se declaran let y var
 Para asegurar la inmutabilidad de una variable que se sabe no va a cambiar es mejor declararla con const*/
 var pasajero = "Juan Perez";

@@ -1,15 +1,17 @@
-/*JavaScript tiene 6 tipos de datos primitivos:
-Undefined
+/*JavaScript tiene 7 tipos de datos primitivos para asignar:
+Undefined (se define automáticamente cuando no se define un valor a una variable)
 Boolean
 String
 Number
 BigInt
 Symbol
+Null, pero por un error en las primeras versiones del lenguaje al utilizar typeof resulta "Object"
+(El error de forma vaga es que en la condicional que definía el tipo de dato primitivo no tenía una que definiera null
+y por defecto le asignaba como Object)
 
 Y dos tipos de datos especiales:
-Object
-Null
-Function
+Object, el cual es la base (prototype) de los objetos Array, Map, Set, etc.
+Function, el cual deriva del prototype de Object pero sin propiedades
 
 Gracias al editor de Visual Studio Code ayuda a ver el tipo de dato cuando se pasa sobre el nombre de la variable*/
 
@@ -18,7 +20,7 @@ let unTexto = "Hola Mundo";
 let unBooleano = true;
 
 /*Las operaciones ariméticas se realizan en el orden:
-() -> * / -> + -
+() --> * ** / % --> + -
 */
 
 let costoBoleto = 150;
