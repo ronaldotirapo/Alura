@@ -21,3 +21,7 @@ if ((edadPasajero >= 18 || estaAconpanado == true)) {
         console.log("Pasajero no cumple las reglas");
     }
 }
+
+/*Cuando definimos una variable, objeto, función, clase, etc. la estamos "Declarando" es decir estamos ordenando algo, 
+lo cual no retorna un valor
+En cambio cuando definimos un valor, un argumento o una condición lo llamamos "Expresión", los cuales retornarán un valor"*/

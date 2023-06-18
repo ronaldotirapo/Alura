@@ -50,7 +50,9 @@ let ciudadSeleccionada = "";
 do {
     if (mapaDeCiudadesYprecios[j].precio <= miPresupuesto) {
         ciudadSeleccionada = mapaDeCiudadesYprecios[j].ciudad;
-        break; //La palabra reservada break sirve para salir de una estructura o bloque cuando se llega a esta línea de código
+        break; 
+        /*La palabra reservada break sirve para salir de un bucle cuando se llega a esta línea de código
+        Asi mismo la palabra reservada continue sirve para ir a la siguiente iteración del bucle*/
     }
     j++;
 } while (j < mapaDeCiudadesYprecios.length && ciudadSeleccionada == "");
