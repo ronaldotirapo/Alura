@@ -64,7 +64,7 @@ es decir guardar una función en una variable (función anónima o de preferenci
 declararla de preferencia con const ya que no tiene hoisting y para no reasignarlas por error, 
 y acceder a la función con el nombre de la variable*/
 
-miFuncionExpresion = function (){
+const miFuncionExpresion = function (){
     var nombre3 = "Juan";
     console.log(nombre3);
     return nombre3;
@@ -76,7 +76,7 @@ ya que tienen contexto léxico de this.variable, es decir en una función anóni
 por lo que crearía una nueva variable y no utilizaría la variable que quisieramos
 En cambio las arrow function entienden que al usar this.variable estamos refiriéndonos a una variable anteriormente declarada*/
 
-miFuncionFlecha = () => { //Literalmente se puede leer "de estos parámetros => haz lo siguiente"
+const miFuncionFlecha = () => { //Literalmente se puede leer "de estos parámetros => haz lo siguiente"
     var nombre3 = "Juan";
     console.log(nombre3);
     return nombre3;
@@ -91,7 +91,7 @@ miFuncionFlechaUnParametro = a => a++;
 /*Las funciones pueden ser recursivas, es decir llamarse a si misma, para solucionar algunos problemas de algoritmos,
 y por ese motivo al usarlas es importante definir bien una condición base que garantize la salida de la función*/
 
-sumaNnumerosNaturales = (n) => {
+const sumaNnumerosNaturales = (n) => {
     if (n == 0) {
         return 0;
     }
@@ -99,3 +99,57 @@ sumaNnumerosNaturales = (n) => {
 }
 console.log(sumaNnumerosNaturales(3));
 
+/*Las funciones pueden contener funciones, funciones anidadas, o recibirlas como parámetro, la función padre se llama de orden mayor,
+aunque se utilizaba como una forma de simular clases con argumentos y funciones privadas (actualmente se pueden declarar con #),
+pero no es recomendable utilizarlas ya que forman un cierre (clousure) en cada llamada el cual provoca que se retenga en memoria
+los argumentos de la función de orden mayor hasta que no se tenga acceso a su return,
+por lo que si la función se almacena en una variable y esa variable es global el closure estará hasta que se cierre la página,
+esto no ocurre en las clases ya que cada instancia contiene una referencia al prototipo de la clase*/
+
+//Ejercicio Counter II
+var expect = function(val) {
+    function toBe(val2) {
+        if (val === val2) {
+            return true;
+        } else {
+            throw new Error("Not Equal");
+        }
+    }
+
+    function notToBe(val3) {
+        if (val !== val3) {
+            return true;
+        } else {
+            throw new Error("Equal");
+        }
+    }
+    return { //Las funciones también pueden hacer múltiples retornos, en este caso es un objeto
+        toBe, //Esta es la forma abreviada de toBe: toBe
+        notToBe //Esta es la forma abreviada de notToBe: notToBe
+    }
+};
+
+expect(5).toBe(5); // true
+expect(5).notToBe(5); // throws "Equal"
+
+//Ejercicio To Be Or Not To Be
+var createCounter = function(init) {
+    let current = init;
+    return {
+        increment: () => {
+            return ++current;
+        },
+        decrement: () => {
+            return --current;
+        },
+        reset: () => {
+            current = init;
+            return current;
+        }
+    }
+};
+
+const counter = createCounter(5)
+counter.increment(); // 6
+counter.reset(); // 5
+counter.decrement(); // 4
