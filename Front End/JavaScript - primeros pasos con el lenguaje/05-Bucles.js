@@ -3,7 +3,7 @@ cada uno se puede usar según necesidad para realizar acciones repetitivas segú
 que podrían ser inviables con otras estructuras*/
 
 const miArrayDeCiudades = new Array("Lima", "Quito", "Santiago", "Caracas", "Bogotá");
-const valorPasajes = [400, 300, 350, 200, 150]; //Este par de arreglos relacionados se podrían realizar mejor con hash map
+const valorPasajes = [400, 300, 350, 200, 150]; //Este par de arreglos relacionados se podrían realizar mejor con un objeto
 
 let miPresupuesto = 150;
 let i = 0; //Este es un contador

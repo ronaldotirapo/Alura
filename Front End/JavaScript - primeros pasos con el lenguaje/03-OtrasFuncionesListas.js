@@ -24,7 +24,8 @@ console.log(miArrayDeCiudades
 );
 
 /*Para retornar un nuevo array modificado según un valor que se puede ir acumulando utilizamos la función reduce(), la cual recibe
-como parámetros: una función que tiene como parámetros (acumulador, elementoActual, indiceActual) y el valor inicial del acumulador
+como parámetros: una función que tiene como parámetros (acumulador, elementoActual, indiceActual) y el valor inicial del acumulador,
+y debe retornar el acumulador el cual será pasado en la siguiente iteración como argumento
 usualmente se puede utilizar para sumar los valores del arrray, pero por ejemplo podemos hacer lo que hicimos con filter y map*/
 let usandoReduce = miArrayDeCiudades.reduce((acumulador, elementoActual) => {
     const letrasMayorIgualQueSeis = elementoActual.length > 6;
@@ -34,7 +35,7 @@ let usandoReduce = miArrayDeCiudades.reduce((acumulador, elementoActual) => {
     } else {
         return acumulador;
     }
-}, []); //El [] es el valor actual del parámetro acumulador
+}, []); //El [] es el valor inicial del parámetro acumulador
 console.log(usandoReduce);
 
 /*Para unir los elementos en una sola cadena de caracteres, separando cada elemento por un caracter (por defecto coma)
@@ -97,7 +98,7 @@ el cual "esparce" los elementos por comas, para usarlo se colocan ...nombreArray
 const spreadArrayPaises = [...miArrayDeCiudades, ...miArrayDePaises];
 console.log(spreadArrayPaises);
 
-/*Para iterar el array tenemos la opción de realizarlo con bucles, con el operador for ...of o con la función forEach()*/
+/*Para iterar el array tenemos la opción de realizarlo con bucles como for o con el operador for ...of o con la función forEach()*/
 
 /*El operador for ..of, necesita como parámetro la declaración de preferencia una constante
 que obtendrá cada valor en la iteración seguido de of nombreDelArray
@@ -107,5 +108,21 @@ for (const ciudad of miArrayDeCiudades) {
 }
 
 /*La función forEach() necesita como parámetro una función (puede ser una función común, anónima o arrow function), 
-que reciba como argumento una variable, que ejecutará las instrucciones para cada elemento del array*/
+que reciba como argumento una variable que ejecutará las instrucciones para cada elemento del array,
+y opcionalmente una argumento que represente el índice y el arreglo*/
 miArrayDeCiudades.forEach(ciudad => console.log(ciudad)); //Esta función no retorna nada
+
+/*También contamos con matrices en JavaScript, el cual se puede definir como un array de arrays,
+el cual se puede evaluar como si fueran filas y columnas en cualquier cantidad*/
+const miMatrizDePaisesYciudades = [
+    ["Perú", "Ecuador", "Chile"], //la fila 0 son los paises
+    ["Lima", "Quito", "Santiago"] //La fila 1 tiene las ciudades
+];
+const peru = miMatrizDePaisesYciudades[0][0]; //Para acceder a cada elemento debemos especificar primero su fila y luego su columna
+
+//Para recorrer una matriz tenemos que usar blucles anidados como for, for ...of o la funcion forEach
+miMatrizDePaisesYciudades.forEach( (fila, indiceFila) => {
+    fila.forEach( (elemento, indiceColumna) => {
+        console.log(miMatrizDePaisesYciudades[indiceFila][indiceColumna]);
+    });
+});
