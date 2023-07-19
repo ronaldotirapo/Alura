@@ -126,3 +126,58 @@ miMatrizDePaisesYciudades.forEach( (fila, indiceFila) => {
         console.log(miMatrizDePaisesYciudades[indiceFila][indiceColumna]);
     });
 });
+
+//También podemos implementar algunos algoritmos, como por ejemplo para recorrer un array y hallar el número máximo
+//Aunque en ese caso es mejor utilizar la función Math.max(...array) para obtener el máximo
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+function findMaxNumber (numbers) {
+    let max = numbers[0];
+    for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] > max) {
+            max = numbers[i];
+        }
+        return max;
+    }
+}
+
+//A la hora de implementar un algoritmo se debe tener en cuenta la complejidad algoritmica, la cual se mide en tiempo y espacio
+//Para medir el tiempo se utiliza la notación O(n), donde n es el número de elementos del array
+//Para medir el espacio se utiliza la notación O(1), donde 1 es el número de variables que se utilizan
+//En el caso de findMaxNumber() la complejidad algoritmica es O(n) en tiempo y O(1) en espacio
+//En el caso de Math.max(...array) la complejidad algoritmica es O(n) en tiempo y O(n) en espacio
+
+//Un algoritmo de busqueda conocido es la búsqueda binaria, la cual se utiliza para encontrar un elemento en un array ordenado
+function busquedaBinaria (array, elemento) {
+    let index = 0;
+    let final = array.length - 1;
+    //Cuando index sobrepase al final o el final sea -1 entonces el elemento no está en el array 
+    while (index <= final) { 
+        const mitad = Math.floor((index + final) / 2);
+        if (array[mitad] === elemento) {
+            return mitad; //Si el elemento está en la mitad retorna el índice
+        } else if (array[mitad] < elemento) {
+            index = mitad + 1; //Si la mitad es menor entonces el elemento está en la mitad mayor derecha
+        } else {
+            final = mitad - 1; //Sino entonces el elemento está en la mitad menor izquierda
+        }
+    }
+    return -1; //Si no encuentra el elemento retorna -1
+}
+
+//Pero en JavaScript es mejor utilizar la función array.indexOf(elemento) que ya está optimizada para realizar la búsqueda binaria
+
+//Otro algoritmo de ejemplo puede ser hallar el indice del mayor y el menor número de un array sin ordenar
+function findMaxAndMin (array) {
+    let min = 0;
+    let max = 0;
+    let index = 0;
+    while (index < array.length) {
+        if (array[index] < array[min]) {
+            min = index;
+        } else if (array[index] > array[max]) {
+            max = index;
+        }
+      index++;
+    }
+    return [min, max];
+}
